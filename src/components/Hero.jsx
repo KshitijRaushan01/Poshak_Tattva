@@ -56,13 +56,13 @@ const Hero = () => {
             </h2>
 
             <p className="lead fs-23 lh-sm mb-7 text-white animate__animated animate__slideInRight animate__delay-2s">
-              Reconnect with Your Inner Balance at Poshak Tattva
+              We are here to make you disease free!
             </p>
 
             <div className="animate__animated animate__slideInUp animate__delay-3s">
               <NextLink
                 title="Read More"
-                href="#"
+                href="/about-us"
                 className="btn btn-lg text-white secondary-bg rounded"
               />
             </div>

@@ -47,8 +47,7 @@ const Footer = () => {
                 <div className="d-flex mb-1 align-items-start">
                   <i className="uil uil-location-pin-alt fs-26" />
                   <address className="ms-2 m-0 mt-1">
-                    123 Tech Park, Ta. Richmond, Dist. Greater London, United
-                    Kingdom – SW1A 1AA.
+                    177, Vinoba Puri,Lajpat nagar 2, New Delhi, Delhi 110024
                   </address>
                 </div>
                 <div className="d-flex mb-1 align-items-center">
@@ -63,7 +62,7 @@ const Footer = () => {
                 <div className="d-flex align-items-center mb-1">
                   <i className="uil uil-phone-volume fs-26" />
                   <p className="m-0 ms-2 fs-16">
-                    <Link href="tel:+911234567890">+91 12345 67890</Link>
+                    <Link href="tel:+919351500400">+91 9351500400</Link>
                   </p>
                 </div>
               </div>
@@ -93,7 +92,7 @@ const Footer = () => {
               <div className="d-flex justify-content-center border rounded">
                 <iframe
                   title="Clinic Location"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019594510314!2d-122.4194156846815!3d37.77492927975988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064f3e74c6f%3A0x4211bbcc3de0b9f0!2sGeneral%20Hospital%20-%20San%20Francisco!5e0!3m2!1sen!2sus!4v1748419750000!5m2!1sen!2sus"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.0649167484435!2d77.2483968!3d28.567813299999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3b1c61b8de3%3A0x3f5eb4ad848c7922!2s177%2C%20Vinobha%20Puri%2C%20Vinoba%20Puri%2C%20Block%20M%2C%20Lajpat%20Nagar%20II%2C%20Lajpat%20Nagar%2C%20New%20Delhi%2C%20Delhi%20110024!5e0!3m2!1sen!2sin!4v1762953791402!5m2!1sen!2sin"
                   width="100%"
                   height="250"
                   loading="lazy"
@@ -111,7 +110,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="d-md-flex align-items-center justify-content-center">
           <p className="mb-2 mb-lg-0">
-            © {currentYear} ENTrova. All rights reserved.
+            © {new Date().getFullYear()} Poshak Tattva. All rights reserved.
           </p>
         </div>
       </div>

@@ -31,8 +31,9 @@ const Home = () => {
               imgPosition="right"
               imgSrc="/img/yds.png"
               heading="Welcome to Poshak Tattva"
-              para="At Poshak Tattva, we believe true wellness begins with balance — of the body, mind, and soul. Through our holistic approach of Yoga, Diet, and Sound Healing, we help you restore inner harmony, enhance vitality, and embrace mindful living. Each session is designed to nurture your energy and guide you toward natural healing and self-discovery."
               isH1="true"
+              para="At Poshak Tattva, we believe that true wellness is not merely the absence of illness — it is a harmonious alignment of the body, mind, and soul. Our philosophy is rooted in the timeless wisdom of holistic living, where healing is achieved through balance, awareness, and conscious nourishment. Through the integration of Yoga, Diet, and Sound Healing, we guide you on a transformative journey toward complete well-being.
+Our Yoga practices cultivate strength, flexibility, and inner calm, helping you reconnect with your breath and your being. Our personalized diet plans are grounded in sattvic principles, designed to cleanse and energize your system from within while nurturing your relationship with food. Through Sound Healing, we work with vibrational frequencies to realign your energy centers, release emotional blockages, and restore peace to your mind and heart."
             />
           </div>
         </section>
@@ -44,21 +45,37 @@ const Home = () => {
               <p className="fs-80 fw-bolder sub-h2 position-relative">
                 Our Offerings
               </p>
-              <h2 className="display-5 mb-16 fw-bold z-1 mt-n15 mt-md-n16 mt-lg-n17 sub-head">
+              <h2 className="display-5 mb-16 fw-bold z-1 mt-n15 mt-md-n16 mt-lg-n17 ">
                 Poshak Tattva Wellness Programs
-                <span
+                {/* <span
                   className="ms-2 d-inline-block"
                   style={{
                     borderBottom: "3px solid #D8D8D8",
                     width: "30px",
                     height: 0,
                   }}
-                />
+                /> */}
               </h2>
             </div>
 
             {/* Services Grid */}
             <Services />
+          </div>
+        </section>
+
+        {/* About Section */}
+        <section className="wrapper bg-light">
+          <div className="container pt-8 pt-md-15 mb-12">
+            <About
+              imgPosition="left"
+              imgSrc="/img/yds.png"
+              heading="Welcome to Poshak Tattva"
+              isH1="true"
+              btnName="Discover More"
+              btnUrl="google.com"
+              para="At Poshak Tattva, we believe that true wellness is not merely the absence of illness — it is a harmonious alignment of the body, mind, and soul. Our philosophy is rooted in the timeless wisdom of holistic living, where healing is achieved through balance, awareness, and conscious nourishment. Through the integration of Yoga, Diet, and Sound Healing, we guide you on a transformative journey toward complete well-being.
+Our Yoga practices cultivate strength, flexibility, and inner calm, helping you reconnect with your breath and your being. Our personalized diet plans are grounded in sattvic principles, designed to cleanse and energize your system from within while nurturing your relationship with food. Through Sound Healing, we work with vibrational frequencies to realign your energy centers, release emotional blockages, and restore peace to your mind and heart."
+            />
           </div>
         </section>
       </main>

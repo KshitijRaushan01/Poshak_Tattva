@@ -39,7 +39,7 @@ export const offeringsList = [
     id: 2,
     url: '#',
     src: '/img/offerings/ayurvedic.png',
-    title: 'Ayurvedic Diet Plans',
+    title: 'Diet Consultation',
     description: 'Customized sattvic meal guidance for holistic nourishment.',
   },
   {
@@ -56,13 +56,13 @@ export const offeringsList = [
     title: 'Meditation & Mindfulness',
     description: 'Calm your mind and rejuvenate your spirit with guided meditation sessions.',
   },
-  {
-    id: 5,
-    url: '#',
-    src: '/img/offerings/detox.png',
-    title: 'Natural Detox Programs',
-    description: 'Purify your body using ancient Ayurvedic cleansing techniques.',
-  },
+  // {
+  //   id: 5,
+  //   url: '#',
+  //   src: '/img/offerings/detox.png',
+  //   title: 'Natural Detox Programs',
+  //   description: 'Purify your body using ancient Ayurvedic cleansing techniques.',
+  // },
   {
     id: 6,
     url: '#',

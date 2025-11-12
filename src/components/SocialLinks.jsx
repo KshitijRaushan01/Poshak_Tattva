@@ -3,22 +3,22 @@ import Link from "next/link";
 const links = [
   {
     id: 1,
-    icon: 'uil uil-facebook-f',
-    url: 'https://www.facebook.com/'
+    icon: "uil uil-facebook-f",
+    url: "https://www.facebook.com/share/1AHRDfFEe8/",
   },
   {
     id: 2,
-    icon: 'uil uil-instagram',
-    url: 'https://www.instagram.com/' 
+    icon: "uil uil-instagram",
+    url: "https://www.instagram.com/poshak_tattva?igshid=1gcwnpf94lpyf",
   },
   {
     id: 3,
-    icon: 'uil uil-whatsapp',
-    url: 'https://api.whatsapp.com' 
-  }
+    icon: "uil uil-whatsapp",
+    url: "https://api.whatsapp.com/send?phone=9351500400",
+  },
 ];
 
-const SocialLinks = ({ className = 'nav social  mt-4' }) => {
+const SocialLinks = ({ className = "nav social  mt-4" }) => {
   return (
     <nav className={className}>
       {links.map(({ id, icon, url }) => (
