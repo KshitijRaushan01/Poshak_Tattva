@@ -166,28 +166,6 @@ const Navbar = ({ navClassName, navOtherClass, fancy, stickyBox }) => {
                       </h4>
                     ))}
                   </div>
-
-                  {/* {surgeryCategory === "ear" && (
-                    <div>
-                      <h4 className="dropdown-header d-header">
-                        Ear Surgeries
-                      </h4>
-                      <ul className="list-unstyled justify-content-center">
-                        {[
-                          "Tympanoplasty",
-                          "Mastoid",
-                          "Stapes",
-                          "Myringotomy",
-                        ].map((surgery, idx) => (
-                          <li key={idx}>
-                            <Link className="dropdown-item" href="#">
-                              {surgery} Surgery
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )} */}
                 </div>
               </div>
             </li>
@@ -259,16 +237,13 @@ const Navbar = ({ navClassName, navOtherClass, fancy, stickyBox }) => {
               </li>
             ))}
 
-            <li className="nav-item" data-bs-dismiss="offcanvas">
-              <NextLink href="#" title="Contact Us" className="nav-link" />
-            </li>
             <li
               className="nav-item align-items-center d-flex mt-3 mt-lg-0 ms-lg-3"
               data-bs-dismiss="offcanvas"
             >
               <NextLink
                 title="Book Appointment"
-                href="#"
+                href="/contact-appointment"
                 className="btn btn-sm secondary-bg text-white mb-lg-1 rounded border border-md-none"
               />
             </li>
@@ -277,12 +252,12 @@ const Navbar = ({ navClassName, navOtherClass, fancy, stickyBox }) => {
           <div className="offcanvas-footer d-lg-none">
             <div>
               <NextLink
-                title="contact@example.com"
+                title="poshaktattva@gmail.com"
                 className="link-inverse"
-                href="mailto:contact@example.com"
+                href="mailto:poshaktattva@gmail.com"
               />
               <br />
-              <NextLink href="tel:+911234567890" title="+91 12345 67890" />
+              <NextLink href="tel:+919351500400" title="+919351500400" />
               <br />
               <SocialLinks />
             </div>

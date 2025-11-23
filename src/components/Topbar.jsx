@@ -17,7 +17,7 @@ const Topbar = () => {
               aria-hidden="true"
             />
             <Link
-              href="mailto:contact@example.com"
+              href="mailto:poshaktattva@gmail.com"
               className="link-white hover fw-semibold"
               aria-label="Email contact"
             >
@@ -26,7 +26,7 @@ const Topbar = () => {
           </div>
 
           {/* Phone Contact */}
-          <div className="d-flex align-items-center justify-content-center col-4 col-xxl-2 me-10">
+          <div className=" d-flex align-items-center justify-content-center col-4 col-xxl-2 me-10">
             <i
               className="uil uil-phone-volume text-white fs-22 mt-1 me-2"
               aria-hidden="true"
