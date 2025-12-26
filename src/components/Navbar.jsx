@@ -242,6 +242,39 @@ const Navbar = ({ navClassName, navOtherClass, fancy, stickyBox }) => {
               data-bs-dismiss="offcanvas"
             >
               <NextLink
+                title="Classes"
+                href="/classes"
+                className="nav-link"
+              />
+            </li>
+
+            <li
+              className="nav-item align-items-center d-flex mt-3 mt-lg-0 ms-lg-3"
+              data-bs-dismiss="offcanvas"
+            >
+              <NextLink
+                title="Pricing"
+                href="/pricing"
+                className="nav-link"
+              />
+            </li>
+
+            <li
+              className="nav-item align-items-center d-flex mt-3 mt-lg-0 ms-lg-3"
+              data-bs-dismiss="offcanvas"
+            >
+              <NextLink
+                title="FAQ"
+                href="/faq"
+                className="nav-link"
+              />
+            </li>
+
+            <li
+              className="nav-item align-items-center d-flex mt-3 mt-lg-0 ms-lg-3"
+              data-bs-dismiss="offcanvas"
+            >
+              <NextLink
                 title="Book Appointment"
                 href="/contact-appointment"
                 className="btn btn-sm secondary-bg text-white mb-lg-1 rounded border border-md-none"
