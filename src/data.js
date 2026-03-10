@@ -107,21 +107,21 @@ export const soundHealing = [
   {
     id: 1,
     title: '1:1 Sound Healing Session',
-    children: [],
+    url: '/sound-healing/1-1-session',
   },
   {
     id: 2,
     title: 'Sound Healing Workshop',
-    children: [],
+    url: '/sound-healing/workshop',
   },
   {
     id: 3,
     title: 'Gong Bath',
-    children: [],
+    url: '/sound-healing/gong-bath',
   },
   {
     id: 4,
     title: 'Chakra Healing',
-    children: [],
+    url: '/sound-healing/chakra-healing',
   },
 ];

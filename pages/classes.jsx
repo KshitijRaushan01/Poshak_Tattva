@@ -207,7 +207,7 @@ export default function ClassesPage() {
           <div className="container text-center text-white">
             <h2 className="h3 fw-bold mb-4">Ready to Start Your Wellness Journey?</h2>
             <p className="lead mb-6">Join hundreds of students transforming their lives</p>
-            <a href="/contact-appointment" className="btn btn-light btn-lg">
+            <a href="/contact-appointment" className="btn btn-lg fw-bold" style={{ background: "white", color: "#667eea", border: "none" }}>
               Book Your First Class Now
             </a>
           </div>

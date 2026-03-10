@@ -175,7 +175,7 @@ export default function PricingPage() {
           <div className="container text-center text-white">
             <h2 className="h3 fw-bold mb-4">Ready to Transform Your Life?</h2>
             <p className="lead mb-6">Join hundreds of students from across India on their wellness journey</p>
-            <a href="/contact-appointment" className="btn btn-light btn-lg">
+            <a href="/contact-appointment" className="btn btn-lg fw-bold" style={{ background: "white", color: "#667eea", border: "none" }}>
               Book Your First Session
             </a>
           </div>

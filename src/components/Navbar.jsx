@@ -14,23 +14,10 @@ const Navbar = ({ navClassName, navOtherClass, fancy, stickyBox }) => {
   const sticky = useSticky(350);
   const navbarRef = useRef(null);
 
-  const [surgeryCategory, setSurgeryCategory] = useState("ear");
-
-  const handleSurgeryCategory = (category) => () => {
-    setSurgeryCategory(category);
-  };
-
-  const soundHealingMenu = [
-    { id: 1, title: "1:1 Sound Healing Session", category: "binaural" },
-    { id: 2, title: "Sound Healing Workshop", category: "workshop" },
-    { id: 3, title: "Gong Bath", category: "gong" },
-    { id: 4, title: "Chakra Healing", category: "chakra" },
-  ];
-
   const renderLinks = (links) =>
     links.map((item) => (
       <ListItemLink
-        href="#"
+        href={item.url || "#"}
         title={item.title}
         linkClassName="dropdown-item"
         key={item.id}
@@ -93,21 +80,14 @@ const Navbar = ({ navClassName, navOtherClass, fancy, stickyBox }) => {
                 className="nav-link dropdown-toggle"
               />
               <ul className="dropdown-menu" data-bs-dismiss="offcanvas">
-                {yoga.map(({ id, url, title, children }) =>
-                  children ? (
-                    <li className="dropdown dropdown-submenu dropend" key={id}>
-                      <DropdownToggleLink title="Yoga " />
-                      <ul className="dropdown-menu">{renderLinks(children)}</ul>
-                    </li>
-                  ) : (
-                    <ListItemLink
-                      key={id}
-                      href="#"
-                      title={title}
-                      linkClassName="dropdown-item"
-                    />
-                  )
-                )}
+                {yoga.map(({ id, url, title }) => (
+                  <ListItemLink
+                    key={id}
+                    href={url || "#"}
+                    title={title}
+                    linkClassName="dropdown-item"
+                  />
+                ))}
               </ul>
             </li>
 
@@ -117,33 +97,14 @@ const Navbar = ({ navClassName, navOtherClass, fancy, stickyBox }) => {
                 className="nav-link dropdown-toggle"
               />
               <ul className="dropdown-menu" data-bs-dismiss="offcanvas">
-                {yoga.map(({ id, url, title, children }) =>
-                  children ? (
-                    <li className="dropdown dropdown-submenu dropend" key={id}>
-                      <DropdownToggleLink
-                        title={title}
-                        className="dropdown-item dropdown-toggle"
-                      />
-                      <ul className="dropdown-menu" data-bs-dismiss="offcanvas">
-                        {children.map((child) => (
-                          <ListItemLink
-                            key={child.id}
-                            href={child.url || "#"}
-                            title={child.title}
-                            linkClassName="dropdown-item"
-                          />
-                        ))}
-                      </ul>
-                    </li>
-                  ) : (
-                    <ListItemLink
-                      key={id}
-                      href={url || "#"}
-                      title={title}
-                      linkClassName="dropdown-item"
-                    />
-                  )
-                )}
+                {yoga.map(({ id, url, title }) => (
+                  <ListItemLink
+                    key={id}
+                    href={url || "#"}
+                    title={title}
+                    linkClassName="dropdown-item"
+                  />
+                ))}
               </ul>
             </li>
 
@@ -153,21 +114,16 @@ const Navbar = ({ navClassName, navOtherClass, fancy, stickyBox }) => {
                 className="nav-link dropdown-toggle"
                 href="#"
               />
-              <div className="dropdown-menu dropdown-lg">
-                <div className="dropdown-lg-content">
-                  <div>
-                    {soundHealingMenu.map(({ id, title, category }) => (
-                      <h4 className="dropdown-header surgery-headings" key={id}>
-                        <li onMouseEnter={handleSurgeryCategory(category)}>
-                          <Link className="dropdown-item" href="#">
-                            {title}
-                          </Link>
-                        </li>
-                      </h4>
-                    ))}
-                  </div>
-                </div>
-              </div>
+              <ul className="dropdown-menu" data-bs-dismiss="offcanvas">
+                {soundHealing.map(({ id, title, url }) => (
+                  <ListItemLink
+                    key={id}
+                    href={url || "#"}
+                    title={title}
+                    linkClassName="dropdown-item"
+                  />
+                ))}
+              </ul>
             </li>
 
             <li className="nav-item dropdown d-lg-none">
@@ -175,34 +131,15 @@ const Navbar = ({ navClassName, navOtherClass, fancy, stickyBox }) => {
                 title="Sound Healing"
                 className="nav-link dropdown-toggle"
               />
-              <ul className="dropdown-menu">
-                {soundHealing.map(({ id, title, children, url }) =>
-                  children ? (
-                    <li className="dropdown dropdown-submenu dropend" key={id}>
-                      <DropdownToggleLink
-                        title={title}
-                        className="dropdown-item dropdown-toggle"
-                      />
-                      <ul className="dropdown-menu" data-bs-dismiss="offcanvas">
-                        {children.map((child) => (
-                          <ListItemLink
-                            key={child.id}
-                            href="#"
-                            title={child.title}
-                            linkClassName="dropdown-item"
-                          />
-                        ))}
-                      </ul>
-                    </li>
-                  ) : (
-                    <ListItemLink
-                      key={id}
-                      href="#"
-                      title={title}
-                      linkClassName="dropdown-item"
-                    />
-                  )
-                )}
+              <ul className="dropdown-menu" data-bs-dismiss="offcanvas">
+                {soundHealing.map(({ id, title, url }) => (
+                  <ListItemLink
+                    key={id}
+                    href={url || "#"}
+                    title={title}
+                    linkClassName="dropdown-item"
+                  />
+                ))}
               </ul>
             </li>
 
@@ -213,40 +150,17 @@ const Navbar = ({ navClassName, navOtherClass, fancy, stickyBox }) => {
                   className="nav-link dropdown-toggle"
                 />
                 <ul className="dropdown-menu" data-bs-dismiss="offcanvas">
-                  {diet.map(({ id, title, children }) =>
-                    children ? (
-                      <li
-                        className="dropdown dropdown-submenu dropend"
-                        key={id}
-                      >
-                        <DropdownToggleLink title="Treatments" />
-                        <ul className="dropdown-menu">
-                          {renderLinks(children)}
-                        </ul>
-                      </li>
-                    ) : (
-                      <ListItemLink
-                        key={id}
-                        href="#"
-                        title={title}
-                        linkClassName="dropdown-item"
-                      />
-                    )
-                  )}
+                  {diet.map(({ id, title, url }) => (
+                    <ListItemLink
+                      key={id}
+                      href={url || "#"}
+                      title={title}
+                      linkClassName="dropdown-item"
+                    />
+                  ))}
                 </ul>
               </li>
             ))}
-
-            <li
-              className="nav-item align-items-center d-flex mt-3 mt-lg-0 ms-lg-3"
-              data-bs-dismiss="offcanvas"
-            >
-              <NextLink
-                title="Classes"
-                href="/classes"
-                className="nav-link"
-              />
-            </li>
 
             <li
               className="nav-item align-items-center d-flex mt-3 mt-lg-0 ms-lg-3"
