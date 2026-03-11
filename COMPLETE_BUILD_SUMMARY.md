@@ -6,7 +6,7 @@
 - ✅ `/` - Home Page (with Testimonials & Quick Links)
 - ✅ `/about-us` - About Us Page
 - ✅ `/classes` - Online Classes Schedule
-- ✅ `/pricing` - Pricing & Plans
+- ✅ `/shop` - Shop Page
 - ✅ `/faq` - Frequently Asked Questions
 - ✅ `/contact-appointment` - Book Appointment Form
 - ✅ `/contact` - Contact Page (existing)
@@ -72,7 +72,7 @@
 ### Navigation Updates
 ✅ **Navbar** - Updated with links to:
 - Classes
-- Pricing
+- Shop
 - FAQ
 - Book Appointment (CTA)
 

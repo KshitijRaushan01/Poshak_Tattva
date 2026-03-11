@@ -7,12 +7,14 @@ import NextLink from "./NextLink";
 import SocialLinks from "./SocialLinks";
 import ListItemLink from "./ListItemLink";
 import DropdownToggleLink from "./DropdownToggleLink";
+import { useCart } from "context/CartContext";
 
 import { soundHealing, diet, yoga } from "../data.js";
 
 const Navbar = ({ navClassName, navOtherClass, fancy, stickyBox }) => {
   const sticky = useSticky(350);
   const navbarRef = useRef(null);
+  const { cartCount } = useCart();
 
   const renderLinks = (links) =>
     links.map((item) => (
@@ -167,10 +169,41 @@ const Navbar = ({ navClassName, navOtherClass, fancy, stickyBox }) => {
               data-bs-dismiss="offcanvas"
             >
               <NextLink
-                title="Pricing"
-                href="/pricing"
+                title="Shop"
+                href="/shop"
                 className="nav-link"
               />
+            </li>
+
+            <li
+              className="nav-item align-items-center d-flex mt-3 mt-lg-0 ms-lg-3"
+              data-bs-dismiss="offcanvas"
+            >
+              <Link href="/cart" className="nav-link position-relative" style={{ paddingRight: '8px' }} aria-label="View Cart">
+                  🛒
+                  {cartCount > 0 && (
+                    <span
+                      style={{
+                        position: 'absolute',
+                        top: '-4px',
+                        right: '-4px',
+                        background: '#FB991C',
+                        color: '#fff',
+                        borderRadius: '50%',
+                        width: '18px',
+                        height: '18px',
+                        fontSize: '11px',
+                        fontWeight: '700',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        lineHeight: '1',
+                      }}
+                    >
+                      {cartCount > 9 ? '9+' : cartCount}
+                    </span>
+                  )}
+              </Link>
             </li>
 
             <li

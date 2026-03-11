@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import { ToastContainer } from "react-toastify";
 import Layout from "components/Layout";
 import ThemeProvider from "theme/ThemeProvider";
+import { CartProvider } from "context/CartContext";
 
 import "animate.css";
 import "styles/style.css";
@@ -86,16 +87,18 @@ function MyApp({ Component, pageProps }) {
         />
       </Head>
 
-      <ThemeProvider>
-        <Layout>
-          <ToastContainer position="bottom-right" autoClose={5000} />
-          {loading ? (
-            <div className="page-loader" />
-          ) : (
-            <Component {...pageProps} />
-          )}
-        </Layout>
-      </ThemeProvider>
+      <CartProvider>
+        <ThemeProvider>
+          <Layout>
+            <ToastContainer position="bottom-right" autoClose={5000} />
+            {loading ? (
+              <div className="page-loader" />
+            ) : (
+              <Component {...pageProps} />
+            )}
+          </Layout>
+        </ThemeProvider>
+      </CartProvider>
     </Fragment>
   );
 }

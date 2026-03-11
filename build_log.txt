@@ -1,0 +1,62 @@
+
+> entrova-nextjs@1.0.0 build
+> next build
+
+   Γû▓ Next.js 15.5.12
+
+   Linting and checking validity of types ...
+   Creating an optimized production build ...
+ Γ£ô Compiled successfully in 11.3s
+   Collecting page data ...
+   Generating static pages (0/31) ...
+   Generating static pages (7/31) 
+   Generating static pages (15/31) 
+   Generating static pages (23/31) 
+ Γ£ô Generating static pages (31/31)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (pages)                                 Size  First Load JS
+Γöî Γùï / (645 ms)                              6.7 kB         109 kB
+Γö£   /_app                                      0 B         102 kB
+Γö£ Γùï /404 (1157 ms)                         2.04 kB         104 kB
+Γö£ Γùï /about-us (1158 ms)                    5.18 kB         107 kB
+Γö£ ╞Æ /api/contact                               0 B         102 kB
+Γö£ ╞Æ /api/razorpay/payment                      0 B         102 kB
+Γö£ Γùï /cart (653 ms)                         2.19 kB         104 kB
+Γö£ Γùï /checkout (1158 ms)                    3.18 kB         105 kB
+Γö£ Γùï /classes (1159 ms)                     2.83 kB         105 kB
+Γö£ Γùï /contact-appointment (650 ms)          2.04 kB         104 kB
+Γö£ Γùï /diet/autoimmune (649 ms)              1.86 kB         104 kB
+Γö£ Γùï /diet/digestive-disorders (649 ms)     1.87 kB         104 kB
+Γö£ Γùï /diet/hormonal (647 ms)                 1.9 kB         104 kB
+Γö£ Γùï /diet/lifestyle                        1.84 kB         104 kB
+Γö£ Γùï /diet/weight-loss (647 ms)             1.88 kB         104 kB
+Γö£ Γùï /faq (646 ms)                          2.93 kB         105 kB
+Γö£ Γùï /order-confirmation                    2.26 kB         104 kB
+Γö£ ΓùÅ /product/[id] (641 ms)                 2.95 kB         105 kB
+Γö£   Γö£ /product/1
+Γö£   Γö£ /product/2
+Γö£   Γö£ /product/3
+Γö£   Γöö [+3 more paths]
+Γö£ Γùï /shop (1158 ms)                        4.45 kB         106 kB
+Γö£ Γùï /sound-healing/1-1-session             1.87 kB         104 kB
+Γö£ Γùï /sound-healing/chakra-healing          1.94 kB         104 kB
+Γö£ Γùï /sound-healing/gong-bath               1.92 kB         104 kB
+Γö£ Γùï /sound-healing/workshop                1.93 kB         104 kB
+Γö£ Γùï /yoga/group-sessions (1159 ms)         1.95 kB         104 kB
+Γö£ Γùï /yoga/meditation                       1.89 kB         104 kB
+Γö£ Γùï /yoga/nidra                            2.03 kB         104 kB
+Γö£ Γùï /yoga/pranayama (1166 ms)               1.9 kB         104 kB
+Γöö Γùï /yoga/pranayams (1160 ms)              1.94 kB         104 kB
++ First Load JS shared by all               212 kB
+  Γö£ chunks/framework-37f3832b4337c515.js   44.8 kB
+  Γö£ chunks/main-2467aaa25b49dd48.js        34.3 kB
+  Γö£ chunks/pages/_app-7640640f9364b495.js    21 kB
+  Γö£ css/4b1a3941cc5e136c.css                110 kB
+  Γöö other shared chunks (total)            1.79 kB
+
+Γùï  (Static)   prerendered as static content
+ΓùÅ  (SSG)      prerendered as static HTML (uses getStaticProps)
+╞Æ  (Dynamic)  server-rendered on demand
+
