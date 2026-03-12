@@ -7,7 +7,10 @@ export default function WeightLossPage() {
       <PageProgress />
       <Head>
         <title>Weight Loss Diet Consultation - Poshak Tattva</title>
-        <meta name="description" content="Natural weight loss through sattvic nutrition without deprivation." />
+        <meta
+          name="description"
+          content="Natural weight loss through sattvic nutrition without deprivation."
+        />
       </Head>
 
       <main className="content-wrapper">
@@ -16,7 +19,9 @@ export default function WeightLossPage() {
           <div className="container">
             <div className="text-center">
               <h1 className="display-4 fw-bold mb-4">Weight Loss</h1>
-              <p className="lead text-muted">Sustainable Weight Loss Through Natural Nutrition</p>
+              <p className="lead text-muted">
+                Sustainable Weight Loss Through Natural Nutrition
+              </p>
             </div>
           </div>
         </section>
@@ -26,12 +31,19 @@ export default function WeightLossPage() {
           <div className="container">
             <div className="row g-4 align-items-center">
               <div className="col-lg-6">
-                <h2 className="h3 fw-bold mb-4">Lose Weight Without Starving</h2>
+                <h2 className="h3 fw-bold mb-4">
+                  Lose Weight Without Starving
+                </h2>
                 <p className="text-muted mb-3">
-                  Tired of restrictive diets that leave you hungry and miserable? We believe in sustainable weight loss through nourishing, whole foods that your body actually needs.
+                  Tired of restrictive diets that leave you hungry and
+                  miserable? We believe in sustainable weight loss through
+                  nourishing, whole foods that your body actually needs.
                 </p>
                 <p className="text-muted mb-4">
-                  Our sattvic nutrition approach addresses the real causes of weight gain—poor digestion, hormonal imbalance, and food addictions—helping you lose weight naturally while feeling energized and satisfied.
+                  Our sattvic nutrition approach addresses the real causes of
+                  weight gain—poor digestion, hormonal imbalance, and food
+                  addictions—helping you lose weight naturally while feeling
+                  energized and satisfied.
                 </p>
                 <a href="/contact-appointment" className="btn btn-primary">
                   Start Weight Loss Journey
@@ -50,7 +62,10 @@ export default function WeightLossPage() {
                       "Supports overall wellness",
                     ].map((item, idx) => (
                       <li key={idx} className="mb-3 d-flex align-items-start">
-                        <i className="uil uil-check-circle text-success me-3 mt-1" style={{ fontSize: "1.2rem" }} />
+                        <i
+                          className="uil uil-check-circle text-success me-3 mt-1"
+                          style={{ fontSize: "1.2rem" }}
+                        />
                         <span>{item}</span>
                       </li>
                     ))}
@@ -79,10 +94,19 @@ export default function WeightLossPage() {
         </section>
 
         {/* CTA */}
-        <section className="wrapper py-16" style={{ background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)" }}>
+        <section
+          className="wrapper py-16"
+          style={{
+            background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+          }}
+        >
           <div className="container text-center text-white">
             <h2 className="h3 fw-bold mb-4">Your Transformation Starts Here</h2>
-            <a href="/contact-appointment" className="btn btn-lg fw-bold" style={{ background: "white", color: "#667eea", border: "none" }}>
+            <a
+              href="/contact-appointment"
+              className="btn btn-lg fw-bold"
+              style={{ background: "white", color: "#667eea", border: "none" }}
+            >
               Begin Today
             </a>
           </div>
