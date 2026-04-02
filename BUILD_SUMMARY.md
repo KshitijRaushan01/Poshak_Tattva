@@ -30,28 +30,63 @@
 - Accordion-style Q&A
 - Contact options in footer
 
-### 4. **Testimonials Component** (`/src/components/Testimonials.jsx`)
+### 4. **🖼️ Gallery Page** (`/pages/gallery.jsx`)
+- Responsive image grid layout
+- Lightbox modal for expanded image viewing
+- Hover scale animation on cards
+- Images served from `/public/img/Gallery/`
+
+### 5. **🛒 Cart Page** (`/pages/cart.jsx`)
+- Full shopping cart UI
+- Item quantity controls (increment/decrement/remove)
+- Order summary with subtotal, shipping, and total
+- Checkout CTA button
+
+### 6. **💳 Checkout Page** (`/pages/checkout.jsx`)
+- Multi-step checkout form (shipping + payment)
+- Razorpay payment integration
+- Order summary sidebar
+- Form validation
+
+### 7. **✅ Order Confirmation Page** (`/pages/order-confirmation.jsx`)
+- Post-payment success screen
+- Order details summary
+- Continue shopping link
+
+### 8. **🔒 Privacy Policy Page** (`/pages/privacy-policy.jsx`)
+- Data collection & usage policy
+- Information sharing disclosure
+- Contact information
+
+### 9. **🛍️ Product Detail Page** (`/pages/product/[id].jsx`)
+- Dynamic routing by product ID
+- Image gallery with thumbnail navigation
+- Add to cart functionality
+- Product description, features, and specifications
+- Related products section
+
+### 10. **Testimonials Component** (`/src/components/Testimonials.jsx`)
 - 4 sample testimonials from different cities
 - Star ratings
 - Student stats (500+ students, 50+ cities, 98% satisfaction)
 - Emoji avatars for visual appeal
+- **Earthy Stats Display**: Features a grounded green gradient section for student achievements.
 
 ## 🎨 Theme & Styling Features
 
-✨ **Consistent Design:**
-- Primary color: Blue (`#667eea` to `#764ba2` gradients)
-- Success color: Green (for checkmarks)
-- Warning color: Yellow (for stars)
-- Bootstrap classes for responsive design
+✨ **Brand Color Scheme (Earthy Transformation):**
+- **Primary:** Deep Forest Green (`#1F3D2B`, `#3D5C4A`)
+- **Backgrounds:** Warm Beige (`#fff5eb`) & Soft Sand
+- **Accents:** Muted Gold, Terracotta, and Sage Green
+- **Contrast Optimization**: All dark sections (Forest Green) feature `text-white` with enhanced visibility for headings and lead paragraphs.
 - Smooth transitions and hover effects
-- Modern card layouts with shadows
+- Modern card layouts with organic shadows
 
 🎯 **Visual Enhancements:**
 - Gradient sections with text-white
 - Badge elements for highlights
-- Icon integration (Unicons)
+- Icon integration (Unicons, Lucide)
 - Table layouts for schedules
-- Emojis for city identification
 - Professional typography hierarchy
 
 ## 📱 Responsive Design
@@ -64,19 +99,24 @@ All pages are:
 ## 🔗 Navigation Updates
 Updated Navbar with links to:
 - `/classes` - Online Classes
-- `/pricing` - Pricing Plans
+- `/gallery` - Gallery
+- `/shop` - Shop
 - `/faq` - Frequently Asked Questions
 - `/contact-appointment` - Book Appointment (CTA button)
+- `/privacy-policy` - Privacy Policy (Footer)
 
 ## 📊 Features by Page
 
-### Classes Page
-- City selector buttons
-- Live schedule table
-- Responsive design
-- 4-step "How it works"
-- Requirements checklist
-- Benefits list
+### E-Commerce Flow
+- Product listing → Product detail → Cart → Checkout → Order Confirmation
+- `src/data/products.js` — centralized product data with images, prices, descriptions
+- **Optimized Pricing**: Product cards on the Shop page now display "From ₹MIN" for clearer catalog browsing.
+- **Dynamic Cart**: Synchronized cart state via `localStorage`.
+
+### Gallery Page
+- Responsive 3-column grid
+- Click-to-expand lightbox modal
+- Smooth hover scale effect
 
 ### Pricing Page
 - 3 card layout
@@ -94,22 +134,23 @@ Updated Navbar with links to:
 ### Home Page Enhancements
 - Added Testimonials section
 - Added Quick Links section (3 cards linking to Classes, Pricing, FAQ)
-- Maintained existing sections
+- StatsSection component added
 
 ## 💡 Key Features
 
-✅ **Beautiful Gradient Sections**
-- Used throughout for CTAs
-- Gradient: `linear-gradient(135deg, #667eea 0%, #764ba2 100%)`
+✅ **E-Commerce Ready**
+- Full cart and checkout flow
+- Razorpay payment integration
+- `products.js` data layer
 
 ✅ **Interactive Elements**
+- Lightbox gallery
 - Accordion FAQs
 - City selector buttons
 - Hover effects on cards
-- Badge highlights
 
 ✅ **Call-to-Action Buttons**
-- All CTAs link to `/contact-appointment`
+- All CTAs link to `/contact-appointment` or `/classes`
 - Buttons on pricing, classes, and quick links sections
 
 ✅ **Professional Messaging**
@@ -122,27 +163,39 @@ Updated Navbar with links to:
 1. **Update instructor names/photos** - Replace placeholder names with real instructors
 2. **Add real testimonials** - Replace sample testimonials with actual student reviews
 3. **Update pricing** - Adjust ₹ values if needed
-4. **Add more cities** - Expand to more cities as you grow
-5. **Add blog section** - SEO content for local yoga keywords
-6. **Integrate payment gateway** - Connect Stripe/Razorpay for online payments
-7. **Add email newsletter** - Collect emails for marketing
+4. **Add gallery images** - Add more images to `/public/img/Gallery/`
+5. **Configure Razorpay** - Add your Razorpay API keys to `.env.local`
+6. **Integrate email newsletter** - Collect emails for marketing
+7. **Add blog section** - SEO content for local yoga/wellness keywords
 
 ## 📝 File Structure
 
 ```
 pages/
-├── pricing.jsx (NEW)
-├── faq.jsx (NEW)
-├── classes.jsx (NEW)
-├── index.jsx (UPDATED - added Testimonials & Quick Links)
+├── index.jsx          (UPDATED - Testimonials, Quick Links, StatsSection)
+├── gallery.jsx        (NEW)
+├── cart.jsx           (NEW)
+├── checkout.jsx       (NEW)
+├── order-confirmation.jsx (NEW)
+├── privacy-policy.jsx (NEW)
+├── pricing.jsx        (NEW)
+├── faq.jsx            (NEW)
+├── classes.jsx        (NEW)
+├── shop.jsx           (UPDATED - dynamic products)
 ├── contact-appointment.jsx (existing)
+├── product/
+│   └── [id].jsx       (NEW - dynamic product detail)
 
-src/components/
-├── Testimonials.jsx (NEW)
-├── Navbar.jsx (UPDATED - added new page links)
+src/
+├── components/
+│   ├── Testimonials.jsx (NEW)
+│   ├── ProductCard.jsx  (NEW)
+│   ├── StatsSection.jsx (NEW)
+│   └── Navbar.jsx       (UPDATED - added new page links)
+└── data/
+    └── products.js      (NEW - centralized product data)
 ```
 
 ---
 
-**All pages follow your theme, are mobile-responsive, and use consistent branding!** 🎉
-
+**All pages follow your brand theme, are mobile-responsive, and use consistent branding!** 🎉

@@ -186,11 +186,11 @@ export default function CheckoutPage() {
       <main className="content-wrapper">
         <section
           className="wrapper py-10"
-          style={{ background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)" }}
+          style={{ background: "linear-gradient(135deg, #1F3D2B 0%, #3D5C4A 100%)" }}
         >
-          <div className="container text-center text-white">
-            <h1 className="display-5 fw-bold mb-2">Checkout</h1>
-            <p className="lead opacity-75 mb-0">Almost there – just fill in your details</p>
+          <div className="container text-center">
+            <h1 className="display-5 fw-bold mb-2 text-white">Checkout</h1>
+            <p className="lead opacity-75 mb-0 text-white">Secure payment & order processing</p>
           </div>
         </section>
 
@@ -294,7 +294,7 @@ export default function CheckoutPage() {
                       <span className="text-muted">Shipping</span>
                       <span className="text-success">FREE</span>
                     </div>
-                    <div className="d-flex justify-content-between fw-bold fs-5 mb-4">
+                    <div className="d-flex justify-content-between fw-bold mb-4">
                       <span>Total</span>
                       <span style={{ color: "#FB991C" }}>₹{cartTotal.toLocaleString()}</span>
                     </div>

@@ -34,10 +34,18 @@ export default function Testimonials() {
     },
   ];
 
+  const stats = [
+    { icon: "🧘‍♀️", number: "5000+", label: "Students Trained" },
+    { icon: "⭐", number: "4.9/5", label: "Average Rating" },
+    { icon: "🏆", number: "15+", label: "Years Experience" },
+    { icon: "🌿", number: "50+", label: "Wellness Programs" },
+  ];
+
   return (
-    <section className="wrapper py-16">
-      <div className="container">
-        <div className="text-center mb-12">
+    <>
+      <section className="wrapper py-16"> 
+        <div className="container">
+          <div className="text-center mb-12">
           <p className="fs-80 fw-bolder sub-h2 position-relative">
             Success Stories
           </p>
@@ -74,23 +82,25 @@ export default function Testimonials() {
             </div>
           ))}
         </div>
-
-        {/* Stats */}
-        <div className="row text-center mt-12 pt-8 border-top">
-          <div className="col-md-4 mb-4 mb-md-0">
-            <div className="h2 fw-bold text-primary">500+</div>
-            <p className="text-muted">Happy Students</p>
-          </div>
-          <div className="col-md-4 mb-4 mb-md-0">
-            <div className="h2 fw-bold text-primary">50+</div>
-            <p className="text-muted">Cities Across India</p>
-          </div>
-          <div className="col-md-4">
-            <div className="h2 fw-bold text-primary">98%</div>
-            <p className="text-muted">Satisfaction Rate</p>
-          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* Stats Section */}
+      <section className="wrapper py-16" style={{ background: "linear-gradient(135deg, #1F3D2B 0%, #3D5C4A 100%)" }}>
+        <div className="container">
+            <div className="row g-4 text-center">
+              {stats.map((stat, idx) => (
+                <div key={idx} className="col-md-6 col-lg-3">
+                  <div className="text-white">
+                    <div style={{ fontSize: "2.5rem", marginBottom: "0.5rem" }}>{stat.icon}</div>
+                    <h3 className="h2 fw-bold mb-2 text-white">{stat.number}</h3>
+                    <p className="mb-0 text-white text-opacity-75">{stat.label}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+      </section>
+    </>
   );
 }

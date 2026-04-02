@@ -84,23 +84,23 @@ export const yoga = [
 ];
 
 export const aboutUsFooter = [
-  { id: 1, title: 'Home' },
-  { id: 2, title: 'About Poshak Tattva' },
-  { id: 3, title: 'Yoga' },
-  { id: 4, title: 'Diet' },
-  { id: 5, title: 'Sound Healing' },
-  { id: 6, title: 'Gallery' },
-  { id: 7, title: 'Contact Us' },
-  { id: 8, title: 'Book Consultation' },
-  { id: 9, title: 'Privacy Policy' },
+  { id: 1, title: 'Home', url: '/' },
+  { id: 2, title: 'About Poshak Tattva', url: '/about-us' },
+  { id: 3, title: 'Yoga', url: '/classes' },
+  { id: 4, title: 'Diet', url: '/diet/weight-loss' },
+  { id: 5, title: 'Sound Healing', url: '/sound-healing/1-1-session' },
+  { id: 6, title: 'Gallery', url: '/gallery' },
+  { id: 7, title: 'Contact Us', url: '/contact-appointment' },
+  { id: 8, title: 'Book Consultation', url: '/contact-appointment' },
+  { id: 9, title: 'Privacy Policy', url: '/privacy-policy' },
 ];
 
 export const treatmentsFooter = [
-  { id: 1, title: 'Digestive Disorders' },
-  { id: 2, title: 'Hormonal Balance' },
-  { id: 3, title: 'Lifestyle Management' },
-  { id: 4, title: 'Weight Loss' },
-  { id: 5, title: 'Chakra Healing' },
+  { id: 1, title: 'Digestive Disorders', url: '/diet/digestive-disorders' },
+  { id: 2, title: 'Hormonal Balance', url: '/diet/hormonal' },
+  { id: 3, title: 'Lifestyle Management', url: '/diet/lifestyle' },
+  { id: 4, title: 'Weight Loss', url: '/diet/weight-loss' },
+  { id: 5, title: 'Chakra Healing', url: '/sound-healing/chakra-healing' },
 ];
 
 export const soundHealing = [

@@ -12,7 +12,7 @@ export default function SoundHealingWorkshopPage() {
 
       <main className="content-wrapper">
         {/* Header */}
-        <section className="wrapper bg-light py-16">
+        <section className="wrapper py-16" style={{ backgroundColor: "#f4effa" }}>
           <div className="container">
             <div className="text-center">
               <h1 className="display-4 fw-bold mb-4">Sound Healing Workshop</h1>
@@ -80,10 +80,10 @@ export default function SoundHealingWorkshopPage() {
         </section>
 
         {/* CTA */}
-        <section className="wrapper py-16" style={{ background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)" }}>
-          <div className="container text-center text-white">
-            <h2 className="h3 fw-bold mb-4">Join Our Next Workshop</h2>
-            <a href="/contact-appointment" className="btn btn-lg fw-bold" style={{ background: "white", color: "#667eea", border: "none" }}>
+        <section className="wrapper py-16" style={{ background: "linear-gradient(135deg, #1F3D2B 0%, #3D5C4A 100%)" }}>
+          <div className="container text-center">
+            <h2 className="h3 fw-bold mb-4 text-white">Join Our Next Workshop</h2>
+            <a href="/contact-appointment" className="btn btn-lg fw-bold" style={{ background: "white", color: "#1F3D2B", border: "none" }}>
               View Schedules
             </a>
           </div>

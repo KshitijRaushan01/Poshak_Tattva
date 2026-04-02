@@ -3,25 +3,24 @@
 export default function StatsSection() {
   const stats = [
     { value: "8+", label: "Years Of Experience" },
-    { value: "150,000+", label: "Happy Patients" },
-    { value: "50,000+", label: "Operations" },
+    { value: "150,00+", label: "Happy Patients" },
+    { value: "50,00+", label: "Operations" },
   ];
 
   return (
-    <section className="py-12">
-      <div className="max-w-6xl mx-auto px-6">
+    <section className="wrapper py-12">
+      <div className="container">
         <div
-          className="bg-gradient-to-r from-blue-900 to-blue-800 rounded-2xl text-white py-12 px-8 flex flex-col md:flex-row justify-around items-center gap-8"
+          className="rounded-4 text-white py-12 px-8 d-flex flex-column flex-md-row justify-content-around align-items-center gap-4"
           style={{
-            backgroundImage: "url('/img/poshak.png')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
+            background: "linear-gradient(135deg, #1F3D2B 0%, #3D5C4A 100%)",
+            boxShadow: "0 10px 30px rgba(31, 61, 43, 0.2)"
           }}
         >
           {stats.map((item, i) => (
             <div key={i} className="text-center">
-              <h3 className="text-4xl font-bold">{item.value}</h3>
-              <p className="text-lg mt-2">{item.label}</p>
+              <h3 className="display-4 fw-bold mb-2 text-white">{item.value}</h3>
+              <p className="lead mb-0 text-white text-opacity-75">{item.label}</p>
             </div>
           ))}
         </div>

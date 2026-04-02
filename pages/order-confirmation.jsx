@@ -27,7 +27,7 @@ export default function OrderConfirmationPage() {
     document.head.appendChild(style);
 
     // Spawn confetti pieces
-    const colors = ["#667eea", "#764ba2", "#FB991C", "#1C7690", "#4CAF50"];
+    const colors = ["#1F3D2B", "#3D5C4A", "#FB991C", "#1C7690", "#4CAF50"];
     const container = document.body;
     const pieces = [];
     for (let i = 0; i < 40; i++) {

@@ -45,11 +45,11 @@ export default function CartPage() {
       <main className="content-wrapper">
         <section
           className="wrapper py-10"
-          style={{ background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)" }}
+          style={{ background: "linear-gradient(135deg, #1F3D2B 0%, #3D5C4A 100%)" }}
         >
-          <div className="container text-center text-white">
-            <h1 className="display-5 fw-bold mb-2">Your Cart</h1>
-            <p className="lead opacity-75 mb-0">{cartCount} item{cartCount !== 1 ? "s" : ""} in your bag</p>
+          <div className="container text-center">
+            <h1 className="display-5 fw-bold mb-2 text-white">Your Cart</h1>
+            <p className="lead opacity-75 mb-0 text-white">{cartCount} item{cartCount !== 1 ? "s" : ""} in your bag</p>
           </div>
         </section>
 
@@ -158,8 +158,8 @@ export default function CartPage() {
                   </div>
                   <hr />
                   <div className="d-flex justify-content-between mb-4">
-                    <span className="fw-bold fs-5">Total</span>
-                    <span className="fw-bold fs-5" style={{ color: "#FB991C" }}>
+                    <span className="fw-bold">Total</span>
+                    <span className="fw-bold" style={{ color: "#FB991C" }}>
                       ₹{cartTotal.toLocaleString()}
                     </span>
                   </div>

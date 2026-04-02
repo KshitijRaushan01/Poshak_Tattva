@@ -203,11 +203,11 @@ export default function ClassesPage() {
         </section>
 
         {/* CTA */}
-        <section className="wrapper py-16" style={{ background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)" }}>
-          <div className="container text-center text-white">
-            <h2 className="h3 fw-bold mb-4">Ready to Start Your Wellness Journey?</h2>
-            <p className="lead mb-6">Join hundreds of students transforming their lives</p>
-            <a href="/contact-appointment" className="btn btn-lg fw-bold" style={{ background: "white", color: "#667eea", border: "none" }}>
+        <section className="wrapper py-16" style={{ background: "linear-gradient(135deg, #1F3D2B 0%, #3D5C4A 100%)" }}>
+          <div className="container text-center">
+            <h2 className="h3 fw-bold mb-4 text-white">Ready to Start Your Wellness Journey?</h2>
+            <p className="lead mb-6 text-white text-opacity-75">Join hundreds of students transforming their lives</p>
+            <a href="/contact-appointment" className="btn btn-lg fw-bold" style={{ background: "white", color: "#1F3D2B", border: "none" }}>
               Book Your First Class Now
             </a>
           </div>

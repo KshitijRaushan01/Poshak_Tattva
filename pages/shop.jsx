@@ -21,13 +21,15 @@ export default function ShopPage() {
         <section
           className="wrapper py-12"
           style={{
-            background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+            background: "linear-gradient(135deg, #1F3D2B 0%, #3D5C4A 100%)",
           }}
         >
-          <div className="container text-center text-white">
-            <h1 className="display-5 fw-bold mb-3">Wellness Shop</h1>
-            <p className="lead mb-0 opacity-75">
+          <div className="container text-center">
+            <h1 className="display-5 fw-bold mb-3 text-white">Wellness Shop</h1>
+            <p className="lead mb-0 opacity-75 text-white">
               Curated tools to deepen your practice
+              <br />
+              Start your Healing Journey
             </p>
           </div>
         </section>
@@ -36,9 +38,9 @@ export default function ShopPage() {
         <section className="wrapper py-16 bg-light">
           <div className="container">
             <div className="row g-4">
-              {products.map((product) => (
+              {products.map((product, idx) => (
                 <div key={product.id} className="col-lg-4 col-md-6">
-                  <ProductCard product={product} />
+                  <ProductCard product={product} priority={idx < 6} />
                 </div>
               ))}
             </div>

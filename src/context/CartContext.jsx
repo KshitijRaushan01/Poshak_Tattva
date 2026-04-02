@@ -1,9 +1,51 @@
-import { createContext, useContext, useState, useCallback } from "react";
+import { createContext, useContext, useState, useCallback, useEffect } from "react";
 
 const CartContext = createContext(null);
 
 export function CartProvider({ children }) {
   const [cartItems, setCartItems] = useState([]);
+  const [isInitialized, setIsInitialized] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      try {
+        const item = window.localStorage.getItem("poshak_cart");
+        if (item) {
+          setCartItems(JSON.parse(item));
+        }
+      } catch (error) {
+        console.warn("Failed to parse cart from localStorage", error);
+      }
+      setIsInitialized(true);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (isInitialized && typeof window !== "undefined") {
+      try {
+        window.localStorage.setItem("poshak_cart", JSON.stringify(cartItems));
+      } catch (error) {
+        console.warn("Failed to save cart to localStorage", error);
+      }
+    }
+  }, [cartItems, isInitialized]);
+
+  useEffect(() => {
+    const handleStorageChange = (e) => {
+      if (e.key === "poshak_cart") {
+        try {
+          const newCart = e.newValue ? JSON.parse(e.newValue) : [];
+          setCartItems(newCart);
+        } catch (error) {
+          console.warn("Error parsing storage cart:", error);
+        }
+      }
+    };
+    if (typeof window !== "undefined") {
+      window.addEventListener("storage", handleStorageChange);
+      return () => window.removeEventListener("storage", handleStorageChange);
+    }
+  }, []);
 
   const addToCart = useCallback((product) => {
     setCartItems((prev) => {

@@ -32,12 +32,11 @@ const Navbar = ({ navClassName, navOtherClass, fancy, stickyBox }) => {
         <NextLink
           href="/"
           title={
-            <Image
+            <img
               alt="Logo | Poshak Tattva"
               className="py-2"
-              src="/img/poshak.png"
-              width={90}
-              height={90}
+              src="/img/logo_new.png"
+              style={{ maxHeight: "90px", width: "auto" }}
             />
           }
         />
@@ -52,13 +51,12 @@ const Navbar = ({ navClassName, navOtherClass, fancy, stickyBox }) => {
           <NextLink
             href="/"
             title={
-              <Image
+              <img
                 id="nav-logo"
                 alt="Logo | Poshak Tattva"
-                className="p-2 position-static bg-white rounded"
-                src="/img/poshak.png"
-                style={{ maxWidth: "200px" }}
-                layout="fill"
+                className="p-2 bg-white rounded"
+                src="/img/logo_new.png"
+                style={{ maxWidth: "200px", height: "auto" }}
               />
             }
           />

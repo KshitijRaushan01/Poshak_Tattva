@@ -31,14 +31,12 @@ const Footer = () => {
           {/* Logo + Contact Info */}
           <div className="col-lg-3">
             <div className="widget d-flex flex-column align-items-center">
-              <div className="d-flex w-100">
-                <Image
-                  src="/img/poshak.png"
+              <div className="d-flex w-100 justify-content-center">
+                <img
+                  src="/img/logo_new.png"
                   alt="Logo | Poshak Tattva"
-                  width={150}
-                  height={100}
                   className="text-center"
-                  style={{ width: "100%", height: "100%" }}
+                  style={{ maxWidth: "200px", height: "auto" }}
                 />
               </div>
 

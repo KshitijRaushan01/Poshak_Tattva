@@ -29,9 +29,9 @@ export default function AboutUs() {
 
   const team = [
     {
-      name: "Dr. Rajeev Kumar",
-      role: "Founder & Yoga Therapist",
-      bio: "15+ years of experience in traditional yoga and holistic healing",
+      name: "Priyanka Pugalia",
+      role: "Founder & Yoga Therapist & Holistic Coach",
+      bio: "8+ years of experience in traditional yoga and holistic healing",
       icon: "👨‍⚕️"
     },
     {
@@ -56,22 +56,22 @@ export default function AboutUs() {
 
   const timeline = [
     {
-      year: "2009",
+      year: "2020",
       title: "The Beginning",
-      desc: "Dr. Rajeev Kumar founded Poshak Tattva with a vision to bring holistic wellness to urban communities."
+      desc: "Priyanka Pugalia founded Poshak Tattva with a vision to bring holistic wellness to urban communities."
     },
     {
-      year: "2012",
+      year: "2021",
       title: "Expansion Phase",
       desc: "Opened branches in 5 major cities and trained 50+ certified instructors."
     },
     {
-      year: "2016",
+      year: "2022",
       title: "Digital Transformation",
       desc: "Launched online classes to reach students across the country and beyond."
     },
     {
-      year: "2020",
+      year: "2023",
       title: "Global Reach",
       desc: "Now serving 500+ students across 50+ cities with specialized wellness programs."
     },
@@ -120,7 +120,7 @@ Through the integration of Yoga, Diet, and Sound Healing, we guide you on a tran
           <div className="container">
             <div className="row g-6">
               <div className="col-lg-6">
-                <div className="card border-0 shadow-lg p-8" style={{ borderTop: "4px solid #667eea" }}>
+                <div className="card border-0 shadow-lg p-8" style={{ borderTop: "4px solid #1F3D2B" }}>
                   <h3 className="h4 fw-bold mb-4">🎯 Our Mission</h3>
                   <p className="text-muted lh-lg">
                     To empower individuals across all cities and cultures with accessible, personalized holistic wellness solutions that integrate the wisdom of ancient practices with modern science. We are committed to transforming lives by facilitating profound healing and sustainable wellness through Yoga, Sattvic Diet, and Sound Healing.
@@ -128,7 +128,7 @@ Through the integration of Yoga, Diet, and Sound Healing, we guide you on a tran
                 </div>
               </div>
               <div className="col-lg-6">
-                <div className="card border-0 shadow-lg p-8" style={{ borderTop: "4px solid #764ba2" }}>
+                <div className="card border-0 shadow-lg p-8" style={{ borderTop: "4px solid #1F3D2B" }}>
                   <h3 className="h4 fw-bold mb-4">✨ Our Vision</h3>
                   <p className="text-muted lh-lg">
                     To create a world where every individual has access to holistic wellness tools and guidance, enabling them to achieve complete balance in body, mind, and spirit. We envision a community where wellness is not a luxury, but a fundamental right accessible to all, fostering a healthier, more conscious, and more compassionate society.
@@ -168,7 +168,7 @@ Through the integration of Yoga, Diet, and Sound Healing, we guide you on a tran
               imgSrc="/img/yds.png"
               heading="Why Choose Poshak Tattva?"
               isH1="false"
-              para="Poshak Tattva stands out in the wellness industry for several compelling reasons. With over 15 years of experience, we've perfected a unique approach that combines ancient yogic wisdom with contemporary science. Our team of certified experts are deeply passionate about your wellness journey.
+              para="Poshak Tattva stands out in the wellness industry for several compelling reasons. With over 6 years of experience, we've perfected a unique approach that combines ancient yogic wisdom with contemporary science. Our team of certified experts are deeply passionate about your wellness journey.
 
 We don't believe in one-size-fits-all solutions. Every student receives personalized attention and customized programs tailored to their specific needs and goals. Our multi-city presence across 50+ cities ensures you can access our programs wherever you are, while our online platform brings flexibility to your schedule.
 
@@ -188,7 +188,7 @@ Beyond just teaching techniques, we build a supportive community where you're em
               {team.map((member, idx) => (
                 <div key={idx} className="col-md-6 col-lg-3">
                   <div className="card h-100 border-0 shadow-sm overflow-hidden text-center">
-                    <div style={{ background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)", padding: "2rem", color: "white" }}>
+                    <div style={{ background: "linear-gradient(135deg, #1F3D2B 0%, #3D5C4A 100%)", padding: "2rem", color: "white" }}>
                       <div style={{ fontSize: "4rem" }}>{member.icon}</div>
                     </div>
                     <div className="p-6">
@@ -208,9 +208,9 @@ Beyond just teaching techniques, we build a supportive community where you're em
           <div className="container">
             <div className="text-center mb-12">
               <h2 className="display-5 fw-bold mb-4">Our Journey</h2>
-              <p className="lead text-muted">15+ years of transforming lives through holistic wellness</p>
+              <p className="lead text-muted">6+ years of transforming lives through holistic wellness</p>
             </div>
-            
+
             <div style={{ position: "relative" }}>
               {/* Timeline line */}
               <div style={{
@@ -219,7 +219,7 @@ Beyond just teaching techniques, we build a supportive community where you're em
                 top: 0,
                 bottom: 0,
                 width: "2px",
-                background: "linear-gradient(180deg, #667eea 0%, #764ba2 100%)",
+                background: "linear-gradient(180deg, #1F3D2B 0%, #3D5C4A 100%)",
                 transform: "translateX(-50%)"
               }} className="d-none d-lg-block" />
 
@@ -235,7 +235,7 @@ Beyond just teaching techniques, we build a supportive community where you're em
                         width: "20px",
                         height: "20px",
                         background: "white",
-                        border: "4px solid #667eea",
+                        border: "4px solid #1F3D2B",
                         borderRadius: "50%",
                         transform: "translateX(-50%)",
                         zIndex: 2
@@ -258,13 +258,13 @@ Beyond just teaching techniques, we build a supportive community where you're em
         <StatsSection />
 
         {/* Commitment Section */}
-        <section className="wrapper py-16" style={{ background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)" }}>
+        <section className="wrapper py-16" style={{ background: "linear-gradient(135deg, #1F3D2B 0%, #3D5C4A 100%)" }}>
           <div className="container">
             <div className="row g-4 text-white">
               <div className="col-lg-8">
-                <h2 className="h3 fw-bold mb-4">Our Commitment to You</h2>
-                <p className="lead mb-4">
-                  At Poshak Tattva, your wellness transformation is our priority. We are committed to:
+                <h2 className="display-6 fw-bold mb-4 text-white">Our Commitment to Your Wellness</h2>
+                <p className="lead mb-4 text-white text-opacity-75">
+                  We don't just provide services; we build relationships. Our commitment is to walk alongside you on your healing journey, providing the tools, knowledge, and support you need to achieve your manifestation of health.
                 </p>
                 <ul className="list-unstyled">
                   {[
@@ -283,9 +283,9 @@ Beyond just teaching techniques, we build a supportive community where you're em
               </div>
               <div className="col-lg-4 d-flex flex-column justify-content-center text-center">
                 <div style={{ fontSize: "4rem", marginBottom: "1rem" }}>💚</div>
-                <h4 className="fw-bold mb-3">Join Our Community</h4>
-                <p className="mb-4">Become part of our growing family of wellness seekers across 50+ cities</p>
-                <a href="/contact-appointment" className="btn btn-lg fw-bold" style={{ background: "white", color: "#667eea", border: "none" }}>
+                <h2 className="h3 fw-bold mb-4 text-white">Ready to Start Your Wellness Journey?</h2>
+                <p className="lead mb-6 text-white text-opacity-75">Join hundreds of students transforming their lives</p>
+                <a href="/contact-appointment" className="btn btn-lg fw-bold" style={{ background: "white", color: "#1F3D2B", border: "none" }}>
                   Begin Your Journey
                 </a>
               </div>

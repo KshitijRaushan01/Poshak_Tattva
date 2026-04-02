@@ -1,133 +1,162 @@
 'use client'
-import { BadgeInfo } from 'lucide-react'
-import { useCart } from 'context/CartContext'
-import { toast } from 'react-toastify'
+import { useMemo } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useCart } from 'context/CartContext'
+import { toast } from 'react-toastify'
 
-const ProductCard = ({ product }) => {
-  const { id, title, image, discount, discountedPrice, price } = product
+/* ─────────────────────────────────────────
+   helpers
+───────────────────────────────────────── */
+function getDiscountPercent(regular, sale) {
+  if (!regular || !sale || regular <= sale) return null
+  return Math.round(((regular - sale) / regular) * 100)
+}
+
+/* ─────────────────────────────────────────
+   Main component
+───────────────────────────────────────── */
+const ProductCard = ({ product, priority = false }) => {
+  const {
+    id,
+    name,
+    thumbnail,
+    price,
+    hasVariations,
+    variations = [],
+    inStock,
+  } = product
+
   const { addToCart } = useCart()
 
-  const handleAddToCart = (e) => {
-    e.preventDefault(); // Prevent navigating to the product page when clicking "Add to cart"
-    addToCart(product)
-    toast.success(`${title} added to cart!`, { autoClose: 1500 })
-  }
+  /* ── derive the display price (always from first/cheapest variation or product price) ── */
+  const { saleFormatted, regularFormatted, discountPct, isOnSale } = useMemo(() => {
+    // For variation products: check if any variation is on sale
+    if (hasVariations && variations.length > 0) {
+      const firstVar = variations[0]
+      const sale = firstVar.price?.inr
+      const regular = firstVar.regularPrice?.inr
+      const pct = getDiscountPercent(regular, sale)
+      if (firstVar.onSale && pct) {
+        return {
+          saleFormatted: firstVar.price?.inrFormatted,
+          regularFormatted: firstVar.regularPrice?.inrFormatted,
+          discountPct: pct,
+          isOnSale: true,
+        }
+      }
+      // No sale on first var — show minimum price
+      return {
+        saleFormatted: hasVariations && price.min?.inrFormatted 
+          ? `From ${price.min.inrFormatted}` 
+          : (price.min?.inrFormatted || price.display),
+        regularFormatted: null,
+        discountPct: null,
+        isOnSale: false,
+      }
+    }
 
-  const handleShowProductInfo = (e) => {
-    e.preventDefault();
-    toast.info(`${title}: Premium quality wellness product.`, { autoClose: 2500 })
+    // No variations
+    if (price.onSale) {
+      const sale = price.salePrice?.inr
+      const regular = price.originalPrice?.inr
+      const pct = getDiscountPercent(regular, sale)
+      return {
+        saleFormatted: price.salePrice?.inrFormatted,
+        regularFormatted: price.originalPrice?.inrFormatted,
+        discountPct: pct,
+        isOnSale: true,
+      }
+    }
+
+    return {
+      saleFormatted: price.min?.inrFormatted || price.salePrice?.inrFormatted || price.display,
+      regularFormatted: null,
+      discountPct: null,
+      isOnSale: false,
+    }
+  }, [hasVariations, variations, price])
+
+  /* ── add to cart (adds default/first variant) ── */
+  const handleAddToCart = (e) => {
+    e.preventDefault()
+    if (!inStock) return
+    const firstVar = hasVariations && variations.length > 0 ? variations[0] : null
+    const cartItem = {
+      id: firstVar ? `${id}-${firstVar.id}` : id,
+      name: firstVar
+        ? `${name} (${Object.values(firstVar.attributes).join(', ')})`
+        : name,
+      image: thumbnail,
+      price: firstVar ? firstVar.price.inr : (price.salePrice?.inr || price.min?.inr || 0),
+      quantity: 1,
+    }
+    addToCart(cartItem)
+    toast.success(`${name} added to cart!`, { autoClose: 1500 })
   }
 
   return (
-    <Link href={`/product/${id}`} className="text-decoration-none text-dark d-block">
-      <div
-        className="transition-all hover:shadow-lg"
-        style={{
-          borderRadius: '16px',
-          border: '1px solid #e0eaf3',
-          background: '#fff',
-          padding: '6px',
-          boxShadow: '0 2px 12px rgba(0,0,0,0.06)',
-        }}
-      >
-        <div
-          style={{
-            position: 'relative',
-            display: 'flex',
-            height: '240px',
-            width: '100%',
-            alignItems: 'center',
-            justifyContent: 'center',
-            borderRadius: '12px',
-            background: '#F6DAB0',
-            padding: '16px',
-            overflow: 'hidden',
-          }}
-        >
+    <Link href={`/product/${id}`} className="text-decoration-none d-block h-100" style={{ color: 'inherit' }}>
+      <div className="pt-card">
+        {/* ── image area ── */}
+        <div className="pt-card__img-wrap">
           <Image
-            src={image}
-            alt={`${title}`}
+            src={thumbnail}
+            alt={name}
             fill
-            style={{ objectFit: 'contain', padding: '1rem' }}
+            priority={priority}
+            style={{ objectFit: 'contain', padding: '16px' }}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            className="transition-transform duration-300 hover:scale-105"
           />
-          {discount && (
-            <span
-              style={{
-                position: 'absolute',
-                left: '8px',
-                top: '8px',
-                borderRadius: '6px',
-                background: '#FB991C',
-                padding: '2px 8px',
-                fontSize: '13px',
-                color: '#fff',
-                fontWeight: '600',
-                zIndex: 10
-              }}
-            >
-              -{discount}%
+
+          {/* discount badge */}
+          {isOnSale && discountPct && (
+            <span className="pt-card__badge">
+              -{discountPct}%
             </span>
+          )}
+
+          {/* out of stock overlay */}
+          {!inStock && (
+            <div className="pt-card__oos">
+              <span>OUT OF STOCK</span>
+            </div>
           )}
         </div>
 
-        <div style={{ padding: '8px 8px 0' }}>
-          <h3 className="hover:text-orange-500 transition-colors" style={{ margin: '16px 0', fontSize: '15px', fontWeight: '600', lineHeight: '1.4', minHeight: '42px', color: '#1e293b' }}>
-            {title}
-          </h3>
+        {/* ── body ── */}
+        <div className="pt-card__body">
+          {/* name */}
+          <h3 className="pt-card__name">{name}</h3>
 
-          <div style={{ marginBottom: '20px', display: 'flex', alignItems: 'center' }}>
-            {discountedPrice ? (
-              <>
-                <span style={{ marginRight: '8px', fontSize: '18px', fontWeight: 'bold', color: '#b91c1c' }}>₹{discountedPrice}</span>
-                <span style={{ fontWeight: '500', color: '#94a3b8', textDecoration: 'line-through', fontSize: '14px' }}>₹{price}</span>
-              </>
-            ) : (
-              <span style={{ marginRight: '8px', fontSize: '18px', fontWeight: 'bold', color: '#b91c1c' }}>₹{price}</span>
+          {/* price row */}
+          <div className="pt-card__price-row">
+            <span className="pt-card__price-sale">{saleFormatted}</span>
+            {isOnSale && regularFormatted && (
+              <span className="pt-card__price-original">{regularFormatted}</span>
             )}
           </div>
 
-          <div style={{ display: 'flex', gap: '10px', paddingBottom: '8px' }}>
-            <button
-              onClick={handleShowProductInfo}
-              style={{
-                borderRadius: '8px',
-                background: '#eff6fb',
-                padding: '8px',
-                border: 'none',
-                cursor: 'pointer',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                transition: 'background 0.2s',
-              }}
-              aria-label={`View details of ${title}`}
-              onMouseEnter={e => e.currentTarget.style.background = '#e1e2e6'}
-              onMouseLeave={e => e.currentTarget.style.background = '#eff6fb'}
+          {/* action row */}
+          <div className="pt-card__actions">
+            <Link
+              href={`/product/${id}`}
+              className="pt-card__info-btn"
+              onClick={(e) => e.stopPropagation()}
+              title="View details"
             >
-              <BadgeInfo size={20} color="#94a3b8" />
-            </button>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="12" y1="8" x2="12" y2="8" />
+                <line x1="12" y1="12" x2="12" y2="16" />
+              </svg>
+            </Link>
             <button
+              className="pt-card__atc-btn"
               onClick={handleAddToCart}
-              style={{
-                width: '100%',
-                borderRadius: '8px',
-                background: '#eff6fb',
-                padding: '8px 12px',
-                fontWeight: '600',
-                color: '#1C7690',
-                border: 'none',
-                cursor: 'pointer',
-                fontSize: '14px',
-                transition: 'background 0.2s',
-              }}
-              onMouseEnter={e => e.currentTarget.style.background = '#d0e9f3'}
-              onMouseLeave={e => e.currentTarget.style.background = '#eff6fb'}
+              disabled={!inStock}
             >
-              Add to cart
+              {inStock ? 'Add to cart' : 'Out of Stock'}
             </button>
           </div>
         </div>

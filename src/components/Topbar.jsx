@@ -7,7 +7,7 @@ const Topbar = () => {
         <div className="py-1 d-flex align-items-center justify-content-between justify-content-xxl-center w-100 row">
           {/* Info Text */}
           <div className="d-none d-xxl-flex col-md-5 text-white fw-semibold fs-16">
-            <p className="m-0"> HEALING THROUGH BALANCE, NOT MEDICINE.</p>
+            <p className="m-0"> Healing Through Balance, Not Medicine.</p>
           </div>
 
           {/* Email Contact */}
