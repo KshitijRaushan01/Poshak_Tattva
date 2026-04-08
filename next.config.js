@@ -8,8 +8,14 @@ const nextConfig = {
         hostname: "sarveda.com",
         pathname: "/wp-content/uploads/**",
       },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+        pathname: "/**",
+      },
     ],
   },
 };
 
 module.exports = nextConfig;
+

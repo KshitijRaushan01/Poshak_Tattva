@@ -1,158 +1,332 @@
 import Head from "next/head";
+import Link from "next/link";
+import Image from "next/image";
 import PageHeader from "components/PageHeader";
-import About from "components/About";
 import StatsSection from "components/StatsSection";
 
 export default function AboutUs() {
-  const coreValues = [
-    {
-      icon: "🌿",
-      title: "Holistic Wellness",
-      desc: "We believe in treating the whole person - body, mind, and spirit - not just symptoms."
-    },
-    {
-      icon: "🤝",
-      title: "Authenticity",
-      desc: "We honor ancient wisdom while embracing modern science for authentic healing."
-    },
-    {
-      icon: "💚",
-      title: "Compassion",
-      desc: "Every person's wellness journey is unique. We guide with care and understanding."
-    },
-    {
-      icon: "✨",
-      title: "Empowerment",
-      desc: "We empower individuals to take control of their own health and transformation."
-    }
-  ];
-
-  const team = [
-    {
-      name: "Priyanka Pugalia",
-      role: "Founder & Yoga Therapist & Holistic Coach",
-      bio: "8+ years of experience in traditional yoga and holistic healing",
-      icon: "👨‍⚕️"
-    },
-    {
-      name: "Priya Sharma",
-      role: "Lead Nutritionist",
-      bio: "Expert in Ayurvedic diet and sattvic meal planning",
-      icon: "👩‍🍳"
-    },
-    {
-      name: "Arjun Verma",
-      role: "Sound Healing Specialist",
-      bio: "Certified sound healer with expertise in vibrational frequencies",
-      icon: "🎵"
-    },
-    {
-      name: "Anjali Singh",
-      role: "Meditation Guide",
-      bio: "Passionate about guiding students through mindfulness practices",
-      icon: "🧘‍♀️"
-    }
-  ];
-
   const timeline = [
     {
       year: "2020",
       title: "The Beginning",
-      desc: "Priyanka Pugalia founded Poshak Tattva with a vision to bring holistic wellness to urban communities."
+      desc: "After years of personal struggle with unresolved health issues, Priyanka Pugalia founded Poshak Tattva — built not from theory, but from lived transformation.",
     },
     {
       year: "2021",
-      title: "Expansion Phase",
-      desc: "Opened branches in 5 major cities and trained 50+ certified instructors."
+      title: "First 100 Lives Changed",
+      desc: "Word spread through results. The first cohort of clients reversed lifestyle disorders, hormonal imbalances, and digestive issues through the integrated protocol.",
     },
     {
       year: "2022",
-      title: "Digital Transformation",
-      desc: "Launched online classes to reach students across the country and beyond."
+      title: "Going Digital",
+      desc: "Expanded online to reach individuals across India who couldn't access in-person sessions — making root-cause healing borderless.",
     },
     {
       year: "2023",
-      title: "Global Reach",
-      desc: "Now serving 500+ students across 50+ cities with specialized wellness programs."
+      title: "500+ Recoveries",
+      desc: "Crossed 500 individuals supported across 50+ cities. Sound healing workshops and retreats launched as standalone programs.",
     },
     {
       year: "2024",
-      title: "Innovation & Growth",
-      desc: "Introducing AI-powered personalized wellness plans and expanded sound healing offerings."
+      title: "Clinical Framework Formalised",
+      desc: "Structured the three-pillar methodology — Yoga, Sattvic Nutrition, Sound Healing — into formal personalised healing protocols.",
     },
     {
       year: "2025",
-      title: "Community First",
-      desc: "Committed to making holistic wellness accessible to everyone, everywhere."
-    }
+      title: "Scaling the Mission",
+      desc: "Bringing root-cause healing to more cities. More sessions, more retreats, more people finally feeling well — not just managing.",
+    },
+  ];
+
+  const whatWeDo = [
+    {
+      icon: "🔍",
+      title: "Identify the Root Cause",
+      desc: "We don't guess. We assess — your lifestyle, nutrition, stress patterns, and energetic state — to find exactly what is driving your condition.",
+    },
+    {
+      icon: "🥗",
+      title: "Rebuild Through Sattvic Nutrition",
+      desc: "Personalised diet protocols engineered to nourish at the cellular level, reduce inflammation, and restore metabolic function naturally.",
+    },
+    {
+      icon: "🧘",
+      title: "Restore Through Yoga",
+      desc: "Specific asana and pranayama sequences prescribed for your condition — stimulating the lymphatic system, vagus nerve, and endocrine regulation.",
+    },
+    {
+      icon: "🔔",
+      title: "Release Through Sound Healing",
+      desc: "Precision vibrational frequencies that dissolve what your body holds subconsciously — rewiring the nervous system, not just relaxing it.",
+    },
+  ];
+
+  const trustPoints = [
+    "This knowledge is not borrowed — it is lived, tested, and refined through real transformation",
+    "Personalised 1:1 consultations — no generic plans",
+    "Yoga & meditation sessions designed for your condition",
+    "Sound healing workshops, retreats & individual sessions",
+    "Clinically structured healing protocols, tracked over time",
+    "No extreme diets. No shortcuts. No dependency.",
   ];
 
   return (
     <>
       <Head>
-        <title>About Poshak Tattva - Holistic Wellness Journey</title>
+        <title>About Poshak Tattva — Real Healing. Root Cause. Real Results.</title>
         <meta
           name="description"
-          content="Learn about Poshak Tattva's mission to transform lives through holistic wellness, yoga, diet, and sound healing. Meet our expert team and discover our 15+ year journey."
+          content="Poshak Tattva was built from personal suffering — not theory. Discover the story of founder Priyanka Pugalia and how an integrated approach of Yoga, Sattvic Diet, and Sound Healing is reversing chronic conditions for 500+ people across India."
         />
       </Head>
 
-      <main>
+      <main className="content-wrapper">
         <PageHeader title="About Poshak Tattva" />
 
-        {/* Our Story Section */}
-        <section className="wrapper bg-light">
-          <div className="container pt-8 pt-md-15">
-            <About
-              imgPosition="right"
-              imgSrc="/img/yds.png"
-              heading="Our Story"
-              isH1="true"
-              para="At Poshak Tattva, we believe that true wellness is not merely the absence of illness — it is a harmonious alignment of the body, mind, and soul. Founded in 2009 with a simple mission: to bring the ancient wisdom of holistic healing to modern communities. Our philosophy is rooted in the timeless wisdom of holistic living, where healing is achieved through balance, awareness, and conscious nourishment.
-
-Through the integration of Yoga, Diet, and Sound Healing, we guide you on a transformative journey toward complete well-being. Our Yoga practices cultivate strength, flexibility, and inner calm, helping you reconnect with your breath and your being. Our personalized diet plans are grounded in sattvic principles, designed to cleanse and energize your system from within while nurturing your relationship with food. Through Sound Healing, we work with vibrational frequencies to realign your energy centers, release emotional blockages, and restore peace to your mind and heart."
-            />
-          </div>
-        </section>
-
-        {/* Mission & Vision Section */}
+        {/* Opening Statement */}
         <section className="wrapper bg-white py-16">
           <div className="container">
-            <div className="row g-6">
+            <div className="row justify-content-center">
+              <div className="col-lg-8 text-center">
+                <p
+                  className="fw-bold mb-3"
+                  style={{ color: "#1F3D2B", letterSpacing: "0.12em", fontSize: "0.8rem", textTransform: "uppercase" }}
+                >
+                  Our Philosophy
+                </p>
+                <h1 className="display-5 fw-bold mb-5" style={{ lineHeight: 1.25 }}>
+                  We don't believe in treating symptoms.<br />
+                  <span style={{ color: "#1F3D2B" }}>We believe in understanding why.</span>
+                </h1>
+                <p className="lead text-muted mb-4" style={{ lineHeight: 1.8 }}>
+                  Because real healing doesn't come from quick fixes.
+                </p>
+                <p
+                  className="fw-bold"
+                  style={{ fontSize: "1.3rem", color: "#1F3D2B" }}
+                >
+                  It comes from alignment.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* The Story */}
+        <section className="wrapper py-16" style={{ background: "#f7f4f0" }}>
+          <div className="container">
+            <div className="row align-items-center g-5">
               <div className="col-lg-6">
-                <div className="card border-0 shadow-lg p-8" style={{ borderTop: "4px solid #1F3D2B" }}>
-                  <h3 className="h4 fw-bold mb-4">🎯 Our Mission</h3>
-                  <p className="text-muted lh-lg">
-                    To empower individuals across all cities and cultures with accessible, personalized holistic wellness solutions that integrate the wisdom of ancient practices with modern science. We are committed to transforming lives by facilitating profound healing and sustainable wellness through Yoga, Sattvic Diet, and Sound Healing.
+                <div style={{ borderRadius: "20px", overflow: "hidden", boxShadow: "0 20px 50px rgba(0,0,0,0.12)" }}>
+                  <Image
+                    src="/img/yds.png"
+                    alt="Priyanka Pugalia — Founder, Poshak Tattva"
+                    width={580}
+                    height={440}
+                    style={{ objectFit: "cover", width: "100%", height: "440px", display: "block" }}
+                  />
+                </div>
+              </div>
+              <div className="col-lg-6">
+                <p
+                  className="fw-bold mb-2"
+                  style={{ color: "#1F3D2B", letterSpacing: "0.12em", fontSize: "0.75rem", textTransform: "uppercase" }}
+                >
+                  The Story Behind Poshak Tattva
+                </p>
+                <h2 className="display-6 fw-bold mb-5" style={{ lineHeight: 1.25 }}>
+                  Built out of suffering.<br />Not out of theory.
+                </h2>
+                <p className="text-muted mb-4" style={{ lineHeight: 1.85 }}>
+                  Our founder, <strong>Priyanka Pugalia</strong>, wasn't always in control of her health. She experienced what most people silently go through for years:
+                </p>
+                <ul className="list-unstyled mb-5">
+                  {[
+                    "Persistent health issues that never fully resolved",
+                    "Treatments that managed symptoms but never addressed the root",
+                    "A constant feeling that something was 'off' — despite doing everything right",
+                  ].map((item, i) => (
+                    <li key={i} className="mb-3 d-flex align-items-start gap-3">
+                      <span style={{ color: "#C97B3A", fontWeight: "700", marginTop: "3px" }}>—</span>
+                      <span className="text-muted">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="text-muted mb-4" style={{ lineHeight: 1.85 }}>
+                  That phase wasn't short. It was long, frustrating, and deeply personal. And that's exactly where the shift began.
+                </p>
+                <p className="text-muted" style={{ lineHeight: 1.85 }}>
+                  Instead of depending on surface-level solutions, she went deeper — into ancient yogic practices, sattvik nutrition, and sound healing. <strong>Not as trends. As systems.</strong>
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* The Breakthrough */}
+        <section
+          className="wrapper py-16"
+          style={{ background: "linear-gradient(135deg, #1F3D2B 0%, #3D5C4A 100%)" }}
+        >
+          <div className="container">
+            <div className="row justify-content-center mb-10">
+              <div className="col-lg-7 text-center">
+                <p
+                  className="fw-bold mb-2"
+                  style={{ color: "rgba(168,213,181,0.8)", letterSpacing: "0.12em", fontSize: "0.75rem", textTransform: "uppercase" }}
+                >
+                  The Breakthrough
+                </p>
+                <h2 className="display-6 fw-bold text-white mb-4">
+                  Through disciplined practice and deep study — something changed.
+                </h2>
+                <p style={{ color: "rgba(255,255,255,0.75)", lineHeight: 1.8 }}>
+                  The body started responding. Energy improved. Mental clarity returned. The dependency on external fixes reduced. This wasn't magic. It was alignment of three fundamentals.
+                </p>
+              </div>
+            </div>
+            <div className="row g-4 justify-content-center">
+              {[
+                { icon: "🧘", title: "Yoga", desc: "To restore the body — lymphatic, endocrine, and neurological function" },
+                { icon: "🥗", title: "Sattvic Diet", desc: "To nourish at a cellular level — correcting inflammation and gut dysbiosis" },
+                { icon: "🔔", title: "Sound Healing", desc: "To regulate the nervous system and release what the body holds unconsciously" },
+              ].map((item, i) => (
+                <div key={i} className="col-md-4">
+                  <div
+                    className="text-center p-6 h-100"
+                    style={{
+                      background: "rgba(255,255,255,0.08)",
+                      borderRadius: "16px",
+                      border: "1px solid rgba(255,255,255,0.12)",
+                    }}
+                  >
+                    <div style={{ fontSize: "3rem", marginBottom: "1rem" }}>{item.icon}</div>
+                    <h5 className="fw-bold text-white mb-3">{item.title}</h5>
+                    <p style={{ color: "rgba(255,255,255,0.7)", fontSize: "0.9rem" }}>{item.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="text-center mt-8">
+              <p style={{ color: "rgba(255,255,255,0.6)", fontStyle: "italic" }}>
+                What modern wellness often separates — ancient science had already integrated.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* From Healing Self to Healing Others */}
+        <section className="wrapper bg-white py-16">
+          <div className="container">
+            <div className="row align-items-center g-5">
+              <div className="col-lg-6">
+                <p
+                  className="fw-bold mb-2"
+                  style={{ color: "#1F3D2B", letterSpacing: "0.12em", fontSize: "0.75rem", textTransform: "uppercase" }}
+                >
+                  From Healing Self to Healing Others
+                </p>
+                <h2 className="display-6 fw-bold mb-5" style={{ lineHeight: 1.25 }}>
+                  Once the transformation became real — the direction became obvious.
+                </h2>
+                <p className="text-muted mb-4" style={{ lineHeight: 1.85 }}>
+                  With a strong foundation in <strong>Nutrition & Dietetics</strong>, along with professional training in Yoga and Sound Healing, Priyanka started working with individuals facing:
+                </p>
+                <ul className="list-unstyled mb-5">
+                  {[
+                    "Lifestyle disorders",
+                    "Hormonal imbalances",
+                    "Digestive issues",
+                    "Chronic stress and burnout",
+                    "Weight struggles that never resolved sustainably",
+                  ].map((item, i) => (
+                    <li key={i} className="mb-2 d-flex align-items-center gap-3">
+                      <span style={{ color: "#1F3D2B", fontWeight: "700" }}>✓</span>
+                      <span className="text-muted">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div
+                  className="p-5"
+                  style={{
+                    background: "#f0f7f2",
+                    borderLeft: "4px solid #1F3D2B",
+                    borderRadius: "0 12px 12px 0",
+                  }}
+                >
+                  <p className="mb-0 fw-semibold" style={{ color: "#1F3D2B", lineHeight: 1.7 }}>
+                    "People weren't sick because they lacked effort. They were stuck because they were solving the wrong problem."
                   </p>
                 </div>
               </div>
               <div className="col-lg-6">
-                <div className="card border-0 shadow-lg p-8" style={{ borderTop: "4px solid #1F3D2B" }}>
-                  <h3 className="h4 fw-bold mb-4">✨ Our Vision</h3>
-                  <p className="text-muted lh-lg">
-                    To create a world where every individual has access to holistic wellness tools and guidance, enabling them to achieve complete balance in body, mind, and spirit. We envision a community where wellness is not a luxury, but a fundamental right accessible to all, fostering a healthier, more conscious, and more compassionate society.
-                  </p>
+                <div className="row g-3">
+                  {[
+                    { num: "500+", label: "People Recovered", sub: "Real, documented results" },
+                    { num: "50+", label: "Cities Reached", sub: "Across India & beyond" },
+                    { num: "5+", label: "Years of Practice", sub: "Founded in 2020" },
+                    { num: "98%", label: "Positive Outcomes", sub: "Root-cause vs symptom management" },
+                  ].map((s, i) => (
+                    <div key={i} className="col-6">
+                      <div
+                        className="p-5 text-center h-100"
+                        style={{
+                          background: i % 2 === 0 ? "#f7f4f0" : "#f0f7f2",
+                          borderRadius: "16px",
+                        }}
+                      >
+                        <div className="fw-bold mb-1" style={{ fontSize: "2.2rem", color: "#1F3D2B" }}>{s.num}</div>
+                        <div className="fw-semibold small mb-1">{s.label}</div>
+                        <div className="text-muted" style={{ fontSize: "0.75rem" }}>{s.sub}</div>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Core Values Section */}
-        <section className="wrapper bg-light py-16">
+        {/* What Poshak Tattva Really Does */}
+        <section className="wrapper py-16" style={{ background: "#f7f4f0" }}>
           <div className="container">
             <div className="text-center mb-12">
-              <h2 className="display-5 fw-bold mb-4">Our Core Values</h2>
-              <p className="lead text-muted">The principles that guide every decision and interaction</p>
+              <p
+                className="fw-bold mb-2"
+                style={{ color: "#1F3D2B", letterSpacing: "0.12em", fontSize: "0.75rem", textTransform: "uppercase" }}
+              >
+                What We Actually Do
+              </p>
+              <h2 className="display-5 fw-bold mb-4">
+                Poshak Tattva is not a service.<br />
+                <span style={{ color: "#1F3D2B" }}>It's a correction.</span>
+              </h2>
+              <p className="lead text-muted" style={{ maxWidth: "560px", margin: "0 auto" }}>
+                No extreme diets. No shortcuts. No dependency. Just structured, natural healing.
+              </p>
             </div>
             <div className="row g-4">
-              {coreValues.map((value, idx) => (
-                <div key={idx} className="col-md-6 col-lg-3">
-                  <div className="card h-100 border-0 shadow-sm p-6 text-center">
-                    <div style={{ fontSize: "3rem", marginBottom: "1rem" }}>{value.icon}</div>
-                    <h5 className="fw-bold mb-3">{value.title}</h5>
-                    <p className="text-muted small">{value.desc}</p>
+              {whatWeDo.map((item, i) => (
+                <div key={i} className="col-md-6 col-lg-3">
+                  <div
+                    className="card border-0 h-100 p-6 text-center"
+                    style={{
+                      borderRadius: "16px",
+                      boxShadow: "0 4px 24px rgba(0,0,0,0.06)",
+                      transition: "transform 0.2s ease, box-shadow 0.2s ease",
+                    }}
+                    onMouseOver={e => {
+                      e.currentTarget.style.transform = "translateY(-4px)";
+                      e.currentTarget.style.boxShadow = "0 8px 32px rgba(0,0,0,0.1)";
+                    }}
+                    onMouseOut={e => {
+                      e.currentTarget.style.transform = "translateY(0)";
+                      e.currentTarget.style.boxShadow = "0 4px 24px rgba(0,0,0,0.06)";
+                    }}
+                  >
+                    <div style={{ fontSize: "3rem", marginBottom: "1rem" }}>{item.icon}</div>
+                    <h5 className="fw-bold mb-3">{item.title}</h5>
+                    <p className="text-muted small mb-0" style={{ lineHeight: 1.7 }}>{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -160,92 +334,156 @@ Through the integration of Yoga, Diet, and Sound Healing, we guide you on a tran
           </div>
         </section>
 
-        {/* Why Choose Us Section */}
+        {/* Why People Trust Us */}
         <section className="wrapper bg-white py-16">
           <div className="container">
-            <About
-              imgPosition="left"
-              imgSrc="/img/yds.png"
-              heading="Why Choose Poshak Tattva?"
-              isH1="false"
-              para="Poshak Tattva stands out in the wellness industry for several compelling reasons. With over 6 years of experience, we've perfected a unique approach that combines ancient yogic wisdom with contemporary science. Our team of certified experts are deeply passionate about your wellness journey.
-
-We don't believe in one-size-fits-all solutions. Every student receives personalized attention and customized programs tailored to their specific needs and goals. Our multi-city presence across 50+ cities ensures you can access our programs wherever you are, while our online platform brings flexibility to your schedule.
-
-Beyond just teaching techniques, we build a supportive community where you're empowered to take control of your health. Our proven track record speaks for itself: 500+ happy students with a 98% satisfaction rate and countless success stories of transformation."
-            />
-          </div>
-        </section>
-
-        {/* Our Team Section */}
-        <section className="wrapper bg-light py-16">
-          <div className="container">
-            <div className="text-center mb-12">
-              <h2 className="display-5 fw-bold mb-4">Meet Our Expert Team</h2>
-              <p className="lead text-muted">Dedicated professionals committed to your wellness transformation</p>
-            </div>
-            <div className="row g-4">
-              {team.map((member, idx) => (
-                <div key={idx} className="col-md-6 col-lg-3">
-                  <div className="card h-100 border-0 shadow-sm overflow-hidden text-center">
-                    <div style={{ background: "linear-gradient(135deg, #1F3D2B 0%, #3D5C4A 100%)", padding: "2rem", color: "white" }}>
-                      <div style={{ fontSize: "4rem" }}>{member.icon}</div>
-                    </div>
-                    <div className="p-6">
-                      <h5 className="fw-bold mb-2">{member.name}</h5>
-                      <p className="text-primary fw-bold small mb-3">{member.role}</p>
-                      <p className="text-muted small">{member.bio}</p>
-                    </div>
+            <div className="row align-items-center g-5">
+              <div className="col-lg-6">
+                <p
+                  className="fw-bold mb-2"
+                  style={{ color: "#fe5b09ff", letterSpacing: "0.12em", fontSize: "1rem", textTransform: "uppercase" }}
+                >
+                  Why People Trust Us
+                </p>
+                <h2 className="display-6 fw-bold mb-5" style={{ lineHeight: 1.25 }}>
+                  Because this is not borrowed knowledge.
+                </h2>
+                <p className="text-muted mb-6" style={{ lineHeight: 1.85 }}>
+                  It is lived. Tested. Refined through real transformation.
+                  And delivered with the full credibility of someone who has walked this path personally.
+                </p>
+                <ul className="list-unstyled">
+                  {trustPoints.map((point, i) => (
+                    <li key={i} className="mb-4 d-flex align-items-start gap-3">
+                      <span
+                        className="d-flex align-items-center justify-content-center flex-shrink-0"
+                        style={{
+                          width: "28px",
+                          height: "28px",
+                          background: "#f0f7f2",
+                          borderRadius: "50%",
+                          color: "#1F3D2B",
+                          fontWeight: "700",
+                          fontSize: "0.75rem",
+                        }}
+                      >
+                        ✓
+                      </span>
+                      <span className="text-muted" style={{ lineHeight: 1.7 }}>{point}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="col-lg-6">
+                <div
+                  className="p-8 text-center"
+                  style={{
+                    background: "linear-gradient(135deg, #1F3D2B 0%, #3D5C4A 100%)",
+                    borderRadius: "20px",
+                  }}
+                >
+                  <div
+                    style={{
+                      width: "160px",
+                      height: "160px",
+                      borderRadius: "50%",
+                      overflow: "hidden",
+                      margin: "0 auto 2rem",
+                      border: "4px solid rgba(255,255,255,0.25)",
+                      boxShadow: "0 10px 30px rgba(0,0,0,0.2)",
+                    }}
+                  >
+                    <img
+                      src="/img/Pri-Pu.jpg"
+                      alt="Priyanka Pugalia"
+                      style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                    />
+                  </div>
+                  <h4 className="fw-bold text-white mb-2" style={{ fontSize: "1.75rem" }}>Priyanka Pugalia</h4>
+                  <p style={{ color: "#A8D5B5", fontSize: "0.9rem", fontWeight: "600", marginBottom: "2rem" }}>
+                    Founder · Nutrition & Dietetics · Yoga Therapist · Sound Healer
+                  </p>
+                  <p style={{ color: "rgba(255,255,255,0.85)", lineHeight: 1.8, fontSize: "1rem" }}>
+                    Trained professionally in Nutrition & Dietetics, Yoga, and Sound Healing — Priyanka brings the rare combination of lived experience, clinical training, and ancient wisdom to every client protocol she designs.
+                  </p>
+                  <div
+                    className="mt-5 p-4"
+                    style={{
+                      background: "rgba(255,255,255,0.08)",
+                      borderRadius: "12px",
+                      borderLeft: "3px solid #A8D5B5",
+                    }}
+                  >
+                    <p style={{ color: "rgba(255,255,255,0.75)", fontStyle: "italic", margin: 0, fontSize: "0.9rem" }}>
+                      "I didn't start this to build a brand. I started it because I knew what it felt like to be stuck — and I found a way out. Now I help others find theirs."
+                    </p>
                   </div>
                 </div>
-              ))}
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Timeline Section */}
-        <section className="wrapper bg-white py-16">
+        {/* Timeline */}
+        <section className="wrapper py-16" style={{ background: "#f7f4f0" }}>
           <div className="container">
             <div className="text-center mb-12">
-              <h2 className="display-5 fw-bold mb-4">Our Journey</h2>
-              <p className="lead text-muted">6+ years of transforming lives through holistic wellness</p>
+              <p
+                className="fw-bold mb-2"
+                style={{ color: "#1F3D2B", letterSpacing: "0.12em", fontSize: "0.75rem", textTransform: "uppercase" }}
+              >
+                Our Journey
+              </p>
+              <h2 className="display-5 fw-bold mb-4">5+ Years of Real Results</h2>
+              <p className="lead text-muted">Founded in 2020 — built one recovery at a time.</p>
             </div>
 
             <div style={{ position: "relative" }}>
-              {/* Timeline line */}
-              <div style={{
-                position: "absolute",
-                left: "50%",
-                top: 0,
-                bottom: 0,
-                width: "2px",
-                background: "linear-gradient(180deg, #1F3D2B 0%, #3D5C4A 100%)",
-                transform: "translateX(-50%)"
-              }} className="d-none d-lg-block" />
-
+              <div
+                style={{
+                  position: "absolute",
+                  left: "50%",
+                  top: 0,
+                  bottom: 0,
+                  width: "2px",
+                  background: "linear-gradient(180deg, #1F3D2B 0%, #A8D5B5 100%)",
+                  transform: "translateX(-50%)",
+                }}
+                className="d-none d-lg-block"
+              />
               <div className="row g-4">
                 {timeline.map((item, idx) => (
-                  <div key={idx} className={`col-lg-6 ${idx % 2 === 0 ? "pe-lg-5" : "ps-lg-5"}`}>
-                    <div style={{ position: "relative" }}>
-                      {/* Timeline dot */}
-                      <div style={{
+                  <div key={idx} className={`col-lg-6 ${idx % 2 === 0 ? "pe-lg-8" : "ps-lg-8"}`} style={{ position: "relative" }}>
+                    <div
+                      style={{
                         position: "absolute",
-                        left: "50%",
-                        top: "1rem",
+                        left: idx % 2 === 0 ? "calc(100% - 10px)" : "-10px",
+                        top: "1.5rem",
                         width: "20px",
                         height: "20px",
-                        background: "white",
-                        border: "4px solid #1F3D2B",
+                        background: "#1F3D2B",
+                        border: "4px solid #A8D5B5",
                         borderRadius: "50%",
-                        transform: "translateX(-50%)",
-                        zIndex: 2
-                      }} className="d-none d-lg-block" />
-
-                      <div className="card h-100 border-0 shadow-sm p-6">
-                        <h5 className="fw-bold text-primary mb-2">{item.year}</h5>
-                        <h6 className="fw-bold mb-3">{item.title}</h6>
-                        <p className="text-muted small">{item.desc}</p>
-                      </div>
+                        zIndex: 2,
+                      }}
+                      className="d-none d-lg-block"
+                    />
+                    <div
+                      className="card border-0 p-6 h-100"
+                      style={{
+                        borderRadius: "14px",
+                        boxShadow: "0 4px 20px rgba(0,0,0,0.06)",
+                        borderTop: "3px solid #1F3D2B",
+                      }}
+                    >
+                      <span
+                        className="badge mb-3 px-3 py-2 align-self-start"
+                        style={{ background: "#1F3D2B", color: "white", fontSize: "0.8rem" }}
+                      >
+                        {item.year}
+                      </span>
+                      <h6 className="fw-bold mb-2">{item.title}</h6>
+                      <p className="text-muted small mb-0" style={{ lineHeight: 1.7 }}>{item.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -254,72 +492,78 @@ Beyond just teaching techniques, we build a supportive community where you're em
           </div>
         </section>
 
-        {/* Stats Section */}
+        {/* Stats Strip */}
         <StatsSection />
 
-        {/* Commitment Section */}
-        <section className="wrapper py-16" style={{ background: "linear-gradient(135deg, #1F3D2B 0%, #3D5C4A 100%)" }}>
+        {/* CTA — Your Turn */}
+        <section
+          className="wrapper py-16"
+          style={{ background: "linear-gradient(135deg, #1F3D2B 0%, #3D5C4A 100%)" }}
+        >
           <div className="container">
-            <div className="row g-4 text-white">
-              <div className="col-lg-8">
-                <h2 className="display-6 fw-bold mb-4 text-white">Our Commitment to Your Wellness</h2>
-                <p className="lead mb-4 text-white text-opacity-75">
-                  We don't just provide services; we build relationships. Our commitment is to walk alongside you on your healing journey, providing the tools, knowledge, and support you need to achieve your manifestation of health.
+            <div className="row align-items-center g-5">
+              <div className="col-lg-7">
+                <p
+                  className="fw-bold mb-2"
+                  style={{ color: "rgba(168,213,181,0.8)", letterSpacing: "0.12em", fontSize: "0.75rem", textTransform: "uppercase" }}
+                >
+                  Your Turn
                 </p>
-                <ul className="list-unstyled">
+                <h2 className="display-5 fw-bold text-white mb-5" style={{ lineHeight: 1.25 }}>
+                  Tired of fixing the same problem — again and again?
+                </h2>
+                <ul className="list-unstyled mb-6">
                   {[
-                    "✓ Providing authentic teachings rooted in traditional wisdom",
-                    "✓ Creating a safe, judgment-free space for your transformation",
-                    "✓ Offering personalized guidance tailored to your unique needs",
-                    "✓ Supporting you every step of your wellness journey",
-                    "✓ Staying dedicated to continuous learning and improvement",
-                    "✓ Making wellness accessible and affordable for all"
-                  ].map((item, idx) => (
-                    <li key={idx} className="mb-3">
-                      <span>{item}</span>
+                    "Fixing the same problem again and again",
+                    "Feeling \"almost okay\" but never fully well",
+                    "Trying methods that don't last",
+                  ].map((item, i) => (
+                    <li key={i} className="mb-3 d-flex align-items-center gap-3">
+                      <span style={{ color: "#A8D5B5", fontWeight: "700" }}>—</span>
+                      <span style={{ color: "rgba(255,255,255,0.8)" }}>{item}</span>
                     </li>
                   ))}
                 </ul>
+                <p className="lead mb-2" style={{ color: "rgba(255,255,255,0.9)", fontWeight: "600" }}>
+                  Then you don't need another solution.
+                </p>
+                <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.7 }}>
+                  You need a different approach. Start where real healing begins.
+                </p>
               </div>
-              <div className="col-lg-4 d-flex flex-column justify-content-center text-center">
-                <div style={{ fontSize: "4rem", marginBottom: "1rem" }}>💚</div>
-                <h2 className="h3 fw-bold mb-4 text-white">Ready to Start Your Wellness Journey?</h2>
-                <p className="lead mb-6 text-white text-opacity-75">Join hundreds of students transforming their lives</p>
-                <a href="/contact-appointment" className="btn btn-lg fw-bold" style={{ background: "white", color: "#1F3D2B", border: "none" }}>
-                  Begin Your Journey
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Impact Section */}
-        <section className="wrapper bg-light py-16">
-          <div className="container">
-            <div className="text-center mb-12">
-              <h2 className="display-5 fw-bold mb-4">The Impact We Create</h2>
-              <p className="lead text-muted">Real transformations, real lives changed</p>
-            </div>
-            <div className="row g-4">
-              <div className="col-md-4">
-                <div className="card h-100 border-0 shadow-sm p-6 text-center">
-                  <h3 className="h2 fw-bold text-primary mb-3">500+</h3>
-                  <p className="fw-bold mb-3">Students Transformed</p>
-                  <p className="text-muted small">Lives changed through holistic wellness practices</p>
-                </div>
-              </div>
-              <div className="col-md-4">
-                <div className="card h-100 border-0 shadow-sm p-6 text-center">
-                  <h3 className="h2 fw-bold text-primary mb-3">50+</h3>
-                  <p className="fw-bold mb-3">Cities Served</p>
-                  <p className="text-muted small">Bringing wellness to communities across the country</p>
-                </div>
-              </div>
-              <div className="col-md-4">
-                <div className="card h-100 border-0 shadow-sm p-6 text-center">
-                  <h3 className="h2 fw-bold text-primary mb-3">98%</h3>
-                  <p className="fw-bold mb-3">Satisfaction Rate</p>
-                  <p className="text-muted small">Students who report significant health improvements</p>
+              <div className="col-lg-5">
+                <div
+                  className="p-7"
+                  style={{
+                    background: "rgba(255,255,255,0.08)",
+                    borderRadius: "20px",
+                    border: "1px solid rgba(255,255,255,0.15)",
+                  }}
+                >
+                  <h4 className="fw-bold text-white mb-6">Start Here</h4>
+                  <div className="d-flex flex-column gap-3">
+                    <Link
+                      href="/contact-appointment"
+                      className="btn btn-lg fw-semibold w-100"
+                      style={{ background: "#A8D5B5", color: "#1F3D2B", border: "none", borderRadius: "50px" }}
+                    >
+                      👉 Book Your Consultation
+                    </Link>
+                    <Link
+                      href="/yoga"
+                      className="btn btn-lg fw-semibold w-100"
+                      style={{ background: "rgba(255,255,255,0.12)", color: "white", border: "1px solid rgba(255,255,255,0.3)", borderRadius: "50px" }}
+                    >
+                      👉 Experience Your First Session
+                    </Link>
+                    <Link
+                      href="/#programs"
+                      className="btn btn-lg fw-semibold w-100"
+                      style={{ background: "rgba(255,255,255,0.06)", color: "rgba(255,255,255,0.8)", border: "1px solid rgba(255,255,255,0.15)", borderRadius: "50px" }}
+                    >
+                      👉 Understand Your Body, Not Fight It
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>

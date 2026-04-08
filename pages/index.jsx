@@ -23,55 +23,55 @@ const Home = () => {
   };
 
   const stats = [
-    { number: "500+", label: "Happy Students", icon: "👥" },
-    { number: "50+", label: "Cities", icon: "🌍" },
-    { number: "15+", label: "Years Experience", icon: "⏱️" },
-    { number: "98%", label: "Satisfaction Rate", icon: "⭐" },
+    { number: "500+", label: "Patients Recovered", icon: "👥" },
+    { number: "50+", label: "Cities Reached", icon: "🌍" },
+    { number: "15+", label: "Years of Clinical Practice", icon: "⏱️" },
+    { number: "98%", label: "Root-Cause Resolution Rate", icon: "⭐" },
   ];
 
   const whyChooseUs = [
     {
-      title: "Holistic Approach",
-      desc: "We combine Yoga, Diet, and Sound Healing for complete wellness",
+      title: "Root-Cause Methodology",
+      desc: "We don't treat symptoms — we identify and eliminate the underlying metabolic and neurological triggers of chronic disorders.",
+      icon: "🔬"
+    },
+    {
+      title: "Clinical-Grade Protocols",
+      desc: "Our Sattvic Diet plans are therapeutically calibrated to fix metabolic dysfunction, inflammation, and gut dysbiosis.",
+      icon: "📊"
+    },
+    {
+      title: "Nervous System Rewiring",
+      desc: "Sound Healing sessions use precise vibrational frequencies to shift the nervous system out of chronic fight-or-flight patterns.",
+      icon: "🎵"
+    },
+    {
+      title: "Functional Yoga Therapy",
+      desc: "Yoga as medicine — postures and pranayama prescribed to stimulate the lymphatic, endocrine, and autonomic nervous systems.",
       icon: "🧘"
-    },
-    {
-      title: "Expert Instructors",
-      desc: "Certified professionals with years of practice and experience",
-      icon: "👨‍🏫"
-    },
-    {
-      title: "Personalized Plans",
-      desc: "Customized sessions tailored to your specific needs and goals",
-      icon: "📋"
-    },
-    {
-      title: "Multi-City Access",
-      desc: "Classes available in 50+ cities with flexible scheduling",
-      icon: "📍"
     },
   ];
 
   const howItWorks = [
     {
       step: "1",
-      title: "Consultation",
-      desc: "Schedule a free consultation to discuss your wellness goals"
+      title: "Free Root-Cause Consult",
+      desc: "A no-cost deep-dive session where we map your symptoms back to their systemic triggers."
     },
     {
       step: "2",
-      title: "Assessment",
-      desc: "We analyze your current health and create a personalized plan"
+      title: "Clinical Assessment",
+      desc: "We evaluate metabolic markers, lifestyle patterns, and nervous system load to build your recovery blueprint."
     },
     {
       step: "3",
-      title: "Practice",
-      desc: "Begin your journey with guided sessions and daily practices"
+      title: "Integrated Protocol",
+      desc: "Your personalised combination of Functional Yoga, Sattvic Nutrition, and Sound Healing begins."
     },
     {
       step: "4",
-      title: "Transform",
-      desc: "Experience lasting changes in health, energy, and wellness"
+      title: "Systemic Recovery",
+      desc: "Track measurable improvements in energy, metabolic health, sleep, and inflammatory markers over time."
     },
   ];
 
@@ -80,10 +80,10 @@ const Home = () => {
       <PageProgress />
 
       <Head>
-        <title>Poshak Tattva - Holistic Wellness Through Yoga, Diet & Sound Healing</title>
+        <title>Poshak Tattva - Reverse Chronic Lifestyle Disorders Naturally</title>
         <meta
           name="description"
-          content="Poshak Tattva is a holistic wellness platform dedicated to healing through Yoga, Diet, and Sound Therapy. We guide you towards balance, vitality, and inner harmony with personalized yoga practices, sattvic diet plans, and transformative sound healing sessions."
+          content="Poshak Tattva offers clinical-grade Functional Yoga, Sattvic Nutrition, and Sound Healing protocols designed to reverse chronic lifestyle disorders at the root cause — not just manage symptoms. Book your free root-cause consultation today."
         />
 
         <link rel="canonical" href="https://www.poshaktattva.com" />
@@ -103,8 +103,9 @@ const Home = () => {
               imgSrc="/img/yds.png"
               heading="Welcome to Poshak Tattva"
               isH1="true"
-              para="At Poshak Tattva, we believe that true wellness is not merely the absence of illness — it is a harmonious alignment of the body, mind, and soul. Our philosophy is rooted in the timeless wisdom of holistic living, where healing is achieved through balance, awareness, and conscious nourishment. Through the integration of Yoga, Diet, and Sound Healing, we guide you on a transformative journey toward complete well-being.
-Our Yoga practices cultivate strength, flexibility, and inner calm, helping you reconnect with your breath and your being. Our personalized diet plans are grounded in sattvic principles, designed to cleanse and energize your system from within while nurturing your relationship with food. Through Sound Healing, we work with vibrational frequencies to realign your energy centers, release emotional blockages, and restore peace to your mind and heart."
+              para="At Poshak Tattva, we go beyond the absence of illness to achieve systemic recovery. Chronic lifestyle disorders — from metabolic dysfunction and hormonal imbalance to autoimmune flares and digestive disorders — are not destiny. They are the result of compounding root causes that conventional medicine rarely addresses."
+              para2="Our methodology is clinically grounded. Our Sattvic Diet protocols are therapeutic-grade, engineered to correct metabolic health at the cellular level — reducing inflammation, rebalancing the gut microbiome, and restoring endocrine function. Our Sound Healing sessions use precision vibrational frequencies to rewire the autonomic nervous system, shifting patients from chronic stress states into deep physiological repair."
+              para3="Through Functional Yoga, we prescribe movement as medicine — specific asana and pranayama sequences that activate the lymphatic system, stimulate the vagus nerve, and restore hormonal regulation. This is not wellness as a lifestyle choice. This is clinical recovery delivered through the wisdom of ancient science."
             />
           </div>
         </section>
@@ -113,8 +114,8 @@ Our Yoga practices cultivate strength, flexibility, and inner calm, helping you 
         <section className="wrapper bg-white py-16">
           <div className="container">
             <div className="text-center mb-12">
-              <h2 className="display-5 fw-bold mb-4">Why Choose Poshak Tattva?</h2>
-              <p className="lead text-muted">Discover what makes our holistic wellness approach unique</p>
+              <h2 className="display-5 fw-bold mb-4">Our Clinical Methodology</h2>
+              <p className="lead text-muted">How we move beyond symptom management to achieve measurable, systemic recovery</p>
             </div>
             <div className="row g-4">
               {whyChooseUs.map((item, idx) => (
@@ -137,8 +138,8 @@ Our Yoga practices cultivate strength, flexibility, and inner calm, helping you 
               <p className="fs-80 fw-bolder sub-h2 position-relative">
                 Our Offerings
               </p>
-              <h2 className="display-5 mb-16 fw-bold z-1 mt-n15 mt-md-n16 mt-lg-n17 ">
-                Poshak Tattva Wellness Programs
+              <h2 className="display-5 mb-16 fw-bold z-1">
+                Clinical Recovery Programs
               </h2>
             </div>
 
@@ -151,8 +152,8 @@ Our Yoga practices cultivate strength, flexibility, and inner calm, helping you 
         <section className="wrapper bg-white py-16">
           <div className="container">
             <div className="text-center mb-12">
-              <h2 className="display-5 fw-bold mb-4">Your Journey Starts Here</h2>
-              <p className="lead text-muted">Simple steps to begin your wellness transformation</p>
+              <h2 className="display-5 fw-bold mb-4">Your Recovery Roadmap</h2>
+              <p className="lead text-muted">A structured clinical intake process designed for measurable results, not just temporary relief</p>
             </div>
             <div className="row g-4">
               {howItWorks.map((item, idx) => (
@@ -185,8 +186,8 @@ Our Yoga practices cultivate strength, flexibility, and inner calm, helping you 
         <section className="wrapper bg-light py-16">
           <div className="container">
             <div className="text-center mb-12">
-              <h2 className="display-5 fw-bold mb-4">Explore Our Services</h2>
-              <p className="lead text-muted">Find the perfect wellness practice for your needs</p>
+              <h2 className="display-5 fw-bold mb-4">Explore Our Clinical Programs</h2>
+              <p className="lead text-muted">Each program targets a specific physiological pathway — choose the intervention aligned with your root cause</p>
             </div>
             <div className="row g-4">
               {/* Yoga Section */}
@@ -217,7 +218,7 @@ Our Yoga practices cultivate strength, flexibility, and inner calm, helping you 
                       ))}
                     </ul>
                     <Link
-                      href="/yoga/group-sessions"
+                      href="/yoga"
                       className="btn btn-sm w-100"
                       style={{ backgroundColor: "#5a7a52", color: "#fff", border: "none", transition: "background-color 0.2s" }}
                       onMouseOver={e => e.currentTarget.style.backgroundColor = "#fd2a05ff"}
@@ -257,7 +258,7 @@ Our Yoga practices cultivate strength, flexibility, and inner calm, helping you 
                       ))}
                     </ul>
                     <Link
-                      href="/diet/digestive-disorders"
+                      href="/diet"
                       className="btn btn-sm w-100"
                       style={{ backgroundColor: "#a0622a", color: "white", border: "none", transition: "background-color 0.2s" }}
                       onMouseOver={e => e.currentTarget.style.backgroundColor = "#7a4a1e"}
@@ -297,7 +298,7 @@ Our Yoga practices cultivate strength, flexibility, and inner calm, helping you 
                       ))}
                     </ul>
                     <Link
-                      href="/sound-healing/1-1-session"
+                      href="/sound-healing"
                       className="btn btn-sm w-100"
                       style={{ backgroundColor: "#8b6347", color: "white", border: "none", transition: "background-color 0.2s" }}
                       onMouseOver={e => e.currentTarget.style.backgroundColor = "#6b4830"}
@@ -320,8 +321,8 @@ Our Yoga practices cultivate strength, flexibility, and inner calm, helping you 
           <div className="container">
             <div className="row align-items-center">
               <div className="col-lg-6 text-white mb-5 mb-lg-0">
-                <h2 className="h3 fw-bold mb-4">Stay Updated with Wellness Tips</h2>
-                <p className="lead mb-0">Subscribe to our newsletter for exclusive tips, class schedules, and wellness advice delivered to your inbox.</p>
+                <h2 className="h3 fw-bold mb-4">Get Clinical Insights Delivered to You</h2>
+                <p className="lead mb-0">Subscribe for evidence-based protocols, root-cause health insights, and early access to new clinical programs — straight to your inbox.</p>
               </div>
               <div className="col-lg-6">
                 <form onSubmit={handleSubscribe}>
@@ -334,7 +335,7 @@ Our Yoga practices cultivate strength, flexibility, and inner calm, helping you 
                       onChange={(e) => setEmail(e.target.value)}
                       required
                     />
-                    <button className="btn btn-light fw-bold" style={{ background: "#1F3D2B", color: "#C97B63", border: "1px solid black" }} type="submit">
+                    <button className="btn btn-light fw-bold" style={{ background: "#1F3D2B", color: "#f8f7f7ff", border: "1px solid black" }} type="submit">
                       Subscribe
                     </button>
                   </div>
@@ -353,17 +354,17 @@ Our Yoga practices cultivate strength, flexibility, and inner calm, helping you 
         <section className="wrapper bg-light py-16">
           <div className="container">
             <div className="text-center mb-12">
-              <h2 className="display-5 fw-bold mb-4">Ready to Begin?</h2>
-              <p className="lead text-muted">Everything you need to know about our wellness programs</p>
+              <h2 className="display-5 fw-bold mb-4">Ready to Reverse Your Condition?</h2>
+              <p className="lead text-muted">Everything you need to start your root-cause recovery — session booking, program details, and answers to your questions</p>
             </div>
             <div className="row g-4">
               <div className="col-md-4">
                 <div className="card shadow-sm border-0 h-100 text-center p-6 hover-shadow" style={{ transition: "all 0.3s ease", cursor: "pointer" }}>
                   <div style={{ fontSize: "3rem", marginBottom: "1rem" }}>📅</div>
-                  <h5 className="fw-bold mb-3">Book Your Session</h5>
-                  <p className="text-muted mb-4">Schedule your personalized consultation and get started on your wellness journey</p>
+                  <h5 className="fw-bold mb-3">Book Your Free Root-Cause Consultation</h5>
+                  <p className="text-muted mb-4">Start with a no-cost clinical intake session — we map your symptoms to their systemic root causes before recommending any protocol.</p>
                   <Link href="/contact-appointment" className="btn btn-primary">
-                    Book Appointment →
+                    Book Free Consultation →
                   </Link>
                 </div>
               </div>
@@ -397,14 +398,11 @@ Our Yoga practices cultivate strength, flexibility, and inner calm, helping you 
         {/* CTA Section */}
         <section className="wrapper py-12 bg-white">
           <div className="container text-center">
-            <h2 className="display-5 fw-bold mb-6">Begin Your Wellness Journey Today</h2>
-            <p className="lead text-muted mb-8">Don't wait for tomorrow. Take the first step towards complete wellness and inner peace.</p>
+            <h2 className="display-5 fw-bold mb-6">Start Your Clinical Recovery Today</h2>
+            <p className="lead text-muted mb-8">Chronic disorders don't reverse themselves. Your first step is a free root-cause consultation — no prescription, no guesswork, just clarity on what's driving your condition.</p>
             <div className="d-flex flex-column flex-sm-row gap-3 justify-content-center">
               <Link href="/contact-appointment" className="btn btn-lg" style={{ background: "linear-gradient(135deg, #1F3D2B 0%, #1F3D2B 100%)", color: "white", border: "none" }}>
-                Book Your Consultation →
-              </Link>
-              <Link href="/pricing" className="btn btn-lg btn-outline-primary">
-                See Pricing →
+                Book Root-Cause Consultation →
               </Link>
             </div>
           </div>

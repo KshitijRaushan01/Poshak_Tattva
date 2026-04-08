@@ -43,7 +43,7 @@ const Hero = () => {
 
       {/* Foreground caption content */}
       <div className="container caption position-relative z-1">
-        <div className="row" style={{ height: "85vh" }}>
+        <div className="row" style={{ height: "95vh" }}>
           <div
             className="col-lg-8 p-5 text-center text-sm-start d-flex flex-column justify-content-center rounded"
             data-cues="slideInDown"
@@ -52,18 +52,23 @@ const Hero = () => {
             data-delay="500"
           >
             <h2 className="fs-56 mb-4 text-white animate__animated animate__slideInDown animate__delay-1s">
-              Heal. Nourish. Awaken.
+              Reverse Chronic Lifestyle Disorders Naturally.
             </h2>
 
             <p className="lead fs-23 lh-sm mb-7 text-white animate__animated animate__slideInRight animate__delay-2s">
-              We are here to make you disease free!
+              The clinical integration of Yoga, Diet & Sound Healing. <br />We don't just manage symptoms—we target the root cause.
             </p>
 
-            <div className="animate__animated animate__slideInUp animate__delay-3s">
+            <div className="animate__animated animate__slideInUp animate__delay-3s d-flex flex-column flex-sm-row gap-3">
               <NextLink
-                title="Read More"
-                href="/about-us"
+                title="Book Your Free Root-Cause Consultation"
+                href="/contact-appointment"
                 className="btn btn-lg text-white secondary-bg rounded"
+              />
+              <NextLink
+                title="Explore Our Approach"
+                href="/about-us"
+                className="btn btn-lg btn-outline-light rounded"
               />
             </div>
           </div>

@@ -7,9 +7,10 @@
         "theme/*": ["theme/*"],
         "styles/*": ["styles/*"],
         "plugins/*": ["plugins/*"],
-        "assets/*": ["../public/assets/*"] // still works if assets are in public
+        "lib/*": ["lib/*"],
+        "@/*": ["./*"],
+        "assets/*": ["../public/assets/*"]
       }
     },
     "include": ["src"]
-  }
-  
+  }
