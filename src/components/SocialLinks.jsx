@@ -16,6 +16,11 @@ const links = [
     icon: "uil uil-whatsapp",
     url: "https://api.whatsapp.com/send?phone=9351500400",
   },
+  {
+    id: 4,
+    icon: "uil uil-linkedin",
+    url: "https://in.linkedin.com/in/priyanka-pugalia-18b4b5169/",
+  },
 ];
 
 const SocialLinks = ({ className = "nav social  mt-4" }) => {

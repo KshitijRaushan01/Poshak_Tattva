@@ -58,6 +58,11 @@ const Topbar = () => {
                 icon: "whatsapp",
                 label: "WhatsApp",
               },
+              {
+                href: "https://in.linkedin.com/in/priyanka-pugalia-18b4b5169/",
+                icon: "linkedin",
+                label: "LinkedIn",
+              },
             ].map(({ href, icon, label }) => (
               <Link
                 key={icon}

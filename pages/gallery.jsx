@@ -11,6 +11,11 @@ export default function GalleryPage() {
     "/img/Gallery/3.webp",
     "/img/Gallery/91938.jpg",
     "/img/Gallery/4.jpg",
+    "/img/Gallery/ALS_0472.jpg",
+    "/img/Gallery/ALS_0494.jpg",
+    "/img/Gallery/ALS_0518.jpg",
+    "/img/Gallery/DSC06324.jpg",
+    "/img/Gallery/DSC06332.jpg",
   ];
 
   return (

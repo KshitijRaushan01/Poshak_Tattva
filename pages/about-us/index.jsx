@@ -399,7 +399,7 @@ export default function AboutUs() {
                       style={{ width: "100%", height: "100%", objectFit: "cover" }}
                     />
                   </div>
-                  <h4 className="fw-bold text-white mb-2" style={{ fontSize: "1.75rem" }}>Priyanka Pugalia</h4>
+                  <h4 className="fw-bold text-white mb-2" style={{ fontSize: "1.75rem", color: "#A8D5B5" }}>Priyanka Pugalia</h4>
                   <p style={{ color: "#A8D5B5", fontSize: "0.9rem", fontWeight: "600", marginBottom: "2rem" }}>
                     Founder · Nutrition & Dietetics · Yoga Therapist · Sound Healer
                   </p>

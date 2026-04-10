@@ -70,8 +70,8 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <h6 className="mb-2">Address</h6>
-                    <p className="small">
+                    <h6 className="mb-1">Address</h6>
+                    <p className="small" style={{fontSize: "15px"}}>
                       177, Vinoba Puri, Lajpat Nagar 2, New Delhi, Delhi 110024
                     </p>
                   </div>

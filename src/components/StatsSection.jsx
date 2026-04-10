@@ -2,16 +2,16 @@
 
 export default function StatsSection() {
   const stats = [
-    { value: "8+", label: "Years Of Experience" },
-    { value: "150,00+", label: "Happy Patients" },
-    { value: "50,00+", label: "Operations" },
+    { value: "5+", label: "Years Of Experience" },
+    { value: "15K+", label: "Happy Patients" },
+    { value: "5+", label: "Operations" },
   ];
 
   return (
     <section className="wrapper py-12">
       <div className="container">
         <div
-          className="rounded-4 text-white py-12 px-8 d-flex flex-column flex-md-row justify-content-around align-items-center gap-4"
+          className="rounded-4 text-white py-4 px-8 d-flex flex-column flex-md-row justify-content-around align-items-center gap-4"
           style={{
             background: "linear-gradient(135deg, #1F3D2B 0%, #3D5C4A 100%)",
             boxShadow: "0 10px 30px rgba(31, 61, 43, 0.2)"

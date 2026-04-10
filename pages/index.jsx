@@ -121,9 +121,9 @@ const Home = () => {
               {whyChooseUs.map((item, idx) => (
                 <div key={idx} className="col-md-6 col-lg-3">
                   <div className="card h-100 border-0 shadow-sm p-6 text-center hover-shadow" style={{ transition: "all 0.3s ease" }}>
-                    <div style={{ fontSize: "3rem", marginBottom: "1rem" }}>{item.icon}</div>
+                    <div style={{ fontSize: "4rem", marginBottom: "0.25rem" }}>{item.icon}</div>
                     <h5 className="fw-bold mb-3">{item.title}</h5>
-                    <p className="text-muted small">{item.desc}</p>
+                    <p className="text-muted bold">{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -135,7 +135,7 @@ const Home = () => {
         <section className="wrapper bg-light py-10 py-md-14">
           <div className="container">
             <div className="col-md-10 col-lg-8">
-              <p className="fs-80 fw-bolder sub-h2 position-relative">
+              <p className="fs-80 fw-bolder sub-h2 position-relative" style={{color: "#14582fff"}}>
                 Our Offerings
               </p>
               <h2 className="display-5 mb-16 fw-bold z-1">
@@ -174,7 +174,7 @@ const Home = () => {
                       {item.step}
                     </div>
                     <h5 className="fw-bold mb-3">{item.title}</h5>
-                    <p className="text-muted small">{item.desc}</p>
+                    <p className="text-muted " style={{fontSize: "1rem"}}>{item.desc}</p>
                   </div>
                 </div>
               ))}

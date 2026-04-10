@@ -43,7 +43,7 @@ const Hero = () => {
 
       {/* Foreground caption content */}
       <div className="container caption position-relative z-1">
-        <div className="row" style={{ height: "95vh" }}>
+        <div className="row" style={{ height: "85vh" }}>
           <div
             className="col-lg-8 p-5 text-center text-sm-start d-flex flex-column justify-content-center rounded"
             data-cues="slideInDown"
@@ -52,11 +52,11 @@ const Hero = () => {
             data-delay="500"
           >
             <h2 className="fs-56 mb-4 text-white animate__animated animate__slideInDown animate__delay-1s">
-              Reverse Chronic Lifestyle Disorders Naturally.
+              Back to Bliss
             </h2>
 
             <p className="lead fs-23 lh-sm mb-7 text-white animate__animated animate__slideInRight animate__delay-2s">
-              The clinical integration of Yoga, Diet & Sound Healing. <br />We don't just manage symptoms—we target the root cause.
+              Poshak Tattva: Pure Elements, Proven Health
             </p>
 
             <div className="animate__animated animate__slideInUp animate__delay-3s d-flex flex-column flex-sm-row gap-3">

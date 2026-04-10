@@ -12,16 +12,20 @@ export default function ShopPage() {
         <title>Shop – Poshak Tattva</title>
         <meta
           name="description"
-          content="Shop our premium wellness products including singing bowls, crystal bowls, gongs, bells, and eco-friendly yoga mats."
+          content="Shop our premium wellness products including singing bowls, crystal bowls, gongs, bells, and Shakers ."
         />
       </Head>
 
       <main className="content-wrapper">
         {/* Hero */}
         <section
-          className="wrapper py-12"
+          className="wrapper py-12 d-flex align-items-center"
           style={{
-            background: "linear-gradient(135deg, #1F3D2B 0%, #3D5C4A 100%)",
+            backgroundImage: "url('/img/Shop Header Image.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "bottom",
+            backgroundRepeat: "no-repeat",
+            minHeight: "50vh",
           }}
         >
           <div className="container text-center">

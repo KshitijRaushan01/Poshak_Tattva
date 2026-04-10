@@ -231,7 +231,7 @@ export default function YogaMainPage() {
                       >
                         {service.badge}
                       </span>
-                      <p className="text-muted small mb-0">
+                      <p className="text-muted mb-0" style={{ fontSize: "0.9rem" }}>
                         <strong>Best For:</strong><br />{service.bestFor}
                       </p>
                     </div>
@@ -241,7 +241,7 @@ export default function YogaMainPage() {
                       <h3 className="fw-bold mb-3" style={{ color: "#1a1a1a" }}>{service.title}</h3>
                       <p className="text-muted mb-5" style={{ lineHeight: "1.75" }}>{service.description}</p>
 
-                      <h6 className="fw-bold mb-3 text-uppercase" style={{ fontSize: "0.75rem", letterSpacing: "0.1em", color: service.accent }}>
+                      <h6 className="fw-bold mb-3 text-uppercase" style={{ fontSize: "0.95rem", letterSpacing: "0.05em", color: service.accent }}>
                         What's Included
                       </h6>
                       <div className="row g-2 mb-5">
@@ -249,7 +249,7 @@ export default function YogaMainPage() {
                           <div key={i} className="col-sm-6">
                             <div className="d-flex align-items-start gap-2">
                               <span style={{ color: service.accent, fontWeight: "bold", marginTop: "2px" }}>✓</span>
-                              <span className="text-muted small">{b}</span>
+                              <span className="text-muted" style={{ fontSize: "0.9rem" }}>{b}</span>
                             </div>
                           </div>
                         ))}
