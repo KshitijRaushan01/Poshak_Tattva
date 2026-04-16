@@ -3,8 +3,8 @@
 export default function StatsSection() {
   const stats = [
     { value: "5+", label: "Years Of Experience" },
-    { value: "15K+", label: "Happy Patients" },
-    { value: "5+", label: "Operations" },
+    { value: "15K+", label: "Students" },
+    { value: "14+", label: "Programs" },
   ];
 
   return (

@@ -78,6 +78,8 @@ const Navbar = ({ navClassName, navOtherClass, fancy, stickyBox }) => {
               <DropdownToggleLink
                 title="Yoga"
                 className="nav-link dropdown-toggle"
+                href="/yoga"
+                disableToggle={true}
               />
               <ul className="dropdown-menu" data-bs-dismiss="offcanvas">
                 {yoga.map(({ id, url, title }) => (
@@ -95,6 +97,7 @@ const Navbar = ({ navClassName, navOtherClass, fancy, stickyBox }) => {
               <DropdownToggleLink
                 title="Yoga"
                 className="nav-link dropdown-toggle"
+                href="/yoga"
               />
               <ul className="dropdown-menu" data-bs-dismiss="offcanvas">
                 {yoga.map(({ id, url, title }) => (
@@ -112,7 +115,8 @@ const Navbar = ({ navClassName, navOtherClass, fancy, stickyBox }) => {
               <DropdownToggleLink
                 title="Sound Healing"
                 className="nav-link dropdown-toggle"
-                href="#"
+                href="/sound-healing"
+                disableToggle={true}
               />
               <ul className="dropdown-menu" data-bs-dismiss="offcanvas">
                 {soundHealing.map(({ id, title, url }) => (
@@ -130,6 +134,7 @@ const Navbar = ({ navClassName, navOtherClass, fancy, stickyBox }) => {
               <DropdownToggleLink
                 title="Sound Healing"
                 className="nav-link dropdown-toggle"
+                href="/sound-healing"
               />
               <ul className="dropdown-menu" data-bs-dismiss="offcanvas">
                 {soundHealing.map(({ id, title, url }) => (
@@ -148,6 +153,8 @@ const Navbar = ({ navClassName, navOtherClass, fancy, stickyBox }) => {
                 <DropdownToggleLink
                   title="Diet"
                   className="nav-link dropdown-toggle"
+                  href="/diet"
+                  disableToggle={cls === "d-none d-lg-block"}
                 />
                 <ul className="dropdown-menu" data-bs-dismiss="offcanvas">
                   {diet.map(({ id, title, url }) => (

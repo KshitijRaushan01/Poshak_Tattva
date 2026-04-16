@@ -22,16 +22,28 @@
 /* ---------------------------------
    Typography
 ---------------------------------- */
-section h1, h1 span {
+section h1 {
   font-size: 34px !important;
   color: #1F3D2B !important;
   letter-spacing: 0;
 }
 
-section h2, h2 span {
+h1 span {
+  font-size: 34px !important;
+  letter-spacing: 0;
+  /* Allow inline color styles to override */
+}
+
+section h2 {
   font-size: 32px !important;
   color: #1F3D2B !important;
   letter-spacing: 0;
+}
+
+h2 span {
+  font-size: 32px !important;
+  letter-spacing: 0;
+  /* Allow inline color styles to override */
 }
 
 section h3, .link h3:hover, .link:hover h4 {
@@ -43,6 +55,13 @@ section h3, .link h3:hover, .link:hover h4 {
   font-weight: bolder !important;
   color: #1F3D2B !important;
   font-size: medium !important;
+}
+
+body, p, .lead, .desc {
+  color: #2D3748; /* Richer dark gray instead of faded gray */
+  line-height: 1.75;
+  font-size: 1.05rem;
+  letter-spacing: 0.01em;
 }
 
 /* ---------------------------------
@@ -140,7 +159,7 @@ section h3, .link h3:hover, .link:hover h4 {
 
 .video-container video {
   width: 100%;
-  height: 85%;
+  height: 100%;
   position: absolute;
   object-fit: cover;
   z-index: -3;
@@ -149,7 +168,7 @@ section h3, .link h3:hover, .link:hover h4 {
 .video-container .overlay {
   position: absolute;
   width: 100%;
-  height: 85%;
+  height: 100%;
   background: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }

@@ -39,7 +39,7 @@ export const offeringsList = [
     id: 2,
     url: '/diet',
     src: '/img/offerings/diet.png',
-    title: 'Sattvic Clinical Nutrition',
+    title: 'Functional Nutrition',
     description: 'Therapeutic-grade diet protocols engineered to correct metabolic dysfunction, reduce systemic inflammation, and rebalance the gut microbiome at the cellular level.',
   },
   {
@@ -53,7 +53,7 @@ export const offeringsList = [
     id: 4,
     url: '/yoga/meditation',
     src: '/img/offerings/meditation.png',
-    title: 'Clinical Meditation & Mindfulness',
+    title: 'Meditation & Mindfulness',
     description: 'Structured neuro-regulatory meditation protocols designed to lower cortisol, reduce neuroinflammation, and rebuild cognitive resilience over measurable timeframes.',
   },
   {
@@ -78,7 +78,7 @@ export const yoga = [
 
 export const aboutUsFooter = [
   { id: 1, title: 'Home', url: '/' },
-  { id: 2, title: 'About Poshak Tattva', url: '/about-us' },
+  { id: 2, title: 'About Us', url: '/about-us' },
   { id: 3, title: 'Yoga', url: '/classes' },
   { id: 4, title: 'Diet', url: '/diet/weight-loss' },
   { id: 5, title: 'Sound Healing', url: '/sound-healing/1-1-session' },

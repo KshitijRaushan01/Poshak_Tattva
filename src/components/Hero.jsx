@@ -7,17 +7,18 @@ import NextLink from "./NextLink";
  */
 const Hero = () => {
   return (
-    <section className="hero position-relative">
+    <section className="hero position-relative mb-0 pb-0">
       {/* Optional: Uncomment this block to use video background instead of static image */}
 
-      <figure className="video-container bg-gray">
+      <figure className="video-container bg-gray m-0 p-0" style={{ marginBottom: 0, overflow: 'hidden' }}>
         <div className="overlay"></div>
         <video
           autoPlay
           muted
           loop
           src="/img/heal.mp4"
-          className="video"
+          className="video d-block w-100"
+          style={{ marginBottom: 0 }}
           playsInline
           aria-hidden="true"
         />
@@ -43,7 +44,7 @@ const Hero = () => {
 
       {/* Foreground caption content */}
       <div className="container caption position-relative z-1">
-        <div className="row" style={{ height: "85vh" }}>
+        <div className="row" style={{ minHeight: "85vh", height: "100%" }}>
           <div
             className="col-lg-8 p-5 text-center text-sm-start d-flex flex-column justify-content-center rounded"
             data-cues="slideInDown"
@@ -61,7 +62,7 @@ const Hero = () => {
 
             <div className="animate__animated animate__slideInUp animate__delay-3s d-flex flex-column flex-sm-row gap-3">
               <NextLink
-                title="Book Your Free Root-Cause Consultation"
+                title="Find Root-Cause"
                 href="/contact-appointment"
                 className="btn btn-lg text-white secondary-bg rounded"
               />

@@ -4,11 +4,22 @@ const DropdownToggleLink = props => {
   const {
     title,
     className,
+    disableToggle,
     ...others
   } = props;
-  return <Link href="#" data-bs-toggle="dropdown" className={className || 'dropdown-item dropdown-toggle'} {...others}>
+  
+  const toggleProps = disableToggle ? {} : { "data-bs-toggle": "dropdown" };
+
+  return (
+    <Link 
+      href={others.href || "#"} 
+      {...toggleProps} 
+      className={className || 'dropdown-item dropdown-toggle'} 
+      {...others}
+    >
       {title}
-    </Link>;
+    </Link>
+  );
 };
 
 export default DropdownToggleLink;

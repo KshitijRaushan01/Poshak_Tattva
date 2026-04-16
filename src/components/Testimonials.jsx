@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import TestimonialCard from "components/ui/testimonial";
+import { supabase } from "lib/supabaseClient";
 
 // ─── Real client testimonials ──────────────────────────────────────────────
 const testimonials = [
@@ -150,10 +151,7 @@ const testimonials = [
   },
 ];
 
-// Split testimonials into 3 columns
-const col1 = testimonials.filter((_, i) => i % 3 === 0);
-const col2 = testimonials.filter((_, i) => i % 3 === 1);
-const col3 = testimonials.filter((_, i) => i % 3 === 2);
+
 
 // ─── Scrolling column ──────────────────────────────────────────────────────
 function TestimonialsColumn({ items, duration = 30 }) {
@@ -178,17 +176,32 @@ function TestimonialsColumn({ items, duration = 30 }) {
     </div>
   );
 }
-
-// ─── Stats ─────────────────────────────────────────────────────────────────
-const stats = [
-  { icon: "🧘‍♀️", number: "5000+", label: "Students Trained" },
-  { icon: "⭐", number: "4.9/5", label: "Average Rating" },
-  { icon: "🏆", number: "5+", label: "Years Experience" },
-  { icon: "🌿", number: "50+", label: "Wellness Programs" },
-];
-
 // ─── Main Export ───────────────────────────────────────────────────────────
 export default function Testimonials() {
+  const [data, setData] = useState(testimonials);
+
+  useEffect(() => {
+    async function fetchTestimonials() {
+      try {
+        const { data: dbData, error } = await supabase
+          .from("testimonials")
+          .select("*")
+          .order("created_at", { ascending: false });
+
+        if (dbData && dbData.length > 0) {
+          setData([...dbData, ...testimonials]);
+        }
+      } catch (err) {
+        console.error("Error fetching testimonials:", err);
+      }
+    }
+    fetchTestimonials();
+  }, []);
+
+  const col1 = data.filter((_, i) => i % 3 === 0);
+  const col2 = data.filter((_, i) => i % 3 === 1);
+  const col3 = data.filter((_, i) => i % 3 === 2);
+
   return (
     <>
       <style>{`
@@ -237,7 +250,7 @@ export default function Testimonials() {
             <h2 id="testimonials-heading" className="display-5 fw-bold mb-3">
               What Our Students Say
             </h2>
-            <p className="lead text-muted">
+            <p className="lead text">
               Real transformations from real students across the globe
             </p>
           </div>
@@ -255,26 +268,6 @@ export default function Testimonials() {
               <TestimonialsColumn items={col3} duration={42} />
             </div>
           </motion.div>
-        </div>
-      </section>
-
-      {/* ── Stats ─────────────────────────────────────────────────────── */}
-      <section
-        className="wrapper py-12"
-        style={{ background: "linear-gradient(135deg, #1F3D2B 0%, #3D5C4A 100%)" }}
-      >
-        <div className="container">
-          <div className="row g-4 text-center">
-            {stats.map((stat, idx) => (
-              <div key={idx} className="col-md-6 col-lg-3">
-                <div className="text-white">
-                  <div style={{ fontSize: "2.5rem", marginBottom: "0.5rem" }}>{stat.icon}</div>
-                  <h3 className="h2 fw-bold mb-2 text-white">{stat.number}</h3>
-                  <p className="mb-0 text-white text-opacity-75">{stat.label}</p>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
     </>

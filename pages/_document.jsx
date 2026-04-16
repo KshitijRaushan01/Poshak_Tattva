@@ -10,12 +10,17 @@ class ENTrovaDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          {/* Favicon Links */}
-          <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png" />
-          <link rel="icon" type="image/svg+xml" href="/img/favicon/favicon.svg" />
-          <link rel="shortcut icon" href="/img/favicon/favicon.ico" />
-          <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png" />
-          <link rel="manifest" href="/img/favicon/site.webmanifest" />
+        {/* Google Fonts — Poshak Tattva Type System */}
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;0,600;0,700;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=DM+Mono:wght@400;500&display=swap"
+            rel="stylesheet"
+          />
+          {/* Favicon */}
+          <link rel="icon" type="image/jpeg" href="/img/favicon/favicon.jpg" />
+          <link rel="shortcut icon" href="/img/favicon/favicon.jpg" />
+          <link rel="apple-touch-icon" href="/img/favicon/favicon.jpg" />
         </Head>
         <body>
           <Main />

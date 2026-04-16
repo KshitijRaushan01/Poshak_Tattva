@@ -1,16 +1,17 @@
 {
-    "compilerOptions": {
-      "baseUrl": "src",
-      "paths": {
-        "components/*": ["components/*"],
-        "hooks/*": ["hooks/*"],
-        "theme/*": ["theme/*"],
-        "styles/*": ["styles/*"],
-        "plugins/*": ["plugins/*"],
-        "lib/*": ["lib/*"],
-        "@/*": ["./*"],
-        "assets/*": ["../public/assets/*"]
-      }
-    },
-    "include": ["src"]
-  }
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "components/*": ["src/components/*"],
+      "hooks/*": ["src/hooks/*"],
+      "theme/*": ["src/theme/*"],
+      "styles/*": ["src/styles/*"],
+      "plugins/*": ["src/plugins/*"],
+      "lib/*": ["src/lib/*"],
+      "context/*": ["src/context/*"],
+      "assets/*": ["src/assets/*"],
+      "@/*": ["./*"]
+    }
+  },
+  "include": ["src", "pages"]
+}

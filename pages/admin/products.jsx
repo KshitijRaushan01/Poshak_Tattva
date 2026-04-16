@@ -112,7 +112,7 @@ export default function AdminProducts() {
                       <td>
                         <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
                           {r.thumbnail && (
-                            <img src={r.thumbnail} alt="" style={{ width: 40, height: 40, objectFit: "cover", borderRadius: 6, background: "#1f3d2b" }} />
+                            <img src={r.thumbnail} alt={r.name} style={{ width: 40, height: 40, objectFit: "cover", borderRadius: 6, background: "#1f3d2b" }} />
                           )}
                           <div>
                             <div style={{ fontWeight: 600, fontSize: "0.875rem" }}>{r.name}</div>
