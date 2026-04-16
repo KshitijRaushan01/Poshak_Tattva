@@ -15,6 +15,7 @@ const ServiceCard = ({ title, src, description }) => {
  height={100}
  className="mx-auto mb-5"
  style={{ objectFit: 'contain' }}
+ unoptimized={true}
  />
  <h3 className="fw-bold mb-3">{title}</h3>
  <p className=" mb-6 px-lg-4" style={{ fontSize: '0.95rem', lineHeight: '1.6' }}>
