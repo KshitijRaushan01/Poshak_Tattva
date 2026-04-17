@@ -54,10 +54,8 @@ export function TestimonialCard({ name, role, quote, rating = 5, className }) {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400&display=swap');
-
         .pt-tc {
-          font-family: 'Poppins', sans-serif;
+          font-family: 'Inter', sans-serif;
           width: 300px;
           min-width: 300px;
           height: max-content;
@@ -100,15 +98,18 @@ export function TestimonialCard({ name, role, quote, rating = 5, className }) {
           flex-shrink: 0;
         }
         .pt-tc .tc-name {
+          font-family: 'Inter', sans-serif;
           font-size: 0.95rem;
           font-weight: 600;
-          color: #1f2937;
+          color: #1a3a33;
           margin: 0;
           line-height: 1.3;
+          letter-spacing: -0.01em;
         }
         .pt-tc .tc-role {
+          font-family: 'Inter', sans-serif;
           font-size: 0.78rem;
-          color: #9ca3af;
+          color: #6B7280;
           margin: 0;
           margin-top: 1px;
         }
@@ -123,9 +124,10 @@ export function TestimonialCard({ name, role, quote, rating = 5, className }) {
 
         /* Quote */
         .pt-tc .tc-quote {
-          color: #4b5563;
+          font-family: 'Inter', sans-serif;
+          color: #555555;
           font-size: 0.82rem;
-          line-height: 1.65;
+          line-height: 1.7;
           margin: 0;
           flex: 1;
         }

@@ -1,11 +1,29 @@
 /* ---------------------------------
+   Global Font Setup
+---------------------------------- */
+:root {
+  --font-heading: 'Inter', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-accent: 'Inter', sans-serif;
+  --font-card-heading: 'Inter', sans-serif;
+  --font-card-body: 'Inter', sans-serif;
+  --text-dark: #2D3D3D;
+  --text-light: #4F5559;
+  --text-muted: #6B7280;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ---------------------------------
    Color Utilities
 ---------------------------------- */
 .text-main { color: #1F3D2B !important; }
 .text-second { color: #C2A46F !important; }
 .sub-heading, .sub-head { color: #C2A46F !important; }
 .sub-h2 { color: #F5F1E8; }
-.sub-h3 { color: black !important; }
+.sub-h3 { color: #2D3D3D !important; }
 .sub-h3:hover { color: #1F3D2B !important; text-decoration: underline; }
 
 /* ---------------------------------
@@ -20,55 +38,176 @@
 .img-bg { background-color: #F5F1E8 !important; }
 
 /* ---------------------------------
-   Typography
+   Typography System
 ---------------------------------- */
-section h1 {
-  font-size: 34px !important;
-  color: #1F3D2B !important;
-  letter-spacing: 0;
+
+/* Base typography */
+body {
+  font-family: var(--font-body) !important;
+  color: var(--text-dark) !important;
+  line-height: 1.65 !important;
+  font-size: clamp(0.95rem, 2.5vw, 1.05rem) !important;
+  letter-spacing: 0.005em !important;
+  font-weight: 400 !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-h1 span {
-  font-size: 34px !important;
-  letter-spacing: 0;
-  /* Allow inline color styles to override */
+p, .desc, .lead-alt {
+  color: var(--text-light) !important;
+  line-height: 1.68 !important;
+  font-size: clamp(0.95rem, 2.5vw, 1.05rem) !important;
+  letter-spacing: 0.005em !important;
 }
 
-section h2 {
-  font-size: 32px !important;
+.lead {
+  font-family: var(--font-body) !important;
+  color: var(--text-light) !important;
+  font-size: clamp(1rem, 2.8vw, 1.1rem) !important;
+  font-weight: 400 !important;
+  line-height: 1.7 !important;
+  letter-spacing: 0.01em !important;
+}
+
+/* Heading hierarchy */
+h1, .h1, .display-1, .display-2, .display-3, .display-4 {
+  font-family: var(--font-heading) !important;
+  color: white !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.02em !important;
+  margin-bottom: 1.25rem !important;
+}
+
+h1, .h1 {
+  font-size: clamp(2rem, 7vw, 3.5rem) !important;
+}
+
+.display-4 {
+  font-size: clamp(1.8rem, 6vw, 2.8rem) !important;
+  font-weight: 700 !important;
+}
+
+.display-5 {
+  font-family: var(--font-heading) !important;
+  font-size: clamp(1.6rem, 5vw, 2.4rem) !important;
+  font-weight: 600 !important;
+  line-height: 1.25 !important;
+  letter-spacing: -0.01em !important;
   color: #1F3D2B !important;
-  letter-spacing: 0;
+}
+
+.display-6 {
+  font-family: var(--font-heading) !important;
+  font-size: clamp(1.3rem, 4vw, 1.8rem) !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  letter-spacing: -0.005em !important;
+  color: #1F3D2B !important;
+}
+
+h2, .h2 {
+  font-family: var(--font-heading) !important;
+  font-size: clamp(1.6rem, 5vw, 2.4rem) !important;
+  color: #1F3D2B !important;
+  font-weight: 600 !important;
+  line-height: 1.25 !important;
+  letter-spacing: -0.01em !important;
+  margin-bottom: 1.2rem !important;
 }
 
 h2 span {
-  font-size: 32px !important;
-  letter-spacing: 0;
-  /* Allow inline color styles to override */
+  font-family: var(--font-heading) !important;
+  letter-spacing: -0.01em !important;
+}
+
+h3, .h3 {
+  font-family: var(--font-heading) !important;
+  font-size: clamp(1.25rem, 3.5vw, 1.75rem) !important;
+  color: #1a3a33 !important;
+  font-weight: 600 !important;
+  line-height: 1.35 !important;
+  letter-spacing: -0.005em !important;
+  margin-bottom: 1rem !important;
+  text-wrap: balance !important;
+}
+
+h4, .h4 {
+  font-family: var(--font-heading) !important;
+  font-size: clamp(1.1rem, 2.5vw, 1.3rem) !important;
+  color: #1a3a33 !important;
+  font-weight: 600 !important;
+  line-height: 1.4 !important;
+  letter-spacing: -0.005em !important;
+  margin-bottom: 0.8rem !important;
+  text-wrap: balance !important;
+}
+
+h5, .h5 {
+  font-family: var(--font-heading) !important;
+  font-size: clamp(1rem, 2.2vw, 1.15rem) !important;
+  color: #1a3a33 !important;
+  font-weight: 600 !important;
+  line-height: 1.4 !important;
+  letter-spacing: -0.005em !important;
+  margin-bottom: 0.7rem !important;
+}
+
+h6, .h6 {
+  font-family: var(--font-heading) !important;
+  font-size: clamp(0.9rem, 2vw, 1rem) !important;
+  color: #1F3D2B !important;
+  font-weight: 500 !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  margin-bottom: 0.6rem !important;
+}
+
+/* Section headers */
+section h1 {
+  font-size: clamp(2rem, 7vw, 3.5rem) !important;
+  color: #1F3D2B !important;
+  letter-spacing: -0.01em !important;
+  font-weight: 700 !important;
+}
+
+section h1 span {
+  font-size: clamp(2rem, 7vw, 3.5rem) !important;
+  letter-spacing: -0.01em !important;
+}
+
+section h2 {
+  font-size: clamp(1.6rem, 5vw, 2.4rem) !important;
+  color: #1F3D2B !important;
+  letter-spacing: -0.005em !important;
+  font-weight: 700 !important;
+}
+
+section h2 span {
+  font-size: clamp(1.6rem, 5vw, 2.4rem) !important;
+  letter-spacing: -0.005em !important;
 }
 
 section h3, .link h3:hover, .link:hover h4 {
   color: #1F3D2B !important;
+  font-weight: 600 !important;
 }
 
 .text-justify { text-align: justify !important; }
-.d-header {
-  font-weight: bolder !important;
-  color: #1F3D2B !important;
-  font-size: medium !important;
-}
 
-body, p, .lead, .desc {
-  color: #2D3748; /* Richer dark gray instead of faded gray */
-  line-height: 1.75;
-  font-size: 1.05rem;
-  letter-spacing: 0.01em;
+.d-header {
+  font-family: var(--font-body) !important;
+  font-weight: 600 !important;
+  color: #1F3D2B !important;
+  font-size: clamp(0.95rem, 2.5vw, 1rem) !important;
 }
 
 /* ---------------------------------
    Links & Hover States
 ---------------------------------- */
-.mail a { color: rgb(85, 79, 79) !important; }
-.mail a:hover { color: #C97B63 !important; }
+.mail a { color: #4F5559 !important; }
+.mail a:hover { color: #C97B63 !important; transition: color 0.2s ease; }
 .widget ul li a:hover {
   color: #fff !important;
   text-decoration: underline !important;
@@ -79,6 +218,338 @@ body, p, .lead, .desc {
 .link-inverse,
 .text-inverse a:not(.btn) {
   color: #1F3D2B !important;
+}
+
+/* Text color utilities */
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+/* Make hero/header text white in header sections and override muted headings */
+.hero-header h1,
+.hero-header h2,
+.hero-header h3,
+.hero-header h4,
+.hero-header h5,
+.hero-header p,
+.hero-header .lead,
+.hero-header .badge {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+.hero-header .text-muted {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+.hero h1,
+.hero h2,
+.hero h3,
+.hero h4,
+.hero h5,
+.hero p,
+.hero .display-4,
+.hero .display-5,
+.article-hero h1,
+.article-hero p,
+.wrapper.py-12.d-flex.align-items-center h1,
+.wrapper.py-12.d-flex.align-items-center h2,
+.wrapper.py-12.d-flex.align-items-center p,
+.wrapper.py-12.d-flex.align-items-center .display-5,
+.wrapper.py-12.d-flex.align-items-center .lead {
+  color: #ffffff !important;
+}
+
+.hero .text-muted,
+.article-hero .text-muted,
+.wrapper.py-12.d-flex.align-items-center .text-muted {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+.text-dark {
+  color: var(--text-dark) !important;
+}
+
+.text-light {
+  color: var(--text-light) !important;
+}
+
+/* Card typography */
+.card-title {
+  font-family: var(--font-body) !important;
+  font-weight: 600 !important;
+  color: #1F3D2B !important;
+  font-size: clamp(1.05rem, 2.5vw, 1.2rem) !important;
+  letter-spacing: 0.01em !important;
+}
+
+.card-text {
+  font-family: var(--font-body) !important;
+  color: var(--text-light) !important;
+  font-size: clamp(0.95rem, 2.2vw, 1rem) !important;
+  line-height: 1.68 !important;
+}
+
+/* Button typography */
+.btn {
+  font-family: var(--font-body) !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.02em !important;
+  font-size: clamp(0.9rem, 2vw, 1rem) !important;
+}
+
+.btn-lg {
+  font-size: clamp(1rem, 2.2vw, 1.1rem) !important;
+}
+
+.btn-sm {
+  font-size: clamp(0.85rem, 1.8vw, 0.95rem) !important;
+}
+
+/* Label and small text */
+label, .form-label {
+  font-family: var(--font-body) !important;
+  font-weight: 500 !important;
+  color: #1F3D2B !important;
+  font-size: clamp(0.9rem, 2vw, 0.95rem) !important;
+  letter-spacing: 0.01em !important;
+}
+
+small, .small {
+  font-family: var(--font-body) !important;
+  font-size: clamp(0.8rem, 1.8vw, 0.9rem) !important;
+  color: var(--text-muted) !important;
+}
+
+/* Service Card Typography — Clinical Zen Aesthetic */
+.service-card-title {
+  font-family: var(--font-card-heading) !important;
+  font-size: clamp(1.3rem, 3vw, 1.6rem) !important;
+  font-weight: 600 !important;
+  color: #1a3a33 !important;
+  letter-spacing: 0.04em !important;
+  line-height: 1.25 !important;
+  text-wrap: balance !important;
+  margin-bottom: 1.2rem !important;
+  text-align: center !important;
+}
+
+.service-card-item {
+  font-family: var(--font-card-body) !important;
+  font-size: clamp(0.95rem, 2.2vw, 1rem) !important;
+  font-weight: 400 !important;
+  color: #555555 !important;
+  line-height: 1.7 !important;
+  letter-spacing: 0.01em !important;
+  max-width: 35ch !important;
+  margin: 0 auto !important;
+}
+
+.service-card-link {
+  font-family: var(--font-card-body) !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.02em !important;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+.featured-service-link:hover {
+  letter-spacing: 0.05em !important;
+  font-weight: 600 !important;
+}
+
+/* Service card container styling */
+.featured-services-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.featured-service-card-body {
+  padding: 2.5rem 1.5rem !important;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem !important;
+}
+
+.featured-service-card-body ul {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.featured-service-card-body li {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .service-card-title {
+    font-size: clamp(1.15rem, 3vw, 1.3rem) !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .service-card-item {
+    font-size: clamp(0.9rem, 2vw, 0.95rem) !important;
+  }
+  
+  .featured-service-card-body {
+    padding: 1.8rem 1.2rem !important;
+    gap: 1.2rem !important;
+  }
+}
+
+/* ---------------------------------
+   Global Card & Component Typography
+---------------------------------- */
+
+/* All cards use Clinical Zen aesthetic */
+.card h3, .card .h3,
+.card h4, .card .h4,
+.card h5, .card .h5 {
+  font-family: var(--font-card-heading) !important;
+  color: #1a3a33 !important;
+  letter-spacing: 0.02em !important;
+  text-wrap: balance !important;
+}
+
+.card p, .card .card-text {
+  font-family: var(--font-card-body) !important;
+  color: #555555 !important;
+  line-height: 1.7 !important;
+  font-weight: 400 !important;
+}
+
+/* Section headings throughout */
+section h2, section .display-5 {
+  font-family: var(--font-heading) !important;
+  color: #1a3a33 !important;
+  letter-spacing: -0.01em !important;
+  font-weight: 700 !important;
+  text-wrap: balance !important;
+}
+
+section h3 {
+  font-family: var(--font-card-heading) !important;
+  color: #1a3a33 !important;
+  letter-spacing: 0.02em !important;
+  text-wrap: balance !important;
+}
+
+/* Enhanced card spacing */
+.card {
+  overflow: visible !important;
+}
+
+.card-body {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.75rem !important;
+}
+
+.card-body h3, .card-body h4, .card-body h5 {
+  margin-bottom: 0.5rem !important;
+}
+
+.card-body p, .card-body .card-text {
+  margin-bottom: 0 !important;
+  max-width: 40ch !important;
+}
+
+/* Button styling */
+.btn, button {
+  font-family: var(--font-card-body) !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.02em !important;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+.btn:hover, button:hover {
+  letter-spacing: 0.03em !important;
+}
+
+/* Link styling */
+a, .link {
+  font-family: var(--font-card-body) !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Page Title & Header styling */
+nav h1, nav .h1,
+.page-header h1, .page-header .h1 {
+  font-family: var(--font-heading) !important;
+  color: #1a3a33 !important;
+  letter-spacing: -0.01em !important;
+}
+
+/* Badge styling */
+.badge, [class*="badge"] {
+  font-family: var(--font-card-body) !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  font-size: 0.7rem !important;
+}
+
+/* Tab and nav link typography */
+.nav-link, .nav-item a {
+  font-family: var(--font-card-body) !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.01em !important;
+}
+
+/* Form labels and inputs */
+.form-label, label {
+  font-family: var(--font-card-body) !important;
+  font-weight: 600 !important;
+  color: #1a3a33 !important;
+  letter-spacing: 0.01em !important;
+}
+
+.form-control, input, textarea, select {
+  font-family: var(--font-card-body) !important;
+  color: #555555 !important;
+}
+
+/* Table typography */
+table {
+  font-family: var(--font-card-body) !important;
+}
+
+table th {
+  font-family: var(--font-card-heading) !important;
+  font-weight: 600 !important;
+  color: #1a3a33 !important;
+  letter-spacing: 0.01em !important;
+}
+
+table td {
+  color: #555555 !important;
+}
+
+/* FAQ and accordion styling */
+.accordion-button, [class*="accordion"] {
+  font-family: var(--font-card-body) !important;
+  font-weight: 500 !important;
+}
+
+.accordion-button:not(.collapsed) {
+  font-weight: 600 !important;
+  color: #1a3a33 !important;
+}
+
+/* List and list item typography */
+li, ul li, ol li {
+  font-family: var(--font-card-body) !important;
+  color: #555555 !important;
+  line-height: 1.7 !important;
+}
+
+/* Alert and notification typography */
+.alert {
+  font-family: var(--font-card-body) !important;
+  color: #555555 !important;
 }
 
 /* ---------------------------------
@@ -118,6 +589,26 @@ body, p, .lead, .desc {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Orphan and widow prevention */
+@media (min-width: 768px) {
+  h1, h2, h3, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6,
+  .display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+    word-spacing: 0.1em;
+  }
+}
+
+/* Text balance for better line wrapping */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
+.display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+  text-wrap: balance;
+}
+
+p, .lead, .card-text {
+  text-wrap: pretty;
+}
+
 /* ---------------------------------
    Breadcrumbs
 ---------------------------------- */
@@ -144,7 +635,8 @@ body, p, .lead, .desc {
 }
 
 .breadcrumbs p {
-  color: #1F3D2B !important;
+  color: var(--text-dark) !important;
+  font-family: var(--font-body) !important;
 }
 
 /* ---------------------------------
@@ -239,10 +731,11 @@ body, p, .lead, .desc {
   position: absolute;
   top: 12px;
   left: 12px;
-  background: #f97316;
+  background: #fd2a05ff;
   color: #fff;
+  font-family: var(--font-card-body) !important;
   font-size: 11px;
-  font-weight: 800;
+  font-weight: 800 !important;
   padding: 4px 10px;
   border-radius: 20px;
   box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
@@ -279,13 +772,15 @@ body, p, .lead, .desc {
   gap: 6px;
 }
 
-/* product name — blue, bold */
+/* product name — Clinical Zen styling */
 .pt-card__name {
   margin: 0;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 1.45;
-  color: #1565c0;
+  font-family: var(--font-card-heading) !important;
+  font-size: clamp(0.95rem, 2vw, 1.05rem) !important;
+  font-weight: 600 !important;
+  line-height: 1.45 !important;
+  color: #1a3a33 !important;
+  letter-spacing: 0.01em !important;
   min-height: 42px;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -303,14 +798,16 @@ body, p, .lead, .desc {
   margin-top: 2px;
 }
 .pt-card__price-sale {
-  font-size: 17px;
-  font-weight: 700;
-  color: #c62828;
+  font-family: var(--font-card-body) !important;
+  font-size: clamp(1rem, 2.2vw, 1.1rem) !important;
+  font-weight: 700 !important;
+  color: #C2A46F !important;
 }
 .pt-card__price-original {
-  font-size: 13px;
-  font-weight: 500;
-  color: #9e9e9e;
+  font-family: var(--font-card-body) !important;
+  font-size: clamp(0.85rem, 1.8vw, 0.95rem) !important;
+  font-weight: 500 !important;
+  color: #6B7280 !important;
   text-decoration: line-through;
 }
 
@@ -327,39 +824,42 @@ body, p, .lead, .desc {
   width: 36px;
   height: 36px;
   border-radius: 8px;
-  background: #e8f4fb;
-  border: 1px solid #c9e4f5;
-  color: #1565c0;
+  background: #fdf6ec;
+  border: 1px solid #e8d8b8;
+  color: #5a7a52;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.18s;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
   text-decoration: none;
 }
 .pt-card__info-btn:hover {
-  background: #c9e4f5;
-  color: #1565c0;
+  background: #e8d8b8;
+  color: #3d5a2b;
 }
 .pt-card__atc-btn {
   flex: 1;
   height: 36px;
   border-radius: 8px;
-  background: #e8f4fb;
-  border: 1px solid #c9e4f5;
-  color: #1565c0;
+  background: #fdf6ec;
+  border: 1px solid #e8d8b8;
+  color: #5a7a52;
+  font-family: var(--font-card-body) !important;
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 600 !important;
   cursor: pointer;
-  transition: background 0.18s;
-  letter-spacing: 0.2px;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  letter-spacing: 0.02em !important;
 }
 .pt-card__atc-btn:hover:not(:disabled) {
-  background: #c9e4f5;
+  background: #e8d8b8;
+  color: #3d5a2b;
+  letter-spacing: 0.03em;
 }
 .pt-card__atc-btn:disabled {
-  background: #f1f5f9;
-  color: #94a3b8;
-  border-color: #e2e8f0;
+  background: #f5f0e8;
+  color: #6B7280;
+  border-color: #e8d8b8;
   cursor: not-allowed;
 }
 

@@ -151,7 +151,7 @@ export default function DietMainPage() {
  <main className="content-wrapper">
  {/* Hero Header */}
  <section
- className="wrapper py-0"
+ className="wrapper py-0 hero-header"
  style={{
  background: "linear-gradient(135deg, #3B2A1A 0%, #7A4A1E 60%, #C97B3A 100%)",
  minHeight: "420px",
@@ -182,7 +182,7 @@ export default function DietMainPage() {
  Clinical<br />
  <span style={{ color: "white !important" }}>Nutrition</span>
  </h1>
- <p className="lead mb-6" style={{ color: "rgba(255,255,255,0.85)", maxWidth: "560px" }}>
+ <p className="lead mb-6" style={{ color: "#ffffff", maxWidth: "560px" }}>
  Therapeutic-grade diet protocols engineered to correct metabolic dysfunction, reduce systemic inflammation, and rebalance the gut microbiome at the cellular level — food as precision medicine.
  </p>
  <div className="d-flex flex-wrap gap-3">

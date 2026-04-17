@@ -1,6 +1,8 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
+    "moduleResolution": "node",
+    "jsx": "preserve",
     "paths": {
       "components/*": ["src/components/*"],
       "hooks/*": ["src/hooks/*"],

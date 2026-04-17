@@ -181,6 +181,14 @@ export default function ProductDetailsPage({ product }) {
 
  const displayImage = images[activeImageIdx] || ((hasVariations && activeVariation?.image) ? activeVariation.image : thumbnail);
 
+ const goToPrevImage = () => {
+  setActiveImageIdx((prev) => (prev - 1 + images.length) % images.length);
+ };
+
+ const goToNextImage = () => {
+  setActiveImageIdx((prev) => (prev + 1) % images.length);
+ };
+
  return (
  <>
  <PageProgress />
@@ -236,6 +244,62 @@ export default function ProductDetailsPage({ product }) {
  priority
  sizes="(max-width: 991px) 100vw, 50vw"
  />
+ {images.length > 1 && (
+ <>
+ <button
+ onClick={(e) => {
+ e.stopPropagation();
+ goToPrevImage();
+ }}
+ style={{
+ position: "absolute",
+ left: "10px",
+ top: "50%",
+ transform: "translateY(-50%)",
+ background: "rgba(0,0,0,0.5)",
+ color: "white",
+ border: "none",
+ borderRadius: "50%",
+ width: "40px",
+ height: "40px",
+ display: "flex",
+ alignItems: "center",
+ justifyContent: "center",
+ cursor: "pointer",
+ fontSize: "18px",
+ zIndex: 10,
+ }}
+ >
+ ‹
+ </button>
+ <button
+ onClick={(e) => {
+ e.stopPropagation();
+ goToNextImage();
+ }}
+ style={{
+ position: "absolute",
+ right: "10px",
+ top: "50%",
+ transform: "translateY(-50%)",
+ background: "rgba(0,0,0,0.5)",
+ color: "white",
+ border: "none",
+ borderRadius: "50%",
+ width: "40px",
+ height: "40px",
+ display: "flex",
+ alignItems: "center",
+ justifyContent: "center",
+ cursor: "pointer",
+ fontSize: "18px",
+ zIndex: 10,
+ }}
+ >
+ ›
+ </button>
+ </>
+ )}
  {isOnSale && discountPct && (
  <div
  className="position-absolute top-0 start-0 m-3"

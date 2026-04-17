@@ -213,18 +213,18 @@ export default function Testimonials() {
         .pt-cols-wrapper {
           display: grid;
           grid-template-columns: 1fr;
-          gap: 1.25rem;
+          gap: 1.75rem;
           max-height: 720px;
           overflow: hidden;
         }
         @media (min-width: 768px) {
           .pt-cols-wrapper {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(2, minmax(0, 1fr));
           }
         }
         @media (min-width: 992px) {
           .pt-cols-wrapper {
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(3, minmax(0, 1fr));
           }
         }
         .pt-badge {
@@ -263,9 +263,9 @@ export default function Testimonials() {
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           >
             <div className="pt-cols-wrapper">
-              <TestimonialsColumn items={col1} duration={38} />
-              <TestimonialsColumn items={col2} duration={48} />
-              <TestimonialsColumn items={col3} duration={42} />
+              <TestimonialsColumn items={col1} duration={72} />
+              <TestimonialsColumn items={col2} duration={90} />
+              <TestimonialsColumn items={col3} duration={84} />
             </div>
           </motion.div>
         </div>

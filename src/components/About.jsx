@@ -2,7 +2,7 @@ import Banner from './Banner';
 import NextLink from './NextLink';
 
 // Reusable heading block
-const HeadingBlock = ({ subHeading, spanHeading, heading, h3, isH1 }) => (
+const HeadingBlock = ({ subHeading, spanHeading, heading, h3, isH1, headingClass }) => (
   <>
     {subHeading && (
       <h2 className="fs-14 text-uppercase sub-heading" style={{ color: '#31A14E' }}>
@@ -10,11 +10,11 @@ const HeadingBlock = ({ subHeading, spanHeading, heading, h3, isH1 }) => (
       </h2>
     )}
     {isH1 ? (
-      <h1>
+      <h1 className={headingClass || ''} style={{ whiteSpace: 'nowrap' }}>
         {spanHeading && <span className="underline-3 style-3">{spanHeading}</span>} {heading}
       </h1>
     ) : (
-      <h2>
+      <h2 className={headingClass || ''} style={{ whiteSpace: 'nowrap' }}>
         {spanHeading && <span className="underline-3 style-3">{spanHeading}</span>} {heading}
       </h2>
     )}
@@ -64,7 +64,8 @@ const About = ({
   imgSrc,
   isH1 = false,
   video,
-  showShape = false
+  showShape = false,
+  headingClass
 }) => {
 
   const isImageRight = imgPosition === 'right';
@@ -86,7 +87,7 @@ const About = ({
       )}
 
       <div className={contentColumnOrder}>
-        <HeadingBlock {...{ subHeading, spanHeading, heading, h3, isH1 }} />
+        <HeadingBlock {...{ subHeading, spanHeading, heading, h3, isH1, headingClass }} />
         <ParagraphBlock {...{ para, para2, para3 }} />
         {list.length > 0 && <BulletList list={list} />}
 

@@ -116,7 +116,7 @@ export default function YogaMainPage() {
  <main className="content-wrapper">
  {/* Hero Header */}
  <section
- className="wrapper py-0"
+ className="wrapper py-0 hero-header"
  style={{
  background: "linear-gradient(135deg, #1F3D2B 0%, #3D5C4A 60%, #2E7D6E 100%)",
  minHeight: "420px",
@@ -147,7 +147,7 @@ export default function YogaMainPage() {
  Functional<br />
  <span style={{ color: "white !important" }}>Yoga Therapy</span>
  </h1>
- <p className="lead mb-6" style={{ color: "rgba(255,255,255,0.85)", maxWidth: "560px" }}>
+ <p className="lead mb-6" style={{ color: "#ffffff", maxWidth: "560px" }}>
  Yoga prescribed as clinical medicine — specific asana and pranayama sequences that stimulate the lymphatic system, activate the vagus nerve, and restore endocrine regulation for measurable recovery outcomes.
  </p>
  <div className="d-flex flex-wrap gap-3">

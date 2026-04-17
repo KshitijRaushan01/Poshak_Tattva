@@ -48,6 +48,15 @@ create table if not exists public.gallery (
   created_at  timestamptz default now()
 );
 
+-- 5. Articles (blogs)
+create table if not exists public.articles (
+  id              uuid primary key default gen_random_uuid(),
+  title           text not null,
+  content         text not null,  -- full content with paragraphs
+  image_url       text,
+  created_at      timestamptz default now()
+);
+
 -- ─── Row Level Security ────────────────────────────────────────────────────────
 -- The admin uses the anon key server-side only, so public reads are safe for
 -- gallery/testimonials. Restrict writes appropriately in production.
@@ -56,6 +65,7 @@ alter table public.appointments  enable row level security;
 alter table public.products      enable row level security;
 alter table public.testimonials  enable row level security;
 alter table public.gallery       enable row level security;
+alter table public.articles      enable row level security;
 
 -- Allow full access via anon key (for server-side admin panel)
 -- You can tighten these with service_role key later.
@@ -63,3 +73,4 @@ create policy "anon_all_appointments"  on public.appointments  for all using (tr
 create policy "anon_all_products"      on public.products      for all using (true) with check (true);
 create policy "anon_all_testimonials"  on public.testimonials  for all using (true) with check (true);
 create policy "anon_all_gallery"       on public.gallery       for all using (true) with check (true);
+create policy "anon_all_articles"      on public.articles      for all using (true) with check (true);

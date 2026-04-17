@@ -101,7 +101,7 @@ export default function SoundHealingMainPage() {
  <main className="content-wrapper">
  {/* Hero Header */}
  <section
- className="wrapper py-0"
+ className="wrapper py-0 hero-header"
  style={{
  background: "linear-gradient(135deg, #1A1040 0%, #1d0eefff 60%, #0f8fbaff 100%)",
  minHeight: "420px",
@@ -132,7 +132,7 @@ export default function SoundHealingMainPage() {
  Sound Healing &<br />
  <span style={{ color: "white !important" }}>Nervous System Reset</span>
  </h1>
- <p className="lead mb-6" style={{ color: "rgba(255,255,255,0.85)", maxWidth: "560px" }}>
+ <p className="lead mb-6" style={{ color: "#ffffff", maxWidth: "560px" }}>
  Precision vibrational frequencies that shift the autonomic nervous system from chronic stress states into deep physiological repair — rewiring the stress response, not just relaxing it.
  </p>
  <div className="d-flex flex-wrap gap-3">

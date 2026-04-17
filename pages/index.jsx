@@ -105,17 +105,20 @@ const Home = () => {
         {/* Hero Section */}
         <Hero />
 
-        {/* Stats Section */}
-        <StatsBar />
 
         {/* About Section */}
         <section className="wrapper bg-light">
           <div className="container pt-8 pt-md-15">
+            <div className="row">
+              <div className="col-12 text-center mb-10">
+                <h1 id="welcome-heading" className="display-4 fw-bold">Welcome to Poshak Tattva</h1>
+              </div>
+            </div>
             <About
               imgPosition="right"
               imgSrc="/img/yds.png"
-              heading="Welcome to Poshak Tattva"
-              isH1="true"
+              heading="" // Removed heading from here to avoid duplication
+              headingClass="text-center mb-6"
               para="At Poshak Tattva, we go beyond the absence of illness to achieve systemic recovery. Chronic lifestyle disorders — from metabolic dysfunction and hormonal imbalance to autoimmune flares and digestive disorders — are not destiny. They are the result of compounding root causes that conventional medicine rarely addresses."
               para2="Our methodology is clinically grounded. Our Sattvic Diet protocols are therapeutic-grade, engineered to correct metabolic health at the cellular level — reducing inflammation, rebalancing the gut microbiome, and restoring endocrine function. Our Sound Healing sessions use precision vibrational frequencies to rewire the autonomic nervous system, shifting patients from chronic stress states into deep physiological repair."
               para3="Through Functional Yoga, we prescribe movement as medicine — specific asana and pranayama sequences that activate the lymphatic system, stimulate the vagus nerve, and restore hormonal regulation. This is not wellness as a lifestyle choice. This is clinical recovery delivered through the wisdom of ancient science."
@@ -123,41 +126,15 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Why Choose Us Section */}
-        <section className="wrapper bg-white py-16">
-          <div className="container">
-            <div className="text-center mb-12">
-              <h2 className="display-5 fw-bold mb-4">Our Clinical Methodology</h2>
-              <p className="lead ">How we move beyond symptom management to achieve measurable, systemic recovery</p>
-            </div>
-            <div className="row g-4">
-              {whyChooseUs.map((item, idx) => (
-                <div key={idx} className="col-md-6 col-lg-3">
-                  <div className="card h-100 border-0 shadow-sm overflow-hidden" style={{ transition: "all 0.3s ease", borderRadius: '16px' }}>
-                    <div style={{ height: '160px', overflow: 'hidden', position: 'relative' }}>
-                      <Image src={item.img} alt={item.title} fill style={{ objectFit: 'cover' }} />
-                    </div>
-                    <div className="p-5 text-center">
-                      <h5 className="fw-bold mb-3">{item.title}</h5>
-                      <p className=" mb-0">{item.desc}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Services Grid Section */}
         <section className="wrapper bg-light py-10 py-md-14">
           <div className="container">
-            <div className="col-md-10 col-lg-8">
-              <p className="fs-80 fw-bolder sub-h3 position-center" style={{ color: "#14582fff" }}>
-                Our Offerings
-              </p>
-              <h2 className="display-5 mb-16 fw-bold z-1 position-center">
-                Clinical Recovery Programs
-              </h2>
+            <div className="row justify-content-center">
+              <div className="col-md-10 col-lg-8 mx-auto text-center">
+                <h2 className="display-5 mb-16 fw-bold z-1 position-center">
+                  Clinical Recovery Programs
+                </h2>
+              </div>
             </div>
 
             {/* Services Grid */}
@@ -291,21 +268,22 @@ const Home = () => {
                   <div style={{ height: "220px", overflow: "hidden", position: "relative" }}>
                     <Image
                       src="/img/home/yoga.jpg"
-                      alt="Yoga"
+                      alt="Functional Yoga Therapy"
                       fill
                       style={{ objectFit: "cover" }}
                     />
                   </div>
-                  <div className="p-6" style={{ backgroundColor: "#f5f0e8" }}>
+                  <div className="p-6 featured-service-card-body" style={{ backgroundColor: "#f5f0e8" }}>
+                    <h3 className="service-card-title">Functional Yoga</h3>
                     <ul className="list-unstyled">
                       {yoga.slice(0, 3).map((item) => (
                         <li key={item.id} className="mb-3 pb-3" style={{ borderBottom: "1px solid #ddd5c0" }}>
                           <Link
                             href={item.url}
-                            className="text-decoration-none featured-service-link"
-                            style={{ color: "#5a7a52", fontWeight: "500", transition: "color 0.2s, letter-spacing 0.2s" }}
-                            onMouseOver={e => { e.currentTarget.style.color = "#fd2a05ff"; e.currentTarget.style.letterSpacing = "0.03em"; }}
-                            onMouseOut={e => { e.currentTarget.style.color = "#5a7a52"; e.currentTarget.style.letterSpacing = "0"; }}
+                            className="text-decoration-none featured-service-link service-card-item"
+                            style={{ color: "#5a7a52", transition: "color 0.2s, letter-spacing 0.2s" }}
+                            onMouseOver={e => { e.currentTarget.style.color = "#fd2a05ff"; e.currentTarget.style.letterSpacing = "0.05em"; }}
+                            onMouseOut={e => { e.currentTarget.style.color = "#5a7a52"; e.currentTarget.style.letterSpacing = "0.01em"; }}
                           >
                             → {item.title}
                           </Link>
@@ -314,12 +292,12 @@ const Home = () => {
                     </ul>
                     <Link
                       href="/yoga"
-                      className="btn btn-sm w-100"
+                      className="btn btn-sm w-100 service-card-link"
                       style={{ backgroundColor: "#5a7a52", color: "#fff", border: "none", transition: "background-color 0.2s" }}
                       onMouseOver={e => e.currentTarget.style.backgroundColor = "#fd2a05ff"}
                       onMouseOut={e => e.currentTarget.style.backgroundColor = "#5a7a52"}
                     >
-                      Explore All Yoga Classes
+                      Explore All Classes
                     </Link>
                   </div>
                 </div>
@@ -331,21 +309,22 @@ const Home = () => {
                   <div style={{ height: "220px", overflow: "hidden", position: "relative" }}>
                     <Image
                       src="/img/home/diet.jpg"
-                      alt="Diet & Nutrition"
+                      alt="Clinical Nutrition"
                       fill
                       style={{ objectFit: "cover" }}
                     />
                   </div>
-                  <div className="p-6" style={{ backgroundColor: "#fdf6ec" }}>
+                  <div className="p-6 featured-service-card-body" style={{ backgroundColor: "#fdf6ec" }}>
+                    <h3 className="service-card-title">Clinical Nutrition</h3>
                     <ul className="list-unstyled">
                       {diet.slice(0, 3).map((item) => (
                         <li key={item.id} className="mb-3 pb-3" style={{ borderBottom: "1px solid #e8d8b8" }}>
                           <Link
                             href={item.url}
-                            className="text-decoration-none"
-                            style={{ color: "#a0622a", fontWeight: "500", transition: "color 0.2s, letter-spacing 0.2s" }}
-                            onMouseOver={e => { e.currentTarget.style.color = "#fd2a05ff"; e.currentTarget.style.letterSpacing = "0.03em"; }}
-                            onMouseOut={e => { e.currentTarget.style.color = "#a0622a"; e.currentTarget.style.letterSpacing = "0"; }}
+                            className="text-decoration-none featured-service-link service-card-item"
+                            style={{ color: "#a0622a", transition: "color 0.2s, letter-spacing 0.2s" }}
+                            onMouseOver={e => { e.currentTarget.style.color = "#fd2a05ff"; e.currentTarget.style.letterSpacing = "0.05em"; }}
+                            onMouseOut={e => { e.currentTarget.style.color = "#a0622a"; e.currentTarget.style.letterSpacing = "0.01em"; }}
                           >
                             → {item.title}
                           </Link>
@@ -354,12 +333,12 @@ const Home = () => {
                     </ul>
                     <Link
                       href="/diet"
-                      className="btn btn-sm w-100"
+                      className="btn btn-sm w-100 service-card-link"
                       style={{ backgroundColor: "#a0622a", color: "white", border: "none", transition: "background-color 0.2s" }}
                       onMouseOver={e => e.currentTarget.style.backgroundColor = "#7a4a1e"}
                       onMouseOut={e => e.currentTarget.style.backgroundColor = "#a0622a"}
                     >
-                      Explore All Diet Programs
+                      Explore All Programs
                     </Link>
                   </div>
                 </div>
@@ -371,21 +350,22 @@ const Home = () => {
                   <div style={{ height: "220px", overflow: "hidden", position: "relative" }}>
                     <Image
                       src="/img/home/sound-healing.jpg"
-                      alt="Sound Healing"
+                      alt="Sound Healing Therapy"
                       fill
                       style={{ objectFit: "cover" }}
                     />
                   </div>
-                  <div className="p-6" style={{ backgroundColor: "#f4ede4" }}>
+                  <div className="p-6 featured-service-card-body" style={{ backgroundColor: "#f4ede4" }}>
+                    <h3 className="service-card-title">Sound Healing</h3>
                     <ul className="list-unstyled">
                       {soundHealing.slice(0, 3).map((item) => (
                         <li key={item.id} className="mb-3 pb-3" style={{ borderBottom: "1px solid #dccfc4" }}>
                           <Link
                             href={item.url}
-                            className="text-decoration-none"
-                            style={{ color: "#8b6347", fontWeight: "500", transition: "color 0.2s, letter-spacing 0.2s" }}
-                            onMouseOver={e => { e.currentTarget.style.color = "#6b4830"; e.currentTarget.style.letterSpacing = "0.03em"; }}
-                            onMouseOut={e => { e.currentTarget.style.color = "#8b6347"; e.currentTarget.style.letterSpacing = "0"; }}
+                            className="text-decoration-none featured-service-link service-card-item"
+                            style={{ color: "#8b6347", transition: "color 0.2s, letter-spacing 0.2s" }}
+                            onMouseOver={e => { e.currentTarget.style.color = "#6b4830"; e.currentTarget.style.letterSpacing = "0.05em"; }}
+                            onMouseOut={e => { e.currentTarget.style.color = "#8b6347"; e.currentTarget.style.letterSpacing = "0.01em"; }}
                           >
                             → {item.title}
                           </Link>
@@ -394,7 +374,7 @@ const Home = () => {
                     </ul>
                     <Link
                       href="/sound-healing"
-                      className="btn btn-sm w-100"
+                      className="btn btn-sm w-100 service-card-link"
                       style={{ backgroundColor: "#8b6347", color: "white", border: "none", transition: "background-color 0.2s" }}
                       onMouseOver={e => e.currentTarget.style.backgroundColor = "#6b4830"}
                       onMouseOut={e => e.currentTarget.style.backgroundColor = "#8b6347"}
@@ -444,59 +424,120 @@ const Home = () => {
             </div>
           </div>
         </section>
-
-        {/* Quick Links Section */}
+        {/* Articles */}
         <section className="wrapper bg-light py-16">
-          <div className="container">
-            <div className="text-center mb-12">
-              <h2 className="display-5 fw-bold mb-4">Ready to Reverse Your Condition?</h2>
-              <p className="lead ">Everything you need to start your root-cause recovery — session booking, program details, and answers to your questions</p>
+          <div className="Articles">
+            <div className="text-center mb-12 article-grid-hero">
+              <h2 className="display-5 fw-bold mb-4 section-heading">From Our Blog</h2>
+              <p className="lead section-copy">Evidence-based insights and actionable strategies to support your recovery journey</p>
             </div>
             <div className="row g-4">
-              <div className="col-md-4">
-                <div className="card shadow-sm border-0 h-100 text-center p-6 hover-shadow" style={{ transition: "all 0.3s ease", cursor: "pointer" }}>
-                  <div style={{ fontSize: "3rem", marginBottom: "1rem" }}>📅</div>
-                  <h5 className="fw-bold mb-3">Book Your Free Root-Cause Consultation</h5>
-                  <p className=" mb-4">Start with a no-cost clinical intake session — we map your symptoms to their systemic root causes before recommending any protocol.</p>
-                  <Link href="/contact-appointment" className="btn btn-primary">
-                    Book Free Consultation →
-                  </Link>
+              <div className="col-md-6 col-lg-4">
+                <div className="card h-100 border-0 shadow-sm overflow-hidden" style={{ transition: "all 0.3s ease", borderRadius: '16px' }}>
+                  <div style={{ height: '180px', overflow: 'hidden', position: 'relative' }}>
+                    <Image src="/img/Sound_Healing.jpg" alt="Sound Healing" fill style={{ objectFit: 'cover' }} />
+                  </div>
+                  <div className="p-5 text-center article-preview-card">
+                    <h5 className="fw-bold mb-3 article-card-heading">How sound healing can reset your mind to optimal performance</h5>
+                    <p className="mb-0 article-card-copy">Discover how vibrational frequencies can reduce stress, improve focus, and enhance cognitive function for better mental performance.</p>
+                    <Link href="/article/optimized-performance-sound-healing" className="stretched-link text-decoration-none" style={{ color: "#1F3D2B", fontWeight: "500", transition: "color 0.2s" }} onMouseOver={e => e.currentTarget.style.color = "#fd2a05ff"} onMouseOut={e => e.currentTarget.style.color = "#1F3D2B"}>
+                      Read More →
+                    </Link>
+                  </div>
                 </div>
               </div>
-              <div className="col-md-4">
-                <div className="card shadow-sm border-0 h-100 text-center p-6 hover-shadow" style={{ transition: "all 0.3s ease", cursor: "pointer" }}>
-                  <div style={{ fontSize: "3rem", marginBottom: "1rem" }}>💰</div>
-                  <h5 className="fw-bold mb-3">Simple Pricing</h5>
-                  <p className=" mb-4">Flexible and affordable plans for every budget. Choose what works for you
-                    <br />
-                    Start your Healing Journey
-                  </p>
-                  <Link href="/pricing" className="btn btn-primary">
-                    See Plans →
-                  </Link>
+              <div className="col-md-6 col-lg-4">
+                <div className="card h-100 border-0 shadow-sm overflow-hidden" style={{ transition: "all 0.3s ease", borderRadius: '16px' }}>
+                  <div style={{ height: '180px', overflow: 'hidden', position: 'relative' }}>
+                    <Image src="/img/Diet.jpg" alt="Yoga Diet Sound Healing" fill style={{ objectFit: 'cover' }} />
+                  </div>
+                  <div className="p-5 text-center article-preview-card">
+                    <h5 className="fw-bold mb-3 article-card-heading">How integration of Yoga, Diet and Sound healing can give an immeasurable boost for any treatment</h5>
+                    <p className="mb-0 article-card-copy">Learn how combining yoga, nutrition, and sound therapy creates a powerful holistic approach to health and recovery.</p>
+                    <Link href="/article/synergy-yoga-diet-sound" className="stretched-link text-decoration-none" style={{ color: "#1F3D2B", fontWeight: "500", transition: "color 0.2s" }} onMouseOver={e => e.currentTarget.style.color = "#fd2a05ff"} onMouseOut={e => e.currentTarget.style.color = "#1F3D2B"}>
+                      Read More →
+                    </Link>
+                  </div>
                 </div>
               </div>
-              <div className="col-md-4">
-                <div className="card shadow-sm border-0 h-100 text-center p-6 hover-shadow" style={{ transition: "all 0.3s ease", cursor: "pointer" }}>
-                  <div style={{ fontSize: "3rem", marginBottom: "1rem" }}>❓</div>
-                  <h5 className="fw-bold mb-3">Questions?</h5>
-                  <p className=" mb-4">Have questions? Find answers to all your concerns in our comprehensive FAQ</p>
-                  <Link href="/faq" className="btn btn-primary">
-                    Visit FAQ →
-                  </Link>
+              <div className="col-md-6 col-lg-4">
+                <div className="card h-100 border-0 shadow-sm overflow-hidden" style={{ transition: "all 0.3s ease", borderRadius: '16px' }}>
+                  <div style={{ height: '180px', overflow: 'hidden', position: 'relative' }}>
+                    <Image src="/img/Yoga.jpg" alt="Yoga Sound Healing" fill style={{ objectFit: 'cover' }} />
+                  </div>
+                  <div className="p-5 text-center article-preview-card">
+                    <h5 className="fw-bold mb-3 article-card-heading">Key to a Healthy life through Yoga and sound healing</h5>
+                    <p className="mb-0 article-card-copy">Explore the essential practices of yoga and sound healing that lead to a balanced, healthy, and fulfilling life.</p>
+                    <Link href="/article/healthy-life-yoga-sound" className="stretched-link text-decoration-none" style={{ color: "#1F3D2B", fontWeight: "500", transition: "color 0.2s" }} onMouseOver={e => e.currentTarget.style.color = "#fd2a05ff"} onMouseOut={e => e.currentTarget.style.color = "#1F3D2B"}>
+                      Read More →
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
+        <style>{`
+          #welcome-heading {
+            color: #132a24 !important;
+          }
+
+          .section-heading {
+            font-size: 2.6rem !important;
+            line-height: 1.08 !important;
+            letter-spacing: -0.02em;
+            color: #132a24 !important;
+          }
+
+          .section-copy {
+            color: #4a5258 !important;
+            max-width: 720px;
+            margin: 0 auto;
+            font-size: 1rem;
+            line-height: 1.75;
+          }
+
+          .article-preview-card {
+            background: #fff;
+            border-radius: 20px;
+            transition: transform 0.28s ease, box-shadow 0.28s ease;
+          }
+
+          .article-preview-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 18px 40px rgba(31, 61, 43, 0.08);
+          }
+
+          .article-card-heading {
+            font-size: 1.15rem !important;
+            line-height: 1.35 !important;
+            color: #142f28 !important;
+            margin-bottom: 0.8rem;
+          }
+
+          .article-card-copy {
+            color: #4f5559 !important;
+            font-size: 0.98rem !important;
+            line-height: 1.72 !important;
+            margin-bottom: 1rem;
+          }
+
+          .article-grid-hero p {
+            color: #4f575d !important;
+          }
+        `}</style>
+        {/* Stats Section */}
+        <StatsBar />
+
         {/* CTA Section */}
         <section className="wrapper py-12 bg-white">
           <div className="container text-center">
-            <h2 className="display-5 fw-bold mb-6">Start Your Clinical Recovery Today</h2>
-            <p className="lead mb-8">Chronic disorders don't reverse themselves. Your first step is a free root-cause consultation — no prescription, no guesswork, just clarity on what's driving your condition.</p>
+            <h2 className="display-5 fw-bold mb-4">Ready to Reverse Your Condition?</h2>
+            <h3 className="display-6 fw-bold mb-3">Start Your Clinical Recovery Today</h3>
+            <p className="text-muted mb-8">Chronic disorders don't reverse themselves. Your first step is a free root-cause consultation — no prescription, no guesswork, just clarity on what's driving your condition.</p>
             <div className="d-flex flex-column flex-sm-row gap-3 justify-content-center">
-              <Link href="/contact-appointment" className="btn btn-lg" style={{ background: "linear-gradient(135deg, #1F3D2B 0%, #1F3D2B 100%)", color: "white", border: "none" }}>
+              <Link href="/contact-appointment" className="btn btn-lg" style={{ background: "linear-gradient(135deg, gold 0%, gold 100%)", color: "white", border: "none" }}>
                 Book Root-Cause Consultation →
               </Link>
             </div>

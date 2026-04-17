@@ -18,16 +18,18 @@ export default function AdminDashboard() {
     products: null,
     testimonials: null,
     gallery: null,
+    articles: null,
   });
 
   useEffect(() => {
     async function fetchCounts() {
       try {
-        const [appt, prod, test, gall] = await Promise.all([
+        const [appt, prod, test, gall, art] = await Promise.all([
           supabase.from("appointments").select("id", { count: "exact", head: true }),
           supabase.from("products").select("id", { count: "exact", head: true }),
           supabase.from("testimonials").select("id", { count: "exact", head: true }),
           supabase.from("gallery").select("id", { count: "exact", head: true }),
+          supabase.from("articles").select("id", { count: "exact", head: true }),
         ]);
         if (appt.error) console.error("appt error", appt.error);
 
@@ -36,6 +38,7 @@ export default function AdminDashboard() {
           products: prod.count ?? 0,
           testimonials: test.count ?? 0,
           gallery: gall.count ?? 0,
+          articles: art.count ?? 0,
         });
       } catch (err) {
         console.error("Dashboard count error:", err);
@@ -49,6 +52,7 @@ export default function AdminDashboard() {
     { label: "Products in DB",     value: stats.products,     icon: "🛍️", href: "/admin/products",     color: "#60a5fa" },
     { label: "Testimonials",       value: stats.testimonials, icon: "⭐", href: "/admin/testimonials", color: "#fbbf24" },
     { label: "Gallery Images",     value: stats.gallery,      icon: "🖼️", href: "/admin/gallery",      color: "#c084fc" },
+    { label: "Articles",           value: stats.articles,     icon: "📝", href: "/admin/articles",     color: "#f87171" },
   ];
 
   return (

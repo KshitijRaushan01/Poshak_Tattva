@@ -1,5 +1,26 @@
 export const productsData = [
   {
+    id: "razorpay-test-product",
+    slug: "razorpay-test-product",
+    name: "Razorpay Test Product",
+    shortDescription: "A test product for verifying Razorpay payment flows.",
+    description: "This product is priced at exactly ₹1 for testing payment gateway integration. Please do not order this expecting a real product.",
+    images: [
+      "/img/favicon/favicon.jpg" // Using an existing tiny image as fallback
+    ],
+    thumbnail: "/img/favicon/favicon.jpg",
+    price: { min: { inr: 1, inrFormatted: "₹1.00" }, max: { inr: 1, inrFormatted: "₹1.00" }, display: "₹1.00", onSale: false, originalPrice: { inr: 1, inrFormatted: "₹1.00" }, salePrice: { inr: 1, inrFormatted: "₹1.00" } },
+    hasVariations: false,
+    variations: [],
+    sizeOptions: {},
+    inStock: true,
+    keyFeatures: ["Testing item", "Priced at ₹1"],
+    careInstructions: [],
+    offers: [],
+    pairWith: [],
+    metaDescription: "Test product for ₹1",
+  },
+  {
     id: "etched-gongs",
     slug: "etched-gongs",
     name: "Etched Gongs",

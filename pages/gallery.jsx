@@ -1,6 +1,6 @@
 import Head from "next/head";
 import PageProgress from "components/PageProgress";
-import ZenGallery from "components/ui/FramerGallery";
+import MasonryGallery from "components/ui/MasonryGallery";
 
 export default function GalleryPage() {
  const images = [
@@ -38,9 +38,9 @@ export default function GalleryPage() {
  </div>
  </section>
 
- {/* ZenGallery — 4-column vertical infinite ticker */}
+ {/* Gallery masonry layout */}
  <section className="wrapper py-0">
- <ZenGallery images={images} />
+ <MasonryGallery images={images} />
  </section>
  </main>
  </>
