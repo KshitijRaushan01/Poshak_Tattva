@@ -331,10 +331,16 @@ export default function DietMainPage() {
  style={{ background: "linear-gradient(135deg, #3B2A1A 0%, #7A4A1E 100%)" }}
  >
  <div className="container text-center">
- <h2 className="display-5 fw-bold text-white mb-4">
+ <h2 className="display-5 fw-bold mb-4 custom-white-heading">
  Start Your Clinical Nutrition Recovery
  </h2>
- <p className="lead mb-6" style={{ color: "rgba(255,255,255,0.8)", maxWidth: "560px", margin: "0 auto 2rem" }}>
+ <style jsx>{`
+     .custom-white-heading {
+         color: #ffffff !important;
+         -webkit-text-fill-color: #ffffff !important;
+     }
+ `}</style>
+ <p className="lead text-white mb-6" style={{ maxWidth: "560px", margin: "0 auto 2rem" }}>
  Book a free root-cause consultation — we map your metabolic markers and design a precision nutrition protocol for your specific condition.
  </p>
  <Link

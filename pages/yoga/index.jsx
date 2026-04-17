@@ -276,10 +276,16 @@ export default function YogaMainPage() {
  style={{ background: "linear-gradient(135deg, #1F3D2B 0%, #3D5C4A 100%)" }}
  >
  <div className="container text-center">
- <h2 className="display-5 fw-bold text-white mb-4">
+ <h2 className="display-5 fw-bold mb-4 custom-white-heading">
  Ready to Begin Your Clinical Yoga Journey?
  </h2>
- <p className="lead mb-6" style={{ color: "rgba(255,255,255,0.8)", maxWidth: "560px", margin: "0 auto 2rem" }}>
+ <style jsx>{`
+     .custom-white-heading {
+         color: #ffffff !important;
+         -webkit-text-fill-color: #ffffff !important;
+     }
+ `}</style>
+ <p className="lead text-white mb-6" style={{ maxWidth: "560px", margin: "0 auto 2rem" }}>
  Start with a free root-cause consultation — we design your yoga protocol around your specific condition, not a generic class schedule.
  </p>
  <Link
