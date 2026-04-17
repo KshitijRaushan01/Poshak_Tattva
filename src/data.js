@@ -45,7 +45,7 @@ export const offeringsList = [
   {
     id: 3,
     url: '/sound-healing',
-    src: '/img/offerings/sound-healing.png',
+    src: '/img/offerings/sound-healing-reset.png',
     title: 'Sound Healing & Nervous System Reset',
     description: 'Precision vibrational frequencies that shift the autonomic nervous system from chronic stress states into deep physiological repair — rewiring, not just relaxing.',
   },
