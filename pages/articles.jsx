@@ -4,6 +4,11 @@ import Link from "next/link";
 import { supabase } from "../src/lib/supabaseClient";
 import Layout from "../src/components/Layout";
 
+export const metadata = {
+  title: "Articles - Poshak Tattva",
+  description: "Read our latest articles on holistic wellness, functional yoga, clinical nutrition, and sound healing. Expert insights for reversing chronic lifestyle disorders naturally."
+}
+
 export async function getServerSideProps() {
   const { data: articles } = await supabase.from("articles").select("*").order("created_at", { ascending: false });
   return { props: { articles: articles || [] } };

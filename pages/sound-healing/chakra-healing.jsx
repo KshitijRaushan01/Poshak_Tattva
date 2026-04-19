@@ -1,6 +1,11 @@
 import Head from "next/head";
 import PageProgress from "components/PageProgress";
 
+export const metadata = {
+  title: "Chakra Healing with Sound Therapy | Poshak Tattva",
+  description: "Balance your 7 energy centers through sound healing. Using specific frequencies and vibrations to clear blockages and restore energetic harmony in your chakra system."
+}
+
 export default function ChakraHealingPage() {
  const chakras = [
  { title: "Root · Muladhara", subtitle: "396 Hz — Grounding", desc: "Issues: Fear, insecurity, physical instability\nLocation: Base of the spine\nHealing: Grounding, stability", img: "/img/services/sound/Chakra-Healing/Root-Muladhara-Chakra.png", color: "#E74C3C" },

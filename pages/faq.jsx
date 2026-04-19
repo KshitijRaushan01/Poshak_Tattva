@@ -2,6 +2,11 @@ import Head from "next/head";
 import PageProgress from "components/PageProgress";
 import FAQCard from "components/ui/FAQCard";
 
+export const metadata = {
+  title: "FAQ - Poshak Tattva",
+  description: "Frequently asked questions about Poshak Tattva's yoga, diet, and sound healing programs. Learn about our approach, pricing, and how we help reverse chronic lifestyle disorders."
+}
+
 export default function FAQPage() {
  const faqCategories = [
  {

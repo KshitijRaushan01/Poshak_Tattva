@@ -2,6 +2,11 @@ import Head from "next/head";
 import { Fragment, useEffect } from "react";
 import PageProgress from "components/PageProgress";
 
+export const metadata = {
+  title: "Autoimmune Disease Nutrition | Poshak Tattva",
+  description: "Clinical nutrition protocols for autoimmune conditions. Reduce inflammation, support immune function, and manage symptoms through targeted dietary interventions and gut microbiome restoration."
+}
+
 export default function AutoimmuneDisordersPage() {
  useEffect(() => {
  const scales = Array.from(document.querySelectorAll('.rmap-scale'));

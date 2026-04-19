@@ -11,6 +11,11 @@ import Services from "components/Services";
 import Testimonials from "components/Testimonials";
 import { yoga, diet, soundHealing } from "../src/data";
 
+export const metadata = {
+  title: "Poshak Tattva - Reverse Chronic Lifestyle Disorders Naturally",
+  description: "Poshak Tattva offers clinical-grade Functional Yoga, Clinical Nutrition, and Sound Healing protocols designed to reverse chronic lifestyle disorders at the root cause — not just manage symptoms. Book your free root-cause consultation today."
+}
+
 const Home = () => {
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);

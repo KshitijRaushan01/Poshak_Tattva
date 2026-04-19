@@ -2,6 +2,11 @@ import Head from "next/head";
 import { Fragment, useEffect } from "react";
 import PageProgress from "components/PageProgress";
 
+export const metadata = {
+  title: "Pranayama Breathing Techniques | Poshak Tattva",
+  description: "Master ancient breathing techniques to regulate your nervous system, reduce stress, and enhance mental clarity. Pranayama practices for modern wellness."
+}
+
 export default function PrivateSessionsPage() {
  const idealFor = [
  { title: "First-Time Practitioners", desc: "Never done yoga? Perfect. Private sessions let you learn proper alignment, breathing, and posture from scratch — without the pressure of keeping up with a group." },

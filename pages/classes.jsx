@@ -2,6 +2,11 @@ import { useState } from "react";
 import Head from "next/head";
 import PageProgress from "components/PageProgress";
 
+export const metadata = {
+  title: "Online Classes - Poshak Tattva",
+  description: "Join our online wellness classes including yoga, meditation, sound healing, and nutrition coaching. Live and recorded sessions for holistic health transformation."
+}
+
 export default function ClassesPage() {
  const [selectedCity, setSelectedCity] = useState("delhi");
 

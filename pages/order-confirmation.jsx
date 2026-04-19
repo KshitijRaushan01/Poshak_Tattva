@@ -4,6 +4,11 @@ import { useRouter } from "next/router";
 import { useEffect } from "react";
 import PageProgress from "components/PageProgress";
 
+export const metadata = {
+  title: "Order Confirmation - Poshak Tattva",
+  description: "Your order has been confirmed. Thank you for purchasing our premium wellness products. Check your email for order details and tracking information."
+}
+
 export default function OrderConfirmationPage() {
  const router = useRouter();
  const { orderId, paymentId, name, email, amount } = router.query;

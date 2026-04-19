@@ -74,7 +74,7 @@ const Navbar = ({ navClassName, navOtherClass, fancy, stickyBox }) => {
               <NextLink href="/" title="Home" className="nav-link" />
             </li>
 
-            <li className="nav-item dropdown d-none d-lg-block">
+            <li className="nav-item dropdown d-lg-block">
               <DropdownToggleLink
                 title="Yoga"
                 className="nav-link dropdown-toggle"
@@ -93,7 +93,7 @@ const Navbar = ({ navClassName, navOtherClass, fancy, stickyBox }) => {
               </ul>
             </li>
 
-            <li className="nav-item dropdown d-lg-none">
+            <li className="nav-item dropdown d-block d-lg-none">
               <DropdownToggleLink
                 title="Yoga"
                 className="nav-link dropdown-toggle"
@@ -111,7 +111,7 @@ const Navbar = ({ navClassName, navOtherClass, fancy, stickyBox }) => {
               </ul>
             </li>
 
-            <li className="nav-item dropdown d-none d-lg-block">
+            <li className="nav-item dropdown d-lg-block">
               <DropdownToggleLink
                 title="Sound Healing"
                 className="nav-link dropdown-toggle"
@@ -130,7 +130,7 @@ const Navbar = ({ navClassName, navOtherClass, fancy, stickyBox }) => {
               </ul>
             </li>
 
-            <li className="nav-item dropdown d-lg-none">
+            <li className="nav-item dropdown d-block d-lg-none">
               <DropdownToggleLink
                 title="Sound Healing"
                 className="nav-link dropdown-toggle"
@@ -148,13 +148,13 @@ const Navbar = ({ navClassName, navOtherClass, fancy, stickyBox }) => {
               </ul>
             </li>
 
-            {["d-none d-lg-block", "d-lg-none"].map((cls, index) => (
+            {["d-lg-block", "d-block d-lg-none"].map((cls, index) => (
               <li className={`nav-item dropdown ${cls}`} key={index}>
                 <DropdownToggleLink
                   title="Diet"
                   className="nav-link dropdown-toggle"
                   href="/diet"
-                  disableToggle={cls === "d-none d-lg-block"}
+                  disableToggle={cls === "d-lg-block"}
                 />
                 <ul className="dropdown-menu" data-bs-dismiss="offcanvas">
                   {diet.map(({ id, title, url }) => (

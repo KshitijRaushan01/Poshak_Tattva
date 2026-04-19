@@ -3,6 +3,11 @@ import Link from "next/link";
 import Image from "next/image";
 import PageProgress from "components/PageProgress";
 
+export const metadata = {
+  title: "Sound Healing & Nervous System Reset | Poshak Tattva",
+  description: "Experience vibrational medicine through sound healing. Gong baths, chakra healing, and personalized sessions to reset your nervous system and release deep-seated trauma."
+}
+
 const soundHealingServices = [
     {
         id: 1,

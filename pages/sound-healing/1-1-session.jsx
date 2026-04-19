@@ -2,6 +2,11 @@ import Head from "next/head";
 import { Fragment, useEffect } from "react";
 import PageProgress from "components/PageProgress";
 
+export const metadata = {
+  title: "1:1 Sound Healing Session | Poshak Tattva",
+  description: "Personalized sound healing therapy using singing bowls, tuning forks, and gongs. Experience vibrational medicine designed for your specific energetic and neurological needs."
+}
+
 export default function SoundHealingSessionPage() {
  const cards = [
  { title: "Singing Bowls", desc: "Hand-hammered Tibetan and crystal singing bowls tuned to specific frequencies. Each bowl resonates with a particular energy centre, creating sustained tones that slow brainwave activity from beta (alert) to theta (deep rest) within minutes." },

@@ -1,6 +1,11 @@
 import Head from "next/head";
 import PageProgress from "components/PageProgress";
 
+export const metadata = {
+  title: "Privacy Policy - Poshak Tattva",
+  description: "Read our privacy policy to understand how Poshak Tattva collects, uses, and protects your personal information. We are committed to your privacy and data security."
+}
+
 export default function PrivacyPolicyPage() {
  return (
  <>

@@ -2,6 +2,11 @@ import Head from "next/head";
 import { Fragment, useEffect } from "react";
 import PageProgress from "components/PageProgress";
 
+export const metadata = {
+  title: "Pranayama Techniques | Poshak Tattva",
+  description: "Learn specific pranayama breathing exercises for stress reduction, energy enhancement, and mental clarity. Traditional yogic breathing practices adapted for modern life."
+}
+
 export default function PranayamsPage() {
  const techniques = [
  { title: "Nadi Shodhana", subtitle: "Alternate Nostril Breathing", desc: "Balances the left and right hemispheres of the brain, calms the nervous system, and clears energy channels. The go-to technique for acute anxiety and scattered thinking." },

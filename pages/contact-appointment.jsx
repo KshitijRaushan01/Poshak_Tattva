@@ -2,6 +2,11 @@ import { useState } from "react";
 import Head from "next/head";
 import PageProgress from "components/PageProgress";
 
+export const metadata = {
+  title: "Contact Us - Poshak Tattva",
+  description: "Get in touch with Poshak Tattva for consultations, appointments, and inquiries about our yoga, diet, and sound healing programs. Book your free root-cause assessment today."
+}
+
 export default function ContactPage() {
  const [form, setForm] = useState({ name: "", email: "", phone: "", date: "", time: "", service: "" });
  const [status, setStatus] = useState({ loading: false, ok: null, error: null });

@@ -2,6 +2,11 @@ import Head from "next/head";
 import { Fragment, useEffect } from "react";
 import PageProgress from "components/PageProgress";
 
+export const metadata = {
+  title: "Gong Bath Meditation | Poshak Tattva",
+  description: "Immerse yourself in healing sound vibrations during our gong bath meditation sessions. Experience deep relaxation and nervous system reset through therapeutic gong therapy."
+}
+
 export default function GongBathPage() {
  const cards = [
  { title: "Brainwave Entrainment", desc: "The gong's complex overtone series produces frequencies that guide your brainwaves from beta (14-30 Hz, awake/anxious) through alpha (8-14 Hz, relaxed) into theta (4-8 Hz, deep meditation) — the same state achieved by experienced monks after years of practice." },

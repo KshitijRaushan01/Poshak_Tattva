@@ -51,7 +51,7 @@ const Footer = () => {
                 <div className="d-flex mb-1 align-items-center">
                   <i className="uil uil-envelope fs-26" />
                   <Link
-                    href="mailto:contact@example.com"
+                    href="mailto:poshaktattva@gmail.com"
                     className="link-body ms-2"
                   >
                     poshaktattva@gmail.com

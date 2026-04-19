@@ -2,6 +2,11 @@ import Head from "next/head";
 import { Fragment, useEffect } from "react";
 import PageProgress from "components/PageProgress";
 
+export const metadata = {
+  title: "Lifestyle Management Nutrition | Poshak Tattva",
+  description: "Holistic nutrition coaching for sustainable lifestyle changes. Build healthy habits, optimize metabolism, and maintain long-term wellness through personalized dietary guidance."
+}
+
 export default function LifestyleDisordersPage() {
  useEffect(() => {
  const scales = Array.from(document.querySelectorAll('.rmap-scale'));

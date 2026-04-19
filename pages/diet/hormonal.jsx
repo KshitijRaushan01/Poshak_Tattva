@@ -2,6 +2,11 @@ import Head from "next/head";
 import { Fragment, useEffect } from "react";
 import PageProgress from "components/PageProgress";
 
+export const metadata = {
+  title: "Hormonal Balance Nutrition | Poshak Tattva",
+  description: "Clinical nutrition for PCOS, thyroid disorders, adrenal fatigue, and hormonal imbalances. Restore endocrine function through targeted dietary protocols and metabolic regulation."
+}
+
 export default function HormonalDisordersPage() {
  useEffect(() => {
  const scales = Array.from(document.querySelectorAll('.rmap-scale'));

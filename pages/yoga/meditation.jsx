@@ -3,6 +3,11 @@ import { Fragment, useEffect } from "react";
 import Image from "next/image";
 import PageProgress from "components/PageProgress";
 
+export const metadata = {
+  title: "Meditation Classes | Poshak Tattva",
+  description: "Clinical meditation protocols to reduce cortisol, lower neuroinflammation, and rebuild cognitive resilience. Structured neuro-regulatory interventions with measurable outcomes."
+}
+
 export default function MeditationPage() {
  const techniques = [
  { title: "Guided Visualization", desc: "Follow a practitioner's voice through calming mental imagery — forests, oceans, sacred spaces — to quiet mental chatter and access deeper states of awareness." },

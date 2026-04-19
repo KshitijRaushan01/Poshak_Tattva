@@ -79,9 +79,9 @@ export const yoga = [
 export const aboutUsFooter = [
   { id: 1, title: 'Home', url: '/' },
   { id: 2, title: 'About Us', url: '/about-us' },
-  { id: 3, title: 'Yoga', url: '/classes' },
-  { id: 4, title: 'Diet', url: '/diet/weight-loss' },
-  { id: 5, title: 'Sound Healing', url: '/sound-healing/1-1-session' },
+  { id: 3, title: 'Yoga', url: '/yoga' },
+  { id: 4, title: 'Diet', url: '/diet' },
+  { id: 5, title: 'Sound Healing', url: '/sound-healing' },
   { id: 6, title: 'Gallery', url: '/gallery' },
   { id: 7, title: 'Contact Us', url: '/contact-appointment' },
   { id: 8, title: 'Book Consultation', url: '/contact-appointment' },

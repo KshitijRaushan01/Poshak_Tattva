@@ -3,6 +3,11 @@ import Link from "next/link";
 import Image from "next/image";
 import PageProgress from "components/PageProgress";
 
+export const metadata = {
+  title: "Clinical Nutrition Programs | Poshak Tattva",
+  description: "Discover our clinical nutrition programs designed to reverse digestive disorders, hormonal imbalances, autoimmune conditions, and metabolic issues through targeted dietary interventions."
+}
+
 const dietServices = [
  {
  id: 1,

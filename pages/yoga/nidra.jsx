@@ -2,6 +2,11 @@ import Head from "next/head";
 import { Fragment, useEffect } from "react";
 import PageProgress from "components/PageProgress";
 
+export const metadata = {
+  title: "Yoga Nidra | Poshak Tattva",
+  description: "Experience deep restorative sleep through guided Yoga Nidra sessions. This ancient practice induces complete physical, mental, and emotional relaxation for profound healing."
+}
+
 export default function YogaNidraPage() {
  const stages = [
  { title: "Settling into Savasana", desc: "You lie down comfortably in corpse pose while the practitioner creates a safe container — adjusting lighting, temperature, and ambiance. External distractions fade as your body begins surrendering to gravity." },

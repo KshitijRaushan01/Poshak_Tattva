@@ -2,6 +2,11 @@ import Head from "next/head";
 import { Fragment, useEffect } from "react";
 import PageProgress from "components/PageProgress";
 
+export const metadata = {
+  title: "Group Yoga Sessions | Poshak Tattva",
+  description: "Join our therapeutic group yoga sessions at Poshak Tattva. Clinical sequences targeting lymphatic drainage, spinal decompression, and autonomic regulation for holistic wellness."
+}
+
 export default function GroupSessionsPage() {
  const pillars = [
  { title: "Warm-Up & Breath Work", desc: "Every session begins with joint mobilization and conscious breathing to prepare your body and settle your mind. This is where the transition from your workday to your practice happens." },

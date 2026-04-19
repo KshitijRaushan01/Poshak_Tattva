@@ -2,6 +2,11 @@ import Head from "next/head";
 import { Fragment, useEffect } from "react";
 import PageProgress from "components/PageProgress";
 
+export const metadata = {
+  title: "Sound Healing Workshops | Poshak Tattva",
+  description: "Join our immersive sound healing workshops and retreats. Group sessions combining gong baths, chakra healing, and vibrational therapy for collective transformation."
+}
+
 export default function SoundHealingWorkshopPage() {
  const cards = [
  { title: "Welcome & Intention Circle", desc: "Every workshop begins with a seated circle. Participants introduce themselves and share their intention for the session — stress relief, emotional processing, spiritual connection, or simple curiosity. This shared vulnerability creates a container of trust that amplifies the healing ahead." },

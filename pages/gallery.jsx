@@ -2,6 +2,11 @@ import Head from "next/head";
 import PageProgress from "components/PageProgress";
 import MasonryGallery from "components/ui/MasonryGallery";
 
+export const metadata = {
+  title: "Gallery - Poshak Tattva",
+  description: "Explore our gallery of yoga sessions, sound healing workshops, wellness retreats, and transformation stories. See the Poshak Tattva community in action."
+}
+
 export default function GalleryPage() {
  const images = [
  "/img/Gallery/1.webp",

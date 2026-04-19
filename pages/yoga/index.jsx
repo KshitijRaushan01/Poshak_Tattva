@@ -3,6 +3,11 @@ import Link from "next/link";
 import Image from "next/image";
 import PageProgress from "components/PageProgress";
 
+export const metadata = {
+  title: "Functional Yoga Therapy Programs | Poshak Tattva",
+  description: "Explore our complete range of clinical yoga programs at Poshak Tattva — Group Sessions, Private 1:1, Meditation, Yoga Nidra, and Pranayama. Yoga prescribed as medicine for chronic disorder recovery."
+}
+
 const yogaServices = [
  {
  id: 1,

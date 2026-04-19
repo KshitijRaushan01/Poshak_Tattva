@@ -2,6 +2,11 @@ import Head from "next/head";
 import { Fragment, useEffect } from "react";
 import PageProgress from "components/PageProgress";
 
+export const metadata = {
+  title: "Weight Loss Nutrition Programs | Poshak Tattva",
+  description: "Sustainable weight loss through clinical nutrition. Address metabolic imbalances, hormonal factors, and lifestyle patterns for lasting results, not quick fixes."
+}
+
 export default function WeightLossPage() {
  useEffect(() => {
  const scales = Array.from(document.querySelectorAll('.rmap-scale'));

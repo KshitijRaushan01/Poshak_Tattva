@@ -5,6 +5,11 @@ import PageProgress from "components/PageProgress";
 import { useCart } from "context/CartContext";
 import Image from "next/image";
 
+export const metadata = {
+  title: "Cart - Poshak Tattva",
+  description: "Review your cart and proceed to checkout for our premium wellness products including singing bowls, crystal bowls, and sound healing instruments."
+}
+
 export default function CartPage() {
  const { cartItems, removeFromCart, updateQuantity, cartTotal, cartCount } = useCart();
  const router = useRouter();

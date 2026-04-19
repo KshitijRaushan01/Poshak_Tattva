@@ -4,6 +4,11 @@ import PageProgress from "components/PageProgress";
 import ProductCard from "components/ProductCard";
 import { productsData as products } from "../src/data/products";
 
+export const metadata = {
+  title: "Wellness Shop | Poshak Tattva",
+  description: "Shop our premium wellness products including singing bowls, crystal bowls, gongs, bells, and Shakers. Curated tools to deepen your practice and start your healing journey."
+}
+
 export default function ShopPage() {
   return (
     <>
@@ -51,7 +56,7 @@ export default function ShopPage() {
 
             <div className="text-center mt-10">
               <Link href="/cart" className="btn btn-primary btn-lg px-5 rounded-pill">
-                🛒 View Cart
+                <i className="bi bi-cart4"></i> View Cart
               </Link>
             </div>
           </div>
