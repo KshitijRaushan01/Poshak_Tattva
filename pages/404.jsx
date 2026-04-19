@@ -1,15 +1,15 @@
 import { Fragment } from 'react';
+import Head from 'next/head';
 import { Breadcrumb } from 'react-bootstrap';
 import NextLink from 'components/NextLink';
-
-export const metadata = {
-  title: "Page Not Found - Poshak Tattva",
-  description: "The page you're looking for doesn't exist. Return to Poshak Tattva's homepage for yoga, diet, and sound healing programs."
-}
 
 const NotFound = () => {
   return (
     <Fragment>
+      <Head>
+        <title>Page Not Found - Poshak Tattva</title>
+        <meta name="description" content="The page you're looking for doesn't exist. Return to Poshak Tattva's homepage for yoga, diet, and sound healing programs." />
+      </Head>
       {/* Header breadcrumb-style banner */}
       <Breadcrumb className="d-flex flex-column align-items-center justify-content-center pt-14 pb-14 breadcrumbs">
         <div className="overlay"></div>

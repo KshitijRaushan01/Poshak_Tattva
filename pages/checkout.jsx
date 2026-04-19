@@ -6,11 +6,6 @@ import Image from "next/image";
 import PageProgress from "components/PageProgress";
 import { useCart } from "context/CartContext";
 
-export const metadata = {
-  title: "Checkout - Poshak Tattva",
-  description: "Complete your purchase of premium wellness products. Secure checkout for singing bowls, crystal bowls, gongs, and sound healing instruments."
-}
-
 // ─────────────────────────────────────────────
 // RAZORPAY INTEGRATION NOTE (for future setup):
 // 1. Add your keys to .env.local:

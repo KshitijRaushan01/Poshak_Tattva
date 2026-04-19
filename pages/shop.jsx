@@ -4,11 +4,6 @@ import PageProgress from "components/PageProgress";
 import ProductCard from "components/ProductCard";
 import { productsData as products } from "../src/data/products";
 
-export const metadata = {
-  title: "Wellness Shop | Poshak Tattva",
-  description: "Shop our premium wellness products including singing bowls, crystal bowls, gongs, bells, and Shakers. Curated tools to deepen your practice and start your healing journey."
-}
-
 export default function ShopPage() {
   return (
     <>

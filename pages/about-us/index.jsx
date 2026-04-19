@@ -4,11 +4,6 @@ import Image from "next/image";
 import PageHeader from "components/PageHeader";
 import StatsSection from "components/StatsSection";
 
-export const metadata = {
-  title: "About Poshak Tattva | Real Healing. Root Cause. Real Results.",
-  description: "Poshak Tattva was built from personal suffering — not theory. Discover the story of founder Priyanka Pugalia and how an integrated approach of Yoga, Clinical Diet, and Sound Healing is reversing chronic conditions for 1500+ people across India."
-}
-
 export default function AboutUs() {
     const timeline = [
         {
