@@ -394,7 +394,7 @@ export default function AboutUs() {
                                         }}
                                     >
                                         <img
-                                            src="/img/Pri-Pu.jpg"
+                                            src="/img/image-founder.jpg"
                                             alt="Priyanka Pugalia"
                                             style={{ width: "100%", height: "100%", objectFit: "cover" }}
                                         />
