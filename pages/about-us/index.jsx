@@ -8,75 +8,81 @@ export default function AboutUs() {
     const timeline = [
         {
             year: "2020",
-            title: "The Beginning",
-            desc: "After years of personal struggle with unresolved health issues, Priyanka Pugalia founded Poshak Tattva — built not from theory, but from lived transformation.",
+            title: "Where It Started",
+            desc: "Priyanka Pugalia founded Poshak Tattva — not from a business plan, but from a genuine conviction that most people were being offered the wrong kind of help.",
         },
         {
             year: "2021",
-            title: "First 100 Lives Changed",
-            desc: "Word spread through results. The first cohort of clients reversed lifestyle disorders, hormonal imbalances, and digestive issues through the integrated protocol.",
+            title: "The First 100",
+            desc: "The results spoke before the marketing did. The first cohort of clients recovered from lifestyle disorders, hormonal imbalances, and digestive conditions that had resisted conventional approaches.",
         },
         {
             year: "2022",
-            title: "Going Digital",
-            desc: "Expanded online to reach individuals across India who couldn't access in-person sessions — making root-cause healing borderless.",
+            title: "Healing Without Borders",
+            desc: "Moved online to reach individuals across India who couldn't access in-person sessions — bringing root-cause clarity to wherever people needed it most.",
         },
         {
             year: "2023",
-            title: "500+ Recoveries",
-            desc: "Crossed 500 individuals supported across 50+ cities. Sound healing workshops and retreats launched as standalone programs.",
+            title: "500 Recoveries and Growing",
+            desc: "Crossed 500 people supported across 50+ cities. Sound healing workshops and immersive retreats launched as standalone programmes.",
         },
         {
             year: "2024",
-            title: "Clinical Framework Formalised",
-            desc: "Structured the three-pillar methodology — Yoga, Clinical Nutrition, Sound Healing — into formal personalised healing protocols.",
+            title: "A Formalised Framework",
+            desc: "The three-pillar methodology — Yoga Therapy, Clinical Nutrition, Sound Healing — was formalised into structured, fully personalised healing protocols.",
         },
         {
             year: "2025",
-            title: "Scaling the Mission",
-            desc: "Bringing root-cause healing to more cities. More sessions, more retreats, more people finally feeling well — not just managing.",
+            title: "Reaching Further",
+            desc: "More cities. More retreats. More people moving past management into actual recovery — and finally understanding why they struggled in the first place.",
         },
     ];
 
     const whatWeDo = [
         {
             icon: "🔍",
-            title: "Identify the Root Cause",
-            desc: "We don't guess. We assess — your lifestyle, nutrition, stress patterns, and energetic state — to find exactly what is driving your condition.",
+            title: "Find the Real Source",
+            desc: "We start with a full picture — your lifestyle, diet history, stress patterns, sleep, and energetic state — before drawing any conclusions.",
         },
         {
             icon: "🥗",
-            title: "Rebuild Through Clinical Nutrition",
-            desc: "Personalised diet protocols engineered to nourish at the cellular level, reduce inflammation, and restore metabolic function naturally.",
+            title: "Rebuild with Clinical Nutrition",
+            desc: "Personalised nutrition protocols designed to reduce systemic inflammation, restore gut integrity, and rebuild metabolic function from the inside out.",
         },
         {
             icon: "🧘",
-            title: "Restore Through Yoga",
-            desc: "Specific asana and pranayama sequences prescribed for your condition — stimulating the lymphatic system, vagus nerve, and endocrine regulation.",
+            title: "Restore with Yoga Therapy",
+            desc: "Condition-specific sequences that target the lymphatic system, vagus nerve, and endocrine function — therapeutic, not generic.",
         },
         {
             icon: "🔔",
-            title: "Release Through Sound Healing",
-            desc: "Precision vibrational frequencies that dissolve what your body holds subconsciously — rewiring the nervous system, not just relaxing it.",
+            title: "Regulate with Sound Healing",
+            desc: "Targeted frequency-based sessions that shift the nervous system out of chronic stress patterns — addressing what simply resting cannot reach.",
         },
     ];
 
     const trustPoints = [
-        "This knowledge is not borrowed — it is lived, tested, and refined through real transformation",
-        "Personalised 1:1 consultations — no generic plans",
-        "Yoga & meditation sessions designed for your condition",
-        "Sound healing workshops, retreats & individual sessions",
-        "Clinically structured healing protocols, tracked over time",
-        "No extreme diets. No shortcuts. No dependency.",
+        {
+            title: "Biological Understanding",
+            desc: "A root-cause lens applied to nutrition, inflammation, gut health, hormonal balance, and nervous system regulation — not generalist wellness.",
+        },
+        {
+            title: "Traditional Intelligence",
+            desc: "Yogic science engaged not as ritual or performance, but as a deeply studied therapeutic system with measurable physiological effects.",
+        },
+        {
+            title: "Energetic Regulation",
+            desc: "Sound-based clinical interventions that work on stress physiology, recovery depth, and nervous system tone — not ambient relaxation.",
+        },
     ];
 
     return (
         <>
             <Head>
-                <title>About Poshak Tattva — Real Healing. Root Cause. Real Results.</title>
+                <title>About Poshak Tattva — Where Real Healing Begins</title>
                 <meta
                     name="description"
-                    content="Poshak Tattva was built from personal suffering — not theory. Discover the story of founder Priyanka Pugalia and how an integrated approach of Yoga, Clinical Diet, and Sound Healing is reversing chronic conditions for 500+ people across India."
+                    content="Meet Priyanka Pugalia and the story behind Poshak Tattva — an integrated healing practice uniting Clinical Nutrition, Yoga Therapy, and Sound Healing to help 500+ people across India address the root cause, not just the symptoms."
                 />
             </Head>
 
@@ -95,17 +101,17 @@ export default function AboutUs() {
                                     Our Philosophy
                                 </p>
                                 <h1 className="display-5 fw-bold mb-5" style={{ lineHeight: 1.25 }}>
-                                    We don't believe in treating symptoms.<br />
-                                    <span style={{ color: "#1F3D2B" }}>We believe in understanding why.</span>
+                                    Most health struggles aren't a mystery.<br />
+                                    <span style={{ color: "#1F3D2B" }}>They're a mismatch — and that can be corrected.</span>
                                 </h1>
                                 <p className="lead mb-4" style={{ lineHeight: 1.8 }}>
-                                    Because real healing doesn't come from quick fixes.
+                                    At Poshak Tattva, we don't manage symptoms. We look for what caused them — and work backward from there.
                                 </p>
                                 <p
                                     className="fw-bold"
                                     style={{ fontSize: "1.3rem", color: "#1F3D2B" }}
                                 >
-                                    It comes from alignment.
+                                    Because when the body is in alignment, healing follows naturally.
                                 </p>
                             </div>
                         </div>
@@ -135,28 +141,24 @@ export default function AboutUs() {
                                     The Story Behind Poshak Tattva
                                 </p>
                                 <h2 className="display-6 fw-bold mb-5" style={{ lineHeight: 1.25 }}>
-                                    Built out of suffering.<br />Not out of theory.
+                                    This work didn't begin with a trend.<br />It began with a question.
                                 </h2>
-                                <p className=" mb-4" style={{ lineHeight: 1.85 }}>
-                                    Our founder, <strong>Priyanka Pugalia</strong>, wasn't always in control of her health. She experienced what most people silently go through for years:
+                                <p className="mb-4" style={{ lineHeight: 1.85 }}>
+                                    Long before founding Poshak Tattva, <strong>Priyanka Pugalia</strong> was captivated by a single question: why does the body struggle the way it does? Her fascination with human anatomy and physiology grew alongside a yoga practice that began in childhood — not as exercise, but as a way of paying close attention to how the body speaks.
                                 </p>
-                                <ul className="list-unstyled mb-5">
-                                    {[
-                                        "Persistent health issues that never fully resolved",
-                                        "Treatments that managed symptoms but never addressed the root",
-                                        "A constant feeling that something was 'off' — despite doing everything right",
-                                    ].map((item, i) => (
-                                        <li key={i} className="mb-3 d-flex align-items-start gap-3">
-                                            <span style={{ color: "#C97B3A", fontWeight: "700", marginTop: "3px" }}>—</span>
-                                            <span className="">{item}</span>
-                                        </li>
-                                    ))}
-                                </ul>
-                                <p className=" mb-4" style={{ lineHeight: 1.85 }}>
-                                    That phase wasn't short. It was long, frustrating, and deeply personal. And that's exactly where the shift began.
+                                <p className="mb-4" style={{ lineHeight: 1.85 }}>
+                                    What truly shaped her path, though, was witnessing something that troubled her deeply: people doing everything right — and still not getting better. Persistent gut issues, hormonal disruption, chronic fatigue, inflammation without cause. The advice was standard. The results were not.
                                 </p>
-                                <p className="" style={{ lineHeight: 1.85 }}>
-                                    Instead of depending on surface-level solutions, she went deeper — into ancient yogic practices, clinical nutrition, and sound healing. <strong>Not as trends. As systems.</strong>
+                                <div className="mb-4 p-4" style={{ background: "#f0f7f2", borderRadius: "12px", borderLeft: "4px solid #1F3D2B" }}>
+                                    <p className="mb-0 fw-bold" style={{ color: "#1F3D2B" }}>
+                                        Symptoms were being managed. But the person was not being restored.
+                                    </p>
+                                </div>
+                                <p className="mb-4" style={{ lineHeight: 1.85 }}>
+                                    That gap became the foundation of her work. Through deep study across Clinical Nutrition, Yoga Therapy, and Sound Healing, she built a framework grounded not in wellness trends, but in biological logic and honest application.
+                                </p>
+                                <p className="mb-0" style={{ lineHeight: 1.85 }}>
+                                    That framework became <strong>Poshak Tattva</strong> — a practice designed to help people stop managing what's wrong and start understanding why it began.
                                 </p>
                             </div>
                         </div>
@@ -175,21 +177,21 @@ export default function AboutUs() {
                                     className="fw-bold text-white mb-2"
                                     style={{ letterSpacing: "0.12em", fontSize: "0.75rem", textTransform: "uppercase" }}
                                 >
-                                    The Breakthrough
+                                    The Framework
                                 </p>
                                 <h2 className="display-6 fw-bold text-white mb-4">
-                                    Through disciplined practice and deep study — something changed.
+                                    Three disciplines. One integrated system. Permanent results.
                                 </h2>
                                 <p className="text-white" style={{ lineHeight: 1.8 }}>
-                                    The body started responding. Energy improved. Mental clarity returned. The dependency on external fixes reduced. This wasn't magic. It was alignment of three fundamentals.
+                                    What emerged from years of rigorous study and applied practice was the recognition that truly lasting recovery requires three things working in concert — not one at a time, not interchangeably. Each pillar addresses a different layer of dysfunction.
                                 </p>
                             </div>
                         </div>
                         <div className="row g-4 justify-content-center">
                             {[
-                                { icon: "🧘", title: "Yoga", desc: "To restore the body — lymphatic, endocrine, and neurological function" },
-                                { icon: "🥗", title: "Clinical Diet", desc: "To nourish at a cellular level — correcting inflammation and gut dysbiosis" },
-                                { icon: "🔔", title: "Sound Healing", desc: "To regulate the nervous system and release what the body holds unconsciously" },
+                                { icon: "🧘", title: "Yoga Therapy", desc: "Therapeutic movement to restore lymphatic, endocrine, and nervous system function — not fitness, but physiology." },
+                                { icon: "🥗", title: "Clinical Nutrition", desc: "Personalised food and protocol design to correct inflammation, heal the gut, and restore metabolic integrity at the cellular level." },
+                                { icon: "🔔", title: "Sound Healing", desc: "Frequency-based interventions that calm the stress response, support recovery, and release what the body holds beneath the surface." },
                             ].map((item, i) => (
                                 <div key={i} className="col-md-4">
                                     <div
@@ -209,7 +211,7 @@ export default function AboutUs() {
                         </div>
                         <div className="text-center mt-8">
                             <p className="text-white" style={{ fontStyle: "italic" }}>
-                                What modern wellness often separates — ancient science had already integrated.
+                                What modern wellness has fragmented into separate verticals, ancient science understood as a unified whole.
                             </p>
                         </div>
                     </div>
@@ -224,21 +226,21 @@ export default function AboutUs() {
                                     className="fw-bold mb-2"
                                     style={{ color: "#1F3D2B", letterSpacing: "0.12em", fontSize: "0.75rem", textTransform: "uppercase" }}
                                 >
-                                    From Healing Self to Healing Others
+                                    From Personal Practice to Clinical Work
                                 </p>
                                 <h2 className="display-6 fw-bold mb-5" style={{ lineHeight: 1.25 }}>
-                                    Once the transformation became real — the direction became obvious.
+                                    When the work proved itself in practice, sharing it became the natural next step.
                                 </h2>
                                 <p className=" mb-4" style={{ lineHeight: 1.85 }}>
-                                    With a strong foundation in <strong>Nutrition & Dietetics</strong>, along with professional training in Yoga and Sound Healing, Priyanka started working with individuals facing:
+                                    Grounded in formal training in <strong>Nutrition &amp; Dietetics</strong> and professional certification in Yoga and Sound Healing, Priyanka began working one-on-one with people navigating some of the most common — and commonly misunderstood — health challenges:
                                 </p>
                                 <ul className="list-unstyled mb-5">
                                     {[
-                                        "Lifestyle disorders",
-                                        "Hormonal imbalances",
-                                        "Digestive issues",
-                                        "Chronic stress and burnout",
-                                        "Weight struggles that never resolved sustainably",
+                                        "Lifestyle disorders — affecting energy, sleep, and metabolism",
+                                        "Hormonal imbalances that conventional tests often miss",
+                                        "Digestive dysfunction and gut-related chronic conditions",
+                                        "Chronic stress, nervous system dysregulation, and burnout",
+                                        "Weight that wouldn't shift — no matter what was tried",
                                     ].map((item, i) => (
                                         <li key={i} className="mb-2 d-flex align-items-center gap-3">
                                             <span style={{ color: "#36ac66ff", fontWeight: "700" }}>✓</span>
@@ -255,17 +257,17 @@ export default function AboutUs() {
                                     }}
                                 >
                                     <p className="mb-0 fw-semibold" style={{ color: "#1F3D2B", lineHeight: 1.7 }}>
-                                        "People weren't sick because they lacked effort. They were stuck because they were solving the wrong problem."
+                                        "The people I worked with were not failing. They were simply asking the wrong question — and receiving answers that didn't go deep enough."
                                     </p>
                                 </div>
                             </div>
                             <div className="col-lg-6">
                                 <div className="row g-3">
                                     {[
-                                        { num: "500+", label: "People Recovered", sub: "Real, documented results" },
-                                        { num: "50+", label: "Cities Reached", sub: "Across India & beyond" },
-                                        { num: "5+", label: "Years of Practice", sub: "Founded in 2020" },
-                                        { num: "98%", label: "Positive Outcomes", sub: "Root-cause vs symptom management" },
+                                        { num: "500+", label: "People Recovered", sub: "Across documented, real-world cases" },
+                                        { num: "50+", label: "Cities Reached", sub: "From India and beyond" },
+                                        { num: "5+", label: "Years in Practice", sub: "Every year built on the last" },
+                                        { num: "98%", label: "Positive Outcomes", sub: "When root cause is the focus" },
                                     ].map((s, i) => (
                                         <div key={i} className="col-6">
                                             <div
@@ -295,14 +297,14 @@ export default function AboutUs() {
                                 className="fw-bold mb-2"
                                 style={{ color: "#1F3D2B", letterSpacing: "0.12em", fontSize: "0.75rem", textTransform: "uppercase" }}
                             >
-                                What We Actually Do
+                                How We Work
                             </p>
                             <h2 className="display-5 fw-bold mb-4">
-                                Poshak Tattva is not a service.<br />
-                                <span style={{ color: "#1F3D2B" }}>It's a correction.</span>
+                                This is not a wellness programme.<br />
+                                <span style={{ color: "#1F3D2B" }}>It's a structured path back to function.</span>
                             </h2>
-                            <p className="lead " style={{ maxWidth: "560px", margin: "0 auto" }}>
-                                No extreme diets. No shortcuts. No dependency. Just structured, natural healing.
+                            <p className="lead" style={{ maxWidth: "560px", margin: "0 auto" }}>
+                                No extreme diets. No shortcuts. No one-size blueprint. Just a methodical, honest approach designed around how your body actually works.
                             </p>
                         </div>
                         <div className="row g-4">
@@ -346,15 +348,14 @@ export default function AboutUs() {
                                     Why People Trust Us
                                 </p>
                                 <h2 className="display-6 fw-bold mb-5" style={{ lineHeight: 1.25 }}>
-                                    Because this is not borrowed knowledge.
+                                    Years of study, practice, and honest clinical observation.
                                 </h2>
-                                <p className=" mb-6" style={{ lineHeight: 1.85 }}>
-                                    It is lived. Tested. Refined through real transformation.
-                                    And delivered with the full credibility of someone who has walked this path personally.
+                                <p className="mb-6" style={{ lineHeight: 1.85 }}>
+                                    This methodology was not assembled from popular wellness trends or borrowed frameworks. It grew from the convergence of three disciplines — each studied seriously, each applied with rigour over years of real-world practice:
                                 </p>
                                 <ul className="list-unstyled">
                                     {trustPoints.map((point, i) => (
-                                        <li key={i} className="mb-4 d-flex align-items-start gap-3">
+                                        <li key={i} className="mb-5 d-flex align-items-start gap-3">
                                             <span
                                                 className="d-flex align-items-center justify-content-center flex-shrink-0"
                                                 style={{
@@ -365,14 +366,21 @@ export default function AboutUs() {
                                                     color: "#1F3D2B",
                                                     fontWeight: "700",
                                                     fontSize: "0.75rem",
+                                                    marginTop: "4px"
                                                 }}
                                             >
                                                 ✓
                                             </span>
-                                            <span className="" style={{ lineHeight: 1.7 }}>{point}</span>
+                                            <div style={{ lineHeight: 1.7 }}>
+                                                <div className="fw-bold" style={{ color: "#1F3D2B", fontSize: "1.1rem" }}>{point.title}</div>
+                                                <div className="text-muted small">{point.desc}</div>
+                                            </div>
                                         </li>
                                     ))}
                                 </ul>
+                                <p className="mt-5 mb-0" style={{ lineHeight: 1.85, fontStyle: "italic" }}>
+                                    Every protocol is built around the individual — their pattern, their history, their root cause. Not a template. Not a trend. A considered response to what's actually happening.
+                                </p>
                             </div>
                             <div className="col-lg-6">
                                 <div
@@ -407,9 +415,9 @@ export default function AboutUs() {
                                         Trained professionally in Nutrition & Dietetics, Yoga, and Sound Healing — Priyanka brings the rare combination of lived experience, clinical training, and ancient wisdom to every client protocol she designs.
                                     </p>
                                     <div
-                                        className="mt-5 p-4"
+                                        className="mt-5 p-4 text-start"
                                         style={{
-                                            background: "rgba(131, 163, 67, 0.08)",
+                                            background: "rgba(255, 255, 255, 0.05)",
                                             borderRadius: "12px",
                                             borderLeft: "3px solid #A8D5B5",
                                         }}
@@ -432,7 +440,7 @@ export default function AboutUs() {
                                 className="fw-bold mb-2"
                                 style={{ color: "#1F3D2B", letterSpacing: "0.12em", fontSize: "0.75rem", textTransform: "uppercase" }}
                             >
-                                Our Journey
+                                Milestones
                             </p>
                             <h2 className="display-5 fw-bold mb-4">5+ Years of Real Results</h2>
                             <p className="lead ">Founded in 2020 — built one recovery at a time.</p>
