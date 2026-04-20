@@ -81,7 +81,7 @@ export const aboutUsFooter = [
   { id: 2, title: 'About Us', url: '/about-us' },
   { id: 3, title: 'Yoga', url: '/yoga' },
   { id: 4, title: 'Diet', url: '/diet' },
-  { id: 5, title: 'Sound Healing', url: '/sound-healing' },
+  { id: 5, title: 'Sound-Healing', url: '/sound-healing' },
   { id: 6, title: 'Gallery', url: '/gallery' },
   { id: 7, title: 'Contact Us', url: '/contact-appointment' },
   { id: 8, title: 'Book Consultation', url: '/contact-appointment' },
