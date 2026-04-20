@@ -56,11 +56,11 @@ export default function MeditationPage() {
 
  <main className="content-wrapper">
  {/* Hero */}
- <section className="wrapper py-10" style={{ background: "linear-gradient(135deg, #f0f7f2 0%, #eaf2ed 100%)" }}>
+ <section className="wrapper py-10 hero-header" style={{ background: "linear-gradient(135deg, #1F3D2B 0%, #3D5C4A 60%, #2E7D6E 100%)" }}>
  <div className="container text-center">
  <span className="d-block text-uppercase fw-semibold mb-3" style={{ fontSize: 12, letterSpacing: "0.12em", color: "#C2A46F" }}>MINDFULNESS PRACTICE</span>
- <h1 className="display-4 fw-bold mb-4">Meditation &amp; Mindfulness</h1>
- <p className="lead mx-auto" style={{ maxWidth: 640 }}>
+ <h1 className="display-4 fw-bold mb-4" style={{ color: "#fff" }}>Meditation &amp; Mindfulness</h1>
+ <p className="lead mx-auto" style={{ maxWidth: 640, color: "rgba(255,255,255,0.85)" }}>
  Train your mind the same way you train your body — with patience, consistency, and the right guidance. Our meditation programs are designed for real people with real schedules.
  </p>
  </div>

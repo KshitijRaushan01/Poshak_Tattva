@@ -55,11 +55,11 @@ export default function SoundHealingWorkshopPage() {
  </Head>
 
  <main className="content-wrapper">
- <section className="wrapper py-10" style={{ background: "linear-gradient(135deg, #f4effa 0%, #f9f5ff 100%)" }}>
+ <section className="wrapper py-10 hero-header" style={{ background: "linear-gradient(135deg, #1A1040 0%, #8f6d3dff 100%)" }}>
  <div className="container text-center">
  <span className="d-block text-uppercase fw-semibold mb-3" style={{ fontSize: 12, letterSpacing: "0.12em", color: "#C2A46F" }}>GROUP EXPERIENCE</span>
- <h1 className="display-4 fw-bold mb-4">Sound Healing Workshop</h1>
- <p className="lead mx-auto" style={{ maxWidth: 640 }}>
+ <h1 className="display-4 fw-bold mb-4" style={{ color: "#fff" }}>Sound Healing Workshop</h1>
+ <p className="lead mx-auto" style={{ maxWidth: 640, color: "rgba(255,255,255,0.85)" }}>
  Individual healing is powerful. Collective healing is transformative. Our workshops bring groups together for a shared sound journey that amplifies the experience beyond what solo practice can achieve.
  </p>
  </div>

@@ -424,56 +424,76 @@ const Home = () => {
             </div>
           </div>
         </section>
-        {/* Articles */}
+        {/* Articles — From Our Blog */}
         <section className="wrapper bg-light py-16">
-          <div className="Articles">
+          <div className="container">
             <div className="text-center mb-12 article-grid-hero">
               <h2 className="display-5 fw-bold mb-4 section-heading">From Our Blog</h2>
               <p className="lead section-copy">Evidence-based insights and actionable strategies to support your recovery journey</p>
             </div>
             <div className="row g-4">
+
+              {/* Card 1 */}
               <div className="col-md-6 col-lg-4">
-                <div className="card h-100 border-0 shadow-sm overflow-hidden" style={{ transition: "all 0.3s ease", borderRadius: '16px' }}>
-                  <div style={{ height: '180px', overflow: 'hidden', position: 'relative' }}>
+                <div className="blog-card">
+                  <div className="blog-card-img-wrap">
                     <Image src="/img/Sound_Healing.jpg" alt="Sound Healing" fill style={{ objectFit: 'cover' }} />
+                    <span className="blog-card-badge">Sound Healing</span>
                   </div>
-                  <div className="p-5 text-center article-preview-card">
-                    <h5 className="fw-bold mb-3 article-card-heading">How sound healing can reset your mind to optimal performance</h5>
-                    <p className="mb-0 article-card-copy">Discover how vibrational frequencies can reduce stress, improve focus, and enhance cognitive function for better mental performance.</p>
-                    <Link href="/article/optimized-performance-sound-healing" className="stretched-link text-decoration-none" style={{ color: "#1F3D2B", fontWeight: "500", transition: "color 0.2s" }} onMouseOver={e => e.currentTarget.style.color = "#fd2a05ff"} onMouseOut={e => e.currentTarget.style.color = "#1F3D2B"}>
+                  <div className="blog-card-body">
+                    <span className="blog-card-date">April 17, 2026</span>
+                    <h5 className="blog-card-title">How sound healing can reset your mind to optimal performance</h5>
+                    <p className="blog-card-excerpt">Discover how vibrational frequencies can reduce stress, improve focus, and enhance cognitive function.</p>
+                    <Link href="/article/optimized-performance-sound-healing" className="blog-card-btn">
                       Read More →
                     </Link>
                   </div>
                 </div>
               </div>
+
+              {/* Card 2 */}
               <div className="col-md-6 col-lg-4">
-                <div className="card h-100 border-0 shadow-sm overflow-hidden" style={{ transition: "all 0.3s ease", borderRadius: '16px' }}>
-                  <div style={{ height: '180px', overflow: 'hidden', position: 'relative' }}>
+                <div className="blog-card">
+                  <div className="blog-card-img-wrap">
                     <Image src="/img/Diet.jpg" alt="Yoga Diet Sound Healing" fill style={{ objectFit: 'cover' }} />
+                    <span className="blog-card-badge">Holistic Recovery</span>
                   </div>
-                  <div className="p-5 text-center article-preview-card">
-                    <h5 className="fw-bold mb-3 article-card-heading">How integration of Yoga, Diet and Sound healing can give an immeasurable boost for any treatment</h5>
-                    <p className="mb-0 article-card-copy">Learn how combining yoga, nutrition, and sound therapy creates a powerful holistic approach to health and recovery.</p>
-                    <Link href="/article/synergy-yoga-diet-sound" className="stretched-link text-decoration-none" style={{ color: "#1F3D2B", fontWeight: "500", transition: "color 0.2s" }} onMouseOver={e => e.currentTarget.style.color = "#fd2a05ff"} onMouseOut={e => e.currentTarget.style.color = "#1F3D2B"}>
+                  <div className="blog-card-body">
+                    <span className="blog-card-date">April 15, 2026</span>
+                    <h5 className="blog-card-title">How integration of Yoga, Diet and Sound healing can boost any treatment</h5>
+                    <p className="blog-card-excerpt">Learn how combining yoga, nutrition, and sound therapy creates a powerful holistic approach to recovery.</p>
+                    <Link href="/article/synergy-yoga-diet-sound" className="blog-card-btn">
                       Read More →
                     </Link>
                   </div>
                 </div>
               </div>
+
+              {/* Card 3 */}
               <div className="col-md-6 col-lg-4">
-                <div className="card h-100 border-0 shadow-sm overflow-hidden" style={{ transition: "all 0.3s ease", borderRadius: '16px' }}>
-                  <div style={{ height: '180px', overflow: 'hidden', position: 'relative' }}>
+                <div className="blog-card">
+                  <div className="blog-card-img-wrap">
                     <Image src="/img/Yoga.jpg" alt="Yoga Sound Healing" fill style={{ objectFit: 'cover' }} />
+                    <span className="blog-card-badge">Longevity</span>
                   </div>
-                  <div className="p-5 text-center article-preview-card">
-                    <h5 className="fw-bold mb-3 article-card-heading">Key to a Healthy life through Yoga and sound healing</h5>
-                    <p className="mb-0 article-card-copy">Explore the essential practices of yoga and sound healing that lead to a balanced, healthy, and fulfilling life.</p>
-                    <Link href="/article/healthy-life-yoga-sound" className="stretched-link text-decoration-none" style={{ color: "#1F3D2B", fontWeight: "500", transition: "color 0.2s" }} onMouseOver={e => e.currentTarget.style.color = "#fd2a05ff"} onMouseOut={e => e.currentTarget.style.color = "#1F3D2B"}>
+                  <div className="blog-card-body">
+                    <span className="blog-card-date">April 10, 2026</span>
+                    <h5 className="blog-card-title">Key to a Healthy life through Yoga and sound healing</h5>
+                    <p className="blog-card-excerpt">Explore the essential practices of yoga and sound healing that lead to a balanced, healthy, and fulfilling life.</p>
+                    <Link href="/article/healthy-life-yoga-sound" className="blog-card-btn">
                       Read More →
                     </Link>
                   </div>
                 </div>
               </div>
+
+            </div>
+
+            {/* View All Articles Button */}
+            <div className="text-center mt-12">
+              <Link href="/articles" className="blog-view-all-btn">
+                View All Articles →
+              </Link>
             </div>
           </div>
         </section>
@@ -498,46 +518,130 @@ const Home = () => {
             line-height: 1.75;
           }
 
-          .article-preview-card {
-            background: #fff;
-            border-radius: 20px;
-            transition: transform 0.28s ease, box-shadow 0.28s ease;
-          }
-
-          .article-preview-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 18px 40px rgba(31, 61, 43, 0.08);
-          }
-
-          .article-card-heading {
-            font-size: 1.15rem !important;
-            line-height: 1.35 !important;
-            color: #142f28 !important;
-            margin-bottom: 0.8rem;
-          }
-
-          .article-card-copy {
-            color: #4f5559 !important;
-            font-size: 0.98rem !important;
-            line-height: 1.72 !important;
-            margin-bottom: 1rem;
-          }
-
           .article-grid-hero p {
             color: #4f575d !important;
+          }
+
+          /* ===== Blog Cards ===== */
+          .blog-card {
+            border-radius: 20px;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 0 4px 24px rgba(19, 42, 36, 0.06);
+            transition: all 0.45s cubic-bezier(0.165, 0.84, 0.44, 1);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+          }
+          .blog-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 24px 48px rgba(19, 42, 36, 0.12);
+          }
+          .blog-card-img-wrap {
+            position: relative;
+            height: 210px;
+            overflow: hidden;
+          }
+          .blog-card-img-wrap img {
+            transition: transform 0.7s ease;
+          }
+          .blog-card:hover .blog-card-img-wrap img {
+            transform: scale(1.08);
+          }
+          .blog-card-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(6px);
+            padding: 0.3rem 0.9rem;
+            border-radius: 100px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: #132a24;
+            z-index: 2;
+            letter-spacing: 0.03em;
+          }
+          .blog-card-body {
+            padding: 1.75rem;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+          }
+          .blog-card-date {
+            font-size: 0.78rem;
+            color: #9ca3af;
+            margin-bottom: 0.65rem;
+            font-weight: 500;
+          }
+          .blog-card-title {
+            font-size: 1.15rem !important;
+            font-weight: 800 !important;
+            line-height: 1.35 !important;
+            color: #132a24 !important;
+            margin-bottom: 0.75rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+          }
+          .blog-card-excerpt {
+            font-size: 0.92rem;
+            line-height: 1.7;
+            color: #6b7280;
+            margin-bottom: 1.5rem;
+            flex: 1;
+          }
+          .blog-card-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.7rem 1.75rem;
+            background: #132a24;
+            color: #fff !important;
+            border-radius: 100px;
+            font-weight: 700;
+            font-size: 0.88rem;
+            text-decoration: none !important;
+            transition: all 0.3s ease;
+            align-self: flex-start;
+            margin-top: auto;
+          }
+          .blog-card-btn:hover {
+            background: #C2A46F;
+            transform: translateX(4px);
+          }
+
+          /* ===== View All Articles ===== */
+          .blog-view-all-btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.9rem 2.5rem;
+            border: 2px solid #132a24;
+            border-radius: 100px;
+            font-weight: 700;
+            font-size: 1rem;
+            color: #132a24 !important;
+            text-decoration: none !important;
+            transition: all 0.35s ease;
+          }
+          .blog-view-all-btn:hover {
+            background: #132a24;
+            color: #fff !important;
+            box-shadow: 0 8px 24px rgba(19, 42, 36, 0.2);
           }
         `}</style>
         {/* Stats Section */}
         <StatsBar />
 
         {/* CTA Section */}
-        <section className="wrapper py-12 bg-white">
+        <section className="wrapper py-12 homepage-cta-section">
           <div className="container text-center">
-            <h2 className="display-5 fw-bold mb-4">Ready to Reverse Your Condition?</h2>
-            <h3 className="display-6 fw-bold mb-3">Start Your Clinical Recovery Today</h3>
-            <p className="text-muted mb-8">Chronic disorders don't reverse themselves. Your first step is a free root-cause consultation — no prescription, no guesswork, just clarity on what's driving your condition.</p>
+            <h2 className="display-5 fw-bold mb-4 homepage-cta-heading">Ready to Reverse Your Condition?</h2>
+            <h3 className="display-6 fw-bold mb-3 homepage-cta-heading">Start Your Clinical Recovery Today</h3>
+            <p className="mb-8 homepage-cta-text">Chronic disorders don't reverse themselves. Your first step is a free root-cause consultation — no prescription, no guesswork, just clarity on what's driving your condition.</p>
             <div className="d-flex flex-column flex-sm-row gap-3 justify-content-center">
-              <Link href="/contact-appointment" className="btn btn-lg" style={{ background: "linear-gradient(135deg, gold 0%, gold 100%)", color: "white", border: "none" }}>
+              <Link href="/contact-appointment" className="btn btn-lg homepage-cta-btn">
                 Book Root-Cause Consultation →
               </Link>
             </div>

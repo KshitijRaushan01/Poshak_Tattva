@@ -33,11 +33,11 @@ export default function ChakraHealingPage() {
  </Head>
 
  <main className="content-wrapper">
- <section className="wrapper py-10" style={{ background: "linear-gradient(135deg, #f4effa 0%, #f9f5ff 100%)" }}>
+ <section className="wrapper py-10 hero-header" style={{ background: "linear-gradient(135deg, #1A1040 0%, #8f6d3dff 100%)" }}>
  <div className="container text-center">
  <span className="d-block text-uppercase fw-semibold mb-3" style={{ fontSize: 12, letterSpacing: "0.12em", color: "#C2A46F" }}>ENERGY ALIGNMENT</span>
- <h1 className="display-4 fw-bold mb-4">Chakra Healing</h1>
- <p className="lead mx-auto" style={{ maxWidth: 640 }}>
+ <h1 className="display-4 fw-bold mb-4" style={{ color: "#fff" }}>Chakra Healing</h1>
+ <p className="lead mx-auto" style={{ maxWidth: 640, color: "rgba(255,255,255,0.85)" }}>
  Your body has seven primary energy centres. When they're in balance, energy flows freely. When they're blocked, it shows up as physical pain, emotional turbulence, or mental fog. Sound is the most direct way to restore the flow.
  </p>
  </div>

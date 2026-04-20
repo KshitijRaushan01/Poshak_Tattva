@@ -56,11 +56,11 @@ export default function HormonalDisordersPage() {
  </Head>
 
  <main className="content-wrapper">
- <section className="wrapper py-10" style={{ background: "linear-gradient(135deg, #f2f8ea 0%, #f9fbf2 100%)" }}>
+ <section className="wrapper py-10 hero-header" style={{ background: "linear-gradient(135deg, #3B2A1A 0%, #7A4A1E 60%, #C97B3A 100%)" }}>
  <div className="container text-center">
  <span className="d-block text-uppercase fw-semibold mb-3" style={{ fontSize: 12, letterSpacing: "0.12em", color: "#C2A46F" }}>HORMONAL HEALTH</span>
- <h1 className="display-4 fw-bold mb-4">Hormonal Balance</h1>
- <p className="lead mx-auto" style={{ maxWidth: 640 }}>
+ <h1 className="display-4 fw-bold mb-4" style={{ color: "#fff" }}>Hormonal Balance</h1>
+ <p className="lead mx-auto" style={{ maxWidth: 640, color: "rgba(255,255,255,0.85)" }}>
  Fatigue, mood swings, weight gain, irregular cycles, brain fog — these aren't "just part of getting older." They're signals your hormones are out of balance. And nutrition is the most powerful lever to correct them.
  </p>
  </div>

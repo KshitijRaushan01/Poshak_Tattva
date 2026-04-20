@@ -4,7 +4,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Fragment } from 'react';
 import { motion } from 'framer-motion';
-import Layout from '../../src/components/Layout';
 import { articles } from '../../src/data/articles';
 
 const ArticlePage = () => {
@@ -16,17 +15,17 @@ const ArticlePage = () => {
 
   if (!article) {
     return (
-      <Layout>
+      <>
         <div className="container py-20 text-center">
           <h2>Article Not Found</h2>
           <Link href="/" className="btn btn-primary mt-4">Return Home</Link>
         </div>
-      </Layout>
+      </>
     );
   }
 
   return (
-    <Layout>
+    <Fragment>
       <Head>
         <title>{article.title} - Poshak Tattva</title>
         <meta name="description" content={article.excerpt} />
@@ -131,8 +130,8 @@ const ArticlePage = () => {
 
               {/* Back to Articles */}
               <div className="mt-12 text-center">
-                <Link href="/" className="text-secondary fw-bold text-decoration-none hover-link">
-                  ← Back to Home
+                <Link href="/articles" className="text-secondary fw-bold text-decoration-none hover-link">
+                  ← Back to All Articles
                 </Link>
               </div>
             </div>
@@ -235,7 +234,7 @@ const ArticlePage = () => {
           font-size: 0.75rem;
         }
       `}</style>
-    </Layout>
+    </Fragment>
   );
 };
 

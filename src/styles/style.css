@@ -863,3 +863,32 @@ p, .lead, .card-text {
   cursor: not-allowed;
 }
 
+/* ---------------------------------
+   Homepage CTA Section Override
+   Must live in global CSS to beat
+   the !important rules above
+---------------------------------- */
+.homepage-cta-section {
+  background: #1F3D2B !important;
+}
+.homepage-cta-section h2,
+.homepage-cta-section h3,
+.homepage-cta-section .display-5,
+.homepage-cta-section .display-6,
+.homepage-cta-section .homepage-cta-heading {
+  color: #ffffff !important;
+}
+.homepage-cta-section p,
+.homepage-cta-section .homepage-cta-text {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+.homepage-cta-section .homepage-cta-btn {
+  background: linear-gradient(135deg, #C2A46F 0%, #d4b87a 100%) !important;
+  color: #fff !important;
+  border: none !important;
+}
+.homepage-cta-section .homepage-cta-btn:hover {
+  background: linear-gradient(135deg, #d4b87a 0%, #C2A46F 100%) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(194, 164, 111, 0.4);
+}

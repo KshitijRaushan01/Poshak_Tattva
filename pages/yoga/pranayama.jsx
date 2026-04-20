@@ -55,11 +55,11 @@ export default function PrivateSessionsPage() {
 
  <main className="content-wrapper">
  {/* Hero */}
- <section className="wrapper py-10" style={{ background: "linear-gradient(135deg, #f0f7f2 0%, #eaf2ed 100%)" }}>
+ <section className="wrapper py-10 hero-header" style={{ background: "linear-gradient(135deg, #1F3D2B 0%, #3D5C4A 60%, #2E7D6E 100%)" }}>
  <div className="container text-center">
  <span className="d-block text-uppercase fw-semibold mb-3" style={{ fontSize: 12, letterSpacing: "0.12em", color: "#C2A46F" }}>PERSONALISED COACHING</span>
- <h1 className="display-4 fw-bold mb-4">Private 1:1 Yoga Sessions</h1>
- <p className="lead mx-auto" style={{ maxWidth: 640 }}>
+ <h1 className="display-4 fw-bold mb-4" style={{ color: "#fff" }}>Private 1:1 Yoga Sessions</h1>
+ <p className="lead mx-auto" style={{ maxWidth: 640, color: "rgba(255,255,255,0.85)" }}>
  Your body. Your goals. Your pace. A practice built entirely around you.
  </p>
  </div>
