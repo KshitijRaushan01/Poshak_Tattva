@@ -4,8 +4,8 @@ import Image from "next/image";
 import PageProgress from "components/PageProgress";
 
 export const metadata = {
-  title: "Sound Healing & Nervous System Reset | Poshak Tattva",
-  description: "Experience vibrational medicine through sound healing. Gong baths, chakra healing, and personalized sessions to reset your nervous system and release deep-seated trauma."
+    title: "Sound Healing & Nervous System Reset | Poshak Tattva",
+    description: "Experience vibrational medicine through sound healing. Gong baths, chakra healing, and personalized sessions to reset your nervous system and release deep-seated trauma."
 }
 
 const soundHealingServices = [
@@ -33,8 +33,8 @@ const soundHealingServices = [
         id: 2,
         title: "Sound Healing Workshops",
         url: "/sound-healing/workshop",
-        img: "/img/services/sound/sound- healing workshop.jpg",
-        badge: "Group Immersion",
+        img: "/img/Gallery/10043.jpeg",
+        badge: "Group Sessions",
         description:
             "Immersive group sound healing workshops where you experience the collective amplification of healing frequencies. These structured sessions combine psycho-education on sound therapy, breathwork priming, and a deep sound bath — designed to reset the nervous system of a group simultaneously and provide lasting post-session physiological calm.",
         benefits: [

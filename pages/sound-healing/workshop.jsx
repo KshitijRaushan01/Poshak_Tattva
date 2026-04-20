@@ -49,7 +49,7 @@ export default function SoundHealingWorkshopPage() {
         <meta property="og:description" content="Collective sound healing for teams, families & retreats. 90–120 min immersive group sessions." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://poshaktattva.com/sound-healing/workshop" />
-        {/*<meta property="og:image" content="/img/services/sound/sound- healing workshop.jpg" />*/}
+        <meta property="og:image" content="/img/Gallery/10043.jpeg" />
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="canonical" href="https://poshaktattva.com/sound-healing/workshop" />
       </Head>
