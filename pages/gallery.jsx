@@ -1,5 +1,6 @@
 import Head from "next/head";
 import PageProgress from "components/PageProgress";
+import GalleryHeader from "components/ui/GalleryHeader";
 import MasonryGallery from "components/ui/MasonryGallery";
 
 export const metadata = {
@@ -46,19 +47,22 @@ export default function GalleryPage() {
       </Head>
 
       <main className="content-wrapper">
-        {/* Page Header */}
-        <section className="wrapper bg-light py-16">
-          <div className="container text-center">
-            <h1 className="display-4 fw-bold mb-3">Our Gallery</h1>
-            <p className="lead mb-0">
-              A glimpse into the serene world of Poshak Tattva
-            </p>
+        {/* Premium Gallery Header Section */}
+        <section className="wrapper py-0">
+          <div className="container">
+            <GalleryHeader
+              eyebrowText="Glimpse Into The Serene World of Poshak Tattva"
+              mainHeading="Gallery"
+              subText=""
+            />
           </div>
         </section>
 
-        {/* Gallery masonry layout */}
+        {/* Gallery masonry layout — full width, no container cap */}
         <section className="wrapper py-0">
-          <MasonryGallery images={images} />
+          <div style={{ padding: "0 16px" }}>
+            <MasonryGallery images={images} />
+          </div>
         </section>
       </main>
     </>

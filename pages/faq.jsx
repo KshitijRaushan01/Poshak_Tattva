@@ -1,4 +1,6 @@
 import Head from "next/head";
+import { useRef, useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import PageProgress from "components/PageProgress";
 import FAQCard from "components/ui/FAQCard";
 
@@ -149,13 +151,10 @@ export default function FAQPage() {
  </Head>
 
  <main className="content-wrapper">
- {/* Header */}
- <section className="wrapper bg-light py-16">
- <div className="container text-center">
- <h1 className="display-4 fw-bold mb-3">Frequently Asked Questions</h1>
- <p className="lead mb-0">
- Find answers to common questions about our programs
- </p>
+ {/* ── Premium FAQ Header ────────────────────────────── */}
+ <section className="wrapper py-0">
+ <div className="container">
+ <FAQPageHeader />
  </div>
  </section>
 
@@ -176,7 +175,7 @@ export default function FAQPage() {
  subtitle={
  i === faqCategories.length - 1
  ? "Have more questions? Don't hesitate to contact us:"
- : `${cat.items.length} questions in this section`
+ : ""
  }
  items={cat.items}
  />
@@ -210,4 +209,108 @@ export default function FAQPage() {
  </main>
  </>
  );
+}
+
+/* ── Premium animated page header ────────────────────────── */
+function FAQPageHeader() {
+  const ref = useRef(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { setVisible(true); obs.disconnect(); } },
+      { threshold: 0.2 }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
+
+  const container = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { staggerChildren: 0.14, delayChildren: 0.08 } },
+  };
+  const item = {
+    hidden: { opacity: 0, y: 22 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.75, ease: [0.25, 0.46, 0.45, 0.94] } },
+  };
+
+  return (
+    <>
+      <style>{`
+        .faq-page-header {
+          width: 100%;
+          padding: 56px 0 40px;
+          text-align: center;
+        }
+        .faq-page-header-inner {
+          max-width: 860px;
+          margin: 0 auto;
+          padding: 0 20px;
+        }
+        .faq-eyebrow {
+          display: block;
+          font-size: 12px;
+          font-weight: 600;
+          letter-spacing: 2.5px;
+          text-transform: uppercase;
+          color: #8B7355;
+          margin-bottom: 18px;
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+        .faq-main-heading {
+          font-size: clamp(42px, 7vw, 72px);
+          font-weight: 300;
+          letter-spacing: -1.5px;
+          line-height: 1.1;
+          margin: 0 0 20px;
+          color: #2c2c2c;
+          font-family: 'Playfair Display', Georgia, serif;
+        }
+        .faq-sub {
+          font-size: clamp(15px, 2.2vw, 18px);
+          line-height: 1.65;
+          color: #666;
+          margin: 0 auto;
+          max-width: 520px;
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+          font-weight: 400;
+        }
+        .faq-divider {
+          width: 48px;
+          height: 2px;
+          background: linear-gradient(90deg, #8B7355, #c4a882);
+          border-radius: 2px;
+          margin: 24px auto 0;
+        }
+        @media (max-width: 768px) {
+          .faq-page-header { padding: 40px 0 28px; }
+          .faq-main-heading { font-size: 38px; }
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400&display=swap');
+      `}</style>
+
+      <motion.section
+        ref={ref}
+        className="faq-page-header"
+        initial="hidden"
+        animate={visible ? "visible" : "hidden"}
+        variants={container}
+      >
+        <div className="faq-page-header-inner">
+          <motion.span className="faq-eyebrow" variants={item}>
+            Everything You Need to Know
+          </motion.span>
+          <motion.h1 className="faq-main-heading" variants={item}>
+            Frequently Asked Questions
+          </motion.h1>
+          <motion.p className="faq-sub" variants={item}>
+            Browse our most common questions below, or reach out to us directly — we&apos;re always happy to help.
+          </motion.p>
+          <motion.div className="faq-divider" variants={item} />
+        </div>
+      </motion.section>
+    </>
+  );
 }

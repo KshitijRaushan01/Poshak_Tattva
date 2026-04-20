@@ -225,18 +225,20 @@ export default function FAQCard({ items = [], title = "Questions & Answers", sub
               {title}
             </h2>
 
-            <p
-              style={{
-                fontFamily: "'Figtree', sans-serif",
-                fontWeight: 400,
-                fontSize: 14,
-                color: "#384250",
-                lineHeight: 1.7,
-                margin: "4px 0 0",
-              }}
-            >
-              {subtitle}
-            </p>
+            {subtitle && (
+              <p
+                style={{
+                  fontFamily: "'Figtree', sans-serif",
+                  fontWeight: 400,
+                  fontSize: 14,
+                  color: "#384250",
+                  lineHeight: 1.7,
+                  margin: "4px 0 0",
+                }}
+              >
+                {subtitle}
+              </p>
+            )}
 
             {/* Contact links */}
             <div style={{ display: "flex", flexDirection: "column", gap: 12, paddingTop: 16 }}>
