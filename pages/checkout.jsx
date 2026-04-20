@@ -108,13 +108,14 @@ export default function CheckoutPage() {
 
  const data = await res.json();
 
- if (!res.ok || data.error) {
- // Fallback: simulate success for demo until Razorpay keys are active
+ // ── Handle Errors OR MOCK MODE (if keys aren't provided yet) ──
+ if (!res.ok || data.error || data.mock) {
+ // Simulate success for demo/mock purposes
  clearCart();
  router.push({
  pathname: "/order-confirmation",
  query: {
- orderId: `PT-DEMO-${Date.now()}`,
+ orderId: data.order?.id || `PT-DEMO-${Date.now()}`,
  name: form.fullName,
  email: form.email,
  amount: cartTotal,
