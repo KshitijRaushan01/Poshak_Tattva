@@ -24,6 +24,11 @@ export const diet = [
     title: "Auto Immune Disorders",
     url: "/diet/autoimmune",
   },
+  {
+    id: 6,
+    title: "Cancer Care",
+    url: "/diet/cancer-care",
+  },
 ];
 
 
@@ -74,6 +79,7 @@ export const yoga = [
   { id: 3, title: 'Meditation Classes', url: '/yoga/meditation' },
   { id: 4, title: 'Yoga Nidra', url: '/yoga/nidra' },
   { id: 5, title: 'Pranayams Classes', url: '/yoga/pranayams' },
+  { id: 6, title: 'Mudras', url: '/yoga/mudras' },
 ];
 
 export const aboutUsFooter = [
@@ -94,6 +100,7 @@ export const treatmentsFooter = [
   { id: 3, title: 'Lifestyle Management', url: '/diet/lifestyle' },
   { id: 4, title: 'Weight Loss', url: '/diet/weight-loss' },
   { id: 5, title: 'Chakra Healing', url: '/sound-healing/chakra-healing' },
+  { id: 6, title: 'Cancer Care', url: '/diet/cancer-care' },
 ];
 
 export const soundHealing = [

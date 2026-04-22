@@ -139,6 +139,32 @@ const dietServices = [
  accent: "#7B3F8C",
  bg: "#f5f0fa",
  },
+ {
+  id: 6,
+  title: "Cancer Care Nutrition",
+  url: "/diet/cancer-care",
+  img: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80",
+  badge: "Metabolic Support",
+  description:
+  "Precision oncology nutrition designed to create a physiological environment that supports clinical treatment while building cellular resilience. We focus on metabolic flexibility, systemic inflammation reduction, and microbiome repair to enhance recovery outcomes.",
+  conditions: [
+  "Post-Chemotherapy Recovery",
+  "Radiation Side-Effect Management",
+  "Metabolic Growth Signal Regulation",
+  "Immune System Rebuilding",
+  "Treatment-Induced Fatigue",
+  "Mitochondrial Support",
+  ],
+  approach: [
+  "Metabolic marker & inflammatory review",
+  "Anti-inflammatory, phyto-rich nutrition",
+  "Blood sugar & insulin regulation",
+  "Gut-immune axis restoration",
+  "Nutrient density & bio-availability focus",
+  ],
+  accent: "#7A4A1E",
+  bg: "#fdf3ec",
+ },
 ];
 
 export default function DietMainPage() {

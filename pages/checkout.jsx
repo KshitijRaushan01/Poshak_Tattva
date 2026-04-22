@@ -108,21 +108,37 @@ export default function CheckoutPage() {
 
  const data = await res.json();
 
- // ── Handle Errors OR MOCK MODE (if keys aren't provided yet) ──
- if (!res.ok || data.error || data.mock) {
- // Simulate success for demo/mock purposes
- clearCart();
- router.push({
- pathname: "/order-confirmation",
- query: {
- orderId: data.order?.id || `PT-DEMO-${Date.now()}`,
- name: form.fullName,
- email: form.email,
- amount: cartTotal,
- },
- });
- return;
- }
+  // ── Handle Errors OR MOCK MODE (if keys aren't provided yet) ──
+  if (!res.ok || data.error || data.mock) {
+    // ── SEND CONFIRMATION EMAIL (Mock Mode) ──
+    const tempOrderId = data.order?.id || `PT-DEMO-${Date.now()}`;
+    try {
+      await fetch("/api/orders/confirm", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          orderId: tempOrderId,
+          customerInfo: form,
+          amount: cartTotal,
+          items: cartItems,
+        }),
+      });
+    } catch (apiErr) {
+      console.warn("Order confirmation API failed (silent catch):", apiErr);
+    }
+
+    clearCart();
+    router.push({
+      pathname: "/order-confirmation",
+      query: {
+        orderId: tempOrderId,
+        name: form.fullName,
+        email: form.email,
+        amount: cartTotal,
+      },
+    });
+    return;
+  }
 
  // ── Open Razorpay Checkout modal ──
  const options = {
@@ -139,19 +155,36 @@ export default function CheckoutPage() {
  contact: form.phone,
  },
  theme: { color: "#1C7690" },
- handler: function (response) {
- clearCart();
- router.push({
- pathname: "/order-confirmation",
- query: {
- orderId: response.razorpay_order_id,
- paymentId: response.razorpay_payment_id,
- name: form.fullName,
- email: form.email,
- amount: cartTotal,
- },
- });
- },
+  handler: async function (response) {
+    // ── SEND CONFIRMATION EMAIL (Real Mode) ──
+    try {
+      await fetch("/api/orders/confirm", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          orderId: response.razorpay_order_id,
+          paymentId: response.razorpay_payment_id,
+          customerInfo: form,
+          amount: cartTotal,
+          items: cartItems,
+        }),
+      });
+    } catch (apiErr) {
+      console.warn("Order confirmation API failed (silent catch):", apiErr);
+    }
+
+    clearCart();
+    router.push({
+      pathname: "/order-confirmation",
+      query: {
+        orderId: response.razorpay_order_id,
+        paymentId: response.razorpay_payment_id,
+        name: form.fullName,
+        email: form.email,
+        amount: cartTotal,
+      },
+    });
+  },
  modal: {
  ondismiss: () => setLoading(false),
  },
@@ -159,19 +192,35 @@ export default function CheckoutPage() {
 
  const rzp = new window.Razorpay(options);
  rzp.open();
- } catch {
- // Simulate success for demo
- clearCart();
- router.push({
- pathname: "/order-confirmation",
- query: {
- orderId: `PT-DEMO-${Date.now()}`,
- name: form.fullName,
- email: form.email,
- amount: cartTotal,
- },
- });
- }
+  } catch {
+    // ── SEND CONFIRMATION EMAIL (Fallback/Error path simulated success) ──
+    const tempOrderId = `PT-DEMO-${Date.now()}`;
+    try {
+      await fetch("/api/orders/confirm", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          orderId: tempOrderId,
+          customerInfo: form,
+          amount: cartTotal,
+          items: cartItems,
+        }),
+      });
+    } catch (apiErr) {
+      console.warn("Order confirmation API failed (silent catch):", apiErr);
+    }
+
+    clearCart();
+    router.push({
+      pathname: "/order-confirmation",
+      query: {
+        orderId: tempOrderId,
+        name: form.fullName,
+        email: form.email,
+        amount: cartTotal,
+      },
+    });
+  }
  };
 
 

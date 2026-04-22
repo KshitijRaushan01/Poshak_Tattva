@@ -57,6 +57,24 @@ create table if not exists public.articles (
   created_at      timestamptz default now()
 );
 
+-- 6. Orders (E-commerce)
+create table if not exists public.orders (
+  id              uuid primary key default gen_random_uuid(),
+  order_id        text unique not null,          -- Razorpay Order ID or Custom ID
+  payment_id      text,                          -- Razorpay Payment ID
+  customer_name   text not null,
+  customer_email  text not null,
+  customer_phone  text,
+  address         text,
+  city            text,
+  state           text,
+  pincode         text,
+  amount          numeric(10,2) not null,
+  items           jsonb,                         -- Array of items purchased
+  status          text default 'paid',           -- paid | pending | shipped | delivered
+  created_at      timestamptz default now()
+);
+
 -- ─── Row Level Security ────────────────────────────────────────────────────────
 -- The admin uses the anon key server-side only, so public reads are safe for
 -- gallery/testimonials. Restrict writes appropriately in production.
@@ -66,6 +84,7 @@ alter table public.products      enable row level security;
 alter table public.testimonials  enable row level security;
 alter table public.gallery       enable row level security;
 alter table public.articles      enable row level security;
+alter table public.orders        enable row level security;
 
 -- Allow full access via anon key (for server-side admin panel)
 -- You can tighten these with service_role key later.
@@ -74,3 +93,4 @@ create policy "anon_all_products"      on public.products      for all using (tr
 create policy "anon_all_testimonials"  on public.testimonials  for all using (true) with check (true);
 create policy "anon_all_gallery"       on public.gallery       for all using (true) with check (true);
 create policy "anon_all_articles"      on public.articles      for all using (true) with check (true);
+create policy "anon_all_orders"        on public.orders        for all using (true) with check (true);

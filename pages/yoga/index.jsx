@@ -86,24 +86,43 @@ const yogaServices = [
  bg: "#f3f0fa",
  },
  {
- id: 5,
- title: "Pranayama Classes",
- url: "/yoga/pranayams",
- img: "/img/services/yoga/pranayam.jpg",
- badge: "Breathwork Therapy",
- description:
- "Pranayama is the direct lever for autonomic nervous system control. Our structured breathwork classes use specific techniques — Nadi Shodhana, Kapalabhati, Bhramari, Kumbhaka — to shift the body from sympathetic dominance (fight-or-flight) into deep parasympathetic heal-and-repair mode.",
- benefits: [
- "CO₂ tolerance & oxygen efficiency",
- "HRV (heart rate variability) improvement",
- "Sympathetic tone reduction",
- "Lung capacity & diaphragm training",
- "Inflammation regulation via breath",
- ],
- bestFor: "Respiratory Disorders, Anxiety, Hypertension, Metabolic Syndrome",
- accent: "#2E7D6E",
- bg: "#eaf7f5",
- },
+  id: 5,
+  title: "Pranayama Classes",
+  url: "/yoga/pranayams",
+  img: "/img/services/yoga/pranayam.jpg",
+  badge: "Breathwork Therapy",
+  description:
+  "Pranayama is the direct lever for autonomic nervous system control. Our structured breathwork classes use specific techniques — Nadi Shodhana, Kapalabhati, Bhramari, Kumbhaka — to shift the body from sympathetic dominance (fight-or-flight) into deep parasympathetic heal-and-repair mode.",
+  benefits: [
+  "CO₂ tolerance & oxygen efficiency",
+  "HRV (heart rate variability) improvement",
+  "Sympathetic tone reduction",
+  "Lung capacity & diaphragm training",
+  "Inflammation regulation via breath",
+  ],
+  bestFor: "Respiratory Disorders, Anxiety, Hypertension, Metabolic Syndrome",
+  accent: "#2E7D6E",
+  bg: "#eaf7f5",
+  },
+  {
+  id: 6,
+  title: "Mudras",
+  url: "/yoga/mudras",
+  img: "https://images.unsplash.com/photo-1544367567-0f2fd750c045?auto=format&fit=crop&w=800&q=80",
+  badge: "Neural Yoga",
+  description:
+  "Hand gestures that act as sacred circuits, reprogramming your neurology and restoring cellular balance. Mudras stimulate specific brain regions via cortical representation, regulating the autonomic nervous system and enhancing cognitive focus.",
+  benefits: [
+  "Vagus nerve stimulation",
+  "Cortical brain mapping engagement",
+  "Autonomic nervous system regulation",
+  "Hormonal & endocrine balancing",
+  "Concentration & memory enhancement",
+  ],
+  bestFor: "Neurological Health | Stress | Focus | Chronic Disorders",
+  accent: "#C2A46F",
+  bg: "#faf7f2",
+  },
 ];
 
 export default function YogaMainPage() {
