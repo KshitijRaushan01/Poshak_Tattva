@@ -73,7 +73,7 @@ const soundHealingServices = [
         id: 4,
         title: "Chakra Healing & Balancing",
         url: "/sound-healing/chakra-healing",
-        img: "/img/services/sound/Chakra-Healing/CHakra-Main.jpg",
+        img: "/img/services/sound/Chakra-Healing/Chakra.jpg",
         badge: "Energy System Regulation",
         description:
             "Each of the body's seven chakras corresponds to specific nerve plexuses, endocrine glands, and physiological functions. Chakra sound healing uses precise frequencies (Solfeggio tones, binaural beats, singing bowls tuned to specific Hz) to identify and correct energetic blockages that manifest as physical, hormonal, or emotional dysfunction — a bridge between ancient energy medicine and modern neuroscience.",

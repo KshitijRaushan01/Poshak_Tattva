@@ -11,35 +11,35 @@ export const metadata = {
 
 export default function MudrasPage() {
   const mudras = [
-    { 
-      title: "Gyan Mudra", 
+    {
+      title: "Gyan Mudra",
       subtitle: "Mudra of Knowledge",
       desc: "By touching the tip of the thumb to the index finger, you stimulate the pituitary and endocrine glands. This gesture enhances concentration, sharpens memory, and fosters a sense of mental clarity.",
-      img: "https://images.unsplash.com/photo-1544367567-0f2fd750c045?auto=format&fit=crop&w=800&q=80"
+      img: "/img/services/mudras/Gyan-Mudra.jpg"
     },
-    { 
-      title: "Prithvi Mudra", 
+    {
+      title: "Prithvi Mudra",
       subtitle: "Mudra of Earth",
       desc: "Connecting the thumb to the ring finger increases vitality and physical strength. It is a powerful grounding technique that helps stabilize the body and mind during times of emotional turbulence.",
-      img: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=80"
+      img: "/img/services/mudras/Prithvi-Mudra.jpg"
     },
-    { 
-      title: "Apana Mudra", 
+    {
+      title: "Apana Mudra",
       subtitle: "Mudra of Digestion",
       desc: "Touching the thumb to the middle and ring fingers assists in deep detoxification. It balances the eliminatory system and supports efficient digestion, helping the body clear toxins naturally.",
-      img: "https://images.unsplash.com/photo-1602192103300-47e66756150e?auto=format&fit=crop&w=800&q=80"
+      img: "/img/services/mudras/Apana-Mudra.jpg"
     },
-    { 
-      title: "Varuna Mudra", 
+    {
+      title: "Varuna Mudra",
       subtitle: "Mudra of Water",
       desc: "Joining the thumb and the little finger helps balance fluid levels and hydrates the body from within. It is excellent for skin health, joint lubrication, and maintaining mental flexibility.",
-      img: "https://images.unsplash.com/photo-1518244484435-50269f82631a?auto=format&fit=crop&w=800&q=80"
+      img: "/img/services/mudras/Varuna-Mudra.jpg"
     },
-    { 
-      title: "Shuni Mudra", 
+    {
+      title: "Shuni Mudra",
       subtitle: "Mudra of Patience",
       desc: "The connection between the thumb and the middle finger promotes discipline and emotional resilience. It cultivates a sense of calm endurance and helps in focusing on long-term goals.",
-      img: "https://images.unsplash.com/photo-1506126483561-c0ae70c86866?auto=format&fit=crop&w=800&q=80"
+      img: "/img/services/mudras/Shuni-Mudra.jpg"
     }
   ];
 
@@ -76,8 +76,8 @@ export default function MudrasPage() {
 
       <main className="content-wrapper">
         {/* Hero Section */}
-        <section 
-          className="wrapper py-16 hero-header" 
+        <section
+          className="wrapper py-16 hero-header"
           style={{ background: "linear-gradient(135deg, #1F3D2B 0%, #3D5C4A 60%, #2E7D6E 100%)", position: "relative", overflow: "hidden" }}
         >
           <div className="container text-center py-10" style={{ position: "relative", zIndex: 1 }}>
@@ -111,8 +111,8 @@ export default function MudrasPage() {
               </div>
               <div className="col-lg-6">
                 <div style={{ position: "relative", borderRadius: 30, overflow: "hidden", boxShadow: "0 30px 60px rgba(31,61,43,0.15)" }}>
-                  <Image 
-                    src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1200&q=80"
+                  <Image
+                    src="/img/services/mudras/Mudra-Main.jpg"
                     alt="The science of mudras"
                     width={600}
                     height={700}
@@ -131,7 +131,7 @@ export default function MudrasPage() {
               <span className="d-block text-uppercase fw-semibold mb-2" style={{ fontSize: 12, letterSpacing: "0.12em", color: "#C2A46F" }}>PRACTICAL GUIDE</span>
               <h2 className="display-6 fw-bold">Five Essential Mudras for Daily Health</h2>
             </div>
-            
+
             <div className="rmap-stack">
               {mudras.map((m, i) => (
                 <Fragment key={i}>
@@ -142,11 +142,12 @@ export default function MudrasPage() {
                           <div className="row g-0">
                             <div className="col-lg-5">
                               <div style={{ position: "relative", height: "100%", minHeight: "300px" }}>
-                                <Image 
-                                  src={m.img} 
-                                  alt={m.title} 
-                                  fill 
-                                  style={{ objectFit: "cover" }} 
+                                <Image
+                                  src={m.img}
+                                  alt={m.title}
+                                  fill
+                                  sizes="(max-width: 991px) 100vw, 450px"
+                                  style={{ objectFit: "cover" }}
                                 />
                               </div>
                             </div>
@@ -172,8 +173,8 @@ export default function MudrasPage() {
         </section>
 
         {/* CTA Section */}
-        <section 
-          className="wrapper py-20" 
+        <section
+          className="wrapper py-20"
           style={{ background: "linear-gradient(135deg, #1F3D2B 0%, #3D5C4A 100%)" }}
         >
           <div className="container text-center">
@@ -181,9 +182,9 @@ export default function MudrasPage() {
             <p className="lead text-white mb-8 opacity-75 mx-auto" style={{ maxWidth: 640 }}>
               Learn how to integrate specific Mudras into your clinical recovery protocol. Book a free root-cause consultation today.
             </p>
-            <Link 
-              href="/contact-appointment" 
-              className="btn btn-lg fw-bold px-8 py-4 rounded-pill" 
+            <Link
+              href="/contact-appointment"
+              className="btn btn-lg fw-bold px-8 py-4 rounded-pill"
               style={{ background: "#ffffff", color: "#1F3D2B", border: "none" }}
             >
               Book Free Session
