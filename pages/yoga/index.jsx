@@ -31,7 +31,7 @@ const yogaServices = [
   {
     id: 2,
     title: "Private 1:1 Yoga Sessions",
-    url: "/yoga/pranayama",
+    url: "/yoga/private-sessions",
     img: "/img/services/yoga/private-yoga.jpg",
     badge: "Clinically Personalised",
     description:
