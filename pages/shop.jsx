@@ -16,7 +16,7 @@ export default function ShopPage() {
         />
       </Head>
 
-      <main className="content-wrapper">
+      <main id="main-content" className="content-wrapper">
         {/* Hero */}
         <section
           className="wrapper py-12 d-flex align-items-center"

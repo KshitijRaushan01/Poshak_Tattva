@@ -10,7 +10,33 @@
   --text-dark: #2D3D3D;
   --text-light: #4F5559;
   --text-muted: #6B7280;
+  --color-secondary-dark: #8C6A30; /* WCAG AA compliant on white background */
 }
+
+:focus-visible {
+  outline: 3px solid var(--secondary-bg, #C2A46F) !important;
+  outline-offset: 2px !important;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #1F3D2B;
+  color: white;
+  padding: 8px;
+  z-index: 10000;
+  transition: top 0.3s;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+.text-secondary-dark {
+  color: var(--color-secondary-dark) !important;
+}
+
 
 html {
   scroll-behavior: smooth;
@@ -892,3 +918,63 @@ p, .lead, .card-text {
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(194, 164, 111, 0.4);
 }
+
+/* ---------------------------------
+   Navigation Refactor Styles
+---------------------------------- */
+
+.toggle-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition: transform 0.3s ease;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-btn.open {
+  transform: rotate(180deg);
+}
+
+.submenu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  list-style: none;
+  padding-left: 0;
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.submenu.open {
+  max-height: 800px;
+}
+
+.nav-item .d-flex:hover {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+/* Ensure desktop dropdowns work with state */
+
+/* Service Card Overrides */
+.yoga-btn { background-color: #5a7a52; color: #fff; border: none; }
+.yoga-btn:hover, .yoga-btn:focus { background-color: #fd2a05; color: #fff; }
+
+.diet-link { color: #a0622a; }
+.diet-link:hover, .diet-link:focus { color: #fd2a05; }
+.diet-btn { background-color: #a0622a; color: white; border: none; }
+.diet-btn:hover, .diet-btn:focus { background-color: #7a4a1e; color: #fff; }
+
+.sound-link { color: #8b6347; }
+.sound-link:hover, .sound-link:focus { color: #6b4830; }
+.sound-btn { background-color: #8b6347; color: white; border: none; }
+.sound-btn:hover, .sound-btn:focus { background-color: #6b4830; color: #fff; }
+
+.service-card-item:hover, .service-card-item:focus {
+  color: #fd2a05 !important;
+  letter-spacing: 0.05em !important;
+}
+
+

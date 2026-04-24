@@ -101,7 +101,7 @@ const Home = () => {
         <link rel="canonical" href="https://www.poshaktattva.com" />
       </Head>
 
-      <main className="content-wrapper" style={{ overflowX: 'clip' }}>
+      <main id="main-content" className="content-wrapper" style={{ overflowX: 'clip' }}>
         {/* Hero Section */}
         <Hero />
 
@@ -281,9 +281,6 @@ const Home = () => {
                           <Link
                             href={item.url}
                             className="text-decoration-none featured-service-link service-card-item"
-                            style={{ color: "#5a7a52", transition: "color 0.2s, letter-spacing 0.2s" }}
-                            onMouseOver={e => { e.currentTarget.style.color = "#fd2a05ff"; e.currentTarget.style.letterSpacing = "0.05em"; }}
-                            onMouseOut={e => { e.currentTarget.style.color = "#5a7a52"; e.currentTarget.style.letterSpacing = "0.01em"; }}
                           >
                             → {item.title}
                           </Link>
@@ -292,10 +289,7 @@ const Home = () => {
                     </ul>
                     <Link
                       href="/yoga"
-                      className="btn btn-sm w-100 service-card-link"
-                      style={{ backgroundColor: "#5a7a52", color: "#fff", border: "none", transition: "background-color 0.2s" }}
-                      onMouseOver={e => e.currentTarget.style.backgroundColor = "#fd2a05ff"}
-                      onMouseOut={e => e.currentTarget.style.backgroundColor = "#5a7a52"}
+                      className="btn btn-sm w-100 service-card-link yoga-btn"
                     >
                       Explore All Classes
                     </Link>
@@ -321,10 +315,7 @@ const Home = () => {
                         <li key={item.id} className="mb-3 pb-3" style={{ borderBottom: "1px solid #e8d8b8" }}>
                           <Link
                             href={item.url}
-                            className="text-decoration-none featured-service-link service-card-item"
-                            style={{ color: "#a0622a", transition: "color 0.2s, letter-spacing 0.2s" }}
-                            onMouseOver={e => { e.currentTarget.style.color = "#fd2a05ff"; e.currentTarget.style.letterSpacing = "0.05em"; }}
-                            onMouseOut={e => { e.currentTarget.style.color = "#a0622a"; e.currentTarget.style.letterSpacing = "0.01em"; }}
+                            className="text-decoration-none featured-service-link service-card-item diet-link"
                           >
                             → {item.title}
                           </Link>
@@ -333,10 +324,7 @@ const Home = () => {
                     </ul>
                     <Link
                       href="/diet"
-                      className="btn btn-sm w-100 service-card-link"
-                      style={{ backgroundColor: "#a0622a", color: "white", border: "none", transition: "background-color 0.2s" }}
-                      onMouseOver={e => e.currentTarget.style.backgroundColor = "#7a4a1e"}
-                      onMouseOut={e => e.currentTarget.style.backgroundColor = "#a0622a"}
+                      className="btn btn-sm w-100 service-card-link diet-btn"
                     >
                       Explore All Programs
                     </Link>
@@ -362,10 +350,7 @@ const Home = () => {
                         <li key={item.id} className="mb-3 pb-3" style={{ borderBottom: "1px solid #dccfc4" }}>
                           <Link
                             href={item.url}
-                            className="text-decoration-none featured-service-link service-card-item"
-                            style={{ color: "#8b6347", transition: "color 0.2s, letter-spacing 0.2s" }}
-                            onMouseOver={e => { e.currentTarget.style.color = "#6b4830"; e.currentTarget.style.letterSpacing = "0.05em"; }}
-                            onMouseOut={e => { e.currentTarget.style.color = "#8b6347"; e.currentTarget.style.letterSpacing = "0.01em"; }}
+                            className="text-decoration-none featured-service-link service-card-item sound-link"
                           >
                             → {item.title}
                           </Link>
@@ -374,10 +359,7 @@ const Home = () => {
                     </ul>
                     <Link
                       href="/sound-healing"
-                      className="btn btn-sm w-100 service-card-link"
-                      style={{ backgroundColor: "#8b6347", color: "white", border: "none", transition: "background-color 0.2s" }}
-                      onMouseOver={e => e.currentTarget.style.backgroundColor = "#6b4830"}
-                      onMouseOut={e => e.currentTarget.style.backgroundColor = "#8b6347"}
+                      className="btn btn-sm w-100 service-card-link sound-btn"
                     >
                       Explore Sound Healing
                     </Link>
@@ -404,6 +386,8 @@ const Home = () => {
                   <div className="input-group input-group-sm">
                     <input
                       type="email"
+                      id="newsletter-email"
+                      aria-label="Email for newsletter"
                       className="form-control"
                       placeholder="Enter your email"
                       value={email}

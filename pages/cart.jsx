@@ -42,7 +42,7 @@ export default function CartPage() {
  <meta name="description" content="Review your selected wellness products before checkout." />
  </Head>
 
- <main className="content-wrapper">
+ <main id="main-content" className="content-wrapper">
  <section
  className="wrapper py-10"
  style={{ background: "linear-gradient(135deg, #1F3D2B 0%, #3D5C4A 100%)" }}
@@ -63,11 +63,13 @@ export default function CartPage() {
  {cartItems.map((item, idx) => (
  <div
  key={item.id}
- className="d-flex align-items-center gap-3 p-4"
+ className="p-4"
  style={{
  borderBottom: idx < cartItems.length - 1 ? "1px solid #f0f0f0" : "none",
  }}
  >
+ <div className="row align-items-center g-3">
+ <div className="col-auto">
  <div style={{ position: "relative", width: "80px", height: "80px", flexShrink: 0 }}>
  <Image
  src={item.image}
@@ -81,17 +83,22 @@ export default function CartPage() {
  sizes="80px"
  />
  </div>
- <div className="flex-grow-1">
- <h5 className="fw-semibold mb-1" style={{ fontSize: "15px" }}>
- {item.title}
- </h5>
- <p className="mb-0 small">Unit price: ₹{item.price.toLocaleString()}</p>
  </div>
 
+ <div className="col">
+ <h2 className="h6 fw-semibold mb-1" style={{ fontSize: "1.05rem" }}>
+ {item.title}
+ </h2>
+ <p className="mb-0 small text-muted">Unit price: ₹{item.price.toLocaleString()}</p>
+ </div>
+
+ <div className="col-md-auto">
+ <div className="d-flex align-items-center justify-content-between gap-4">
  {/* Quantity controls */}
  <div className="d-flex align-items-center" style={{ gap: "8px" }}>
  <button
  className="btn btn-sm"
+ aria-label={`Decrease quantity of ${item.title}`}
  style={{
  width: "32px",
  height: "32px",
@@ -103,11 +110,12 @@ export default function CartPage() {
  }}
  onClick={() => updateQuantity(item.id, item.quantity - 1)}
  >−</button>
- <span className="fw-semibold" style={{ minWidth: "24px", textAlign: "center" }}>
+ <span className="fw-semibold" aria-label="Current quantity" style={{ minWidth: "24px", textAlign: "center" }}>
  {item.quantity}
  </span>
  <button
  className="btn btn-sm"
+ aria-label={`Increase quantity of ${item.title}`}
  style={{
  width: "32px",
  height: "32px",
@@ -122,7 +130,7 @@ export default function CartPage() {
  </div>
 
  <div style={{ minWidth: "90px", textAlign: "right" }}>
- <p className="fw-bold mb-1" style={{ color: "#FB991C", fontSize: "16px" }}>
+ <p className="fw-bold mb-1" style={{ color: "#FB991C", fontSize: "1.1rem" }}>
  ₹{(item.price * item.quantity).toLocaleString()}
  </p>
  <button
@@ -134,11 +142,14 @@ export default function CartPage() {
  </button>
  </div>
  </div>
+ </div>
+ </div>
+ </div>
  ))}
  </div>
  </div>
 
- <Link href="/shop" className="text-primary mt-3 d-inline-block" style={{ fontSize: "14px" }}>
+ <Link href="/shop" className="text-primary mt-4 d-inline-block fw-medium">
  ← Continue Shopping
  </Link>
  </div>
@@ -146,28 +157,28 @@ export default function CartPage() {
  {/* Order Summary */}
  <div className="col-lg-4">
  <div className="card border-0 shadow-sm rounded-4 p-4">
- <h4 className="fw-bold mb-4">Order Summary</h4>
+ <h2 className="h4 fw-bold mb-4">Order Summary</h2>
 
  <div className="d-flex justify-content-between mb-3">
- <span className="">Subtotal ({cartCount} items)</span>
+ <span className="text-muted">Subtotal ({cartCount} items)</span>
  <span className="fw-semibold">₹{cartTotal.toLocaleString()}</span>
  </div>
  <div className="d-flex justify-content-between mb-3">
- <span className="">Shipping</span>
+ <span className="text-muted">Shipping</span>
  <span className="text-success fw-semibold">FREE</span>
  </div>
- <hr />
+ <hr className="my-4" />
  <div className="d-flex justify-content-between mb-4">
- <span className="fw-bold">Total</span>
- <span className="fw-bold" style={{ color: "#FB991C" }}>
+ <span className="fw-bold fs-18">Total</span>
+ <span className="fw-bold fs-18" style={{ color: "#FB991C" }}>
  ₹{cartTotal.toLocaleString()}
  </span>
  </div>
 
  <button
- className="btn btn-primary w-100 rounded-pill py-3 fw-semibold"
+ className="btn btn-primary w-100 rounded-pill py-3 fw-bold"
  onClick={() => router.push("/checkout")}
- style={{ fontSize: "15px" }}
+ style={{ fontSize: "1rem" }}
  >
  Proceed to Checkout →
  </button>

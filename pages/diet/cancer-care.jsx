@@ -114,13 +114,13 @@ export default function CancerCarePage() {
                 </Link>
               </div>
               <div className="col-lg-5">
-                <div style={{ position: "relative", borderRadius: 24, overflow: "hidden", boxShadow: "0 20px 60px rgba(0,0,0,0.12)" }}>
+                <div style={{ position: "relative", borderRadius: 24, overflow: "hidden", boxShadow: "0 20px 60px rgba(0,0,0,0.12)", minHeight: 450, background: "#f8f9fa" }}>
                   <Image
-                    src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1200&q=80"
+                    src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80"
                     alt="Nutritious oncology support foods"
-                    width={600}
-                    height={800}
-                    style={{ width: "100%", height: "auto", display: "block" }}
+                    fill
+                    sizes="(max-width: 991px) 100vw, 500px"
+                    style={{ objectFit: "contain", padding: "20px" }}
                   />
                 </div>
               </div>
@@ -172,7 +172,7 @@ export default function CancerCarePage() {
         </section>
 
         {/* CTA Section */}
-        <section className="wrapper py-20" style={{ background: "linear-gradient(135deg, #3B2A1A 0%, #7A4A1E 100%)" }}>
+        <section className="wrapper py-20 hero" style={{ background: "linear-gradient(135deg, #3B2A1A 0%, #7A4A1E 100%)" }}>
           <div className="container text-center">
             <h2 className="display-5 fw-bold mb-4 text-white">Your Path to Recovery Begins with the Right Fuel</h2>
             <p className="lead text-white mb-8 opacity-75 mx-auto" style={{ maxWidth: 640 }}>

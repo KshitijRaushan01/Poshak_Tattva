@@ -125,3 +125,28 @@ export const soundHealing = [
     url: '/sound-healing/chakra-healing',
   },
 ];
+
+export const NAV_ITEMS = [
+  { label: "Home", href: "/" },
+  {
+    label: "Yoga",
+    href: "/yoga",
+    children: yoga.map((item) => ({ label: item.title, href: item.url })),
+  },
+  {
+    label: "Sound Healing",
+    href: "/sound-healing",
+    children: soundHealing.map((item) => ({ label: item.title, href: item.url })),
+  },
+  {
+    label: "Diet",
+    href: "/diet",
+    children: diet.map((item) => ({ label: item.title, href: item.url })),
+  },
+  { label: "Shop", href: "/shop" },
+  { label: "Cart", type: "cart" },
+  { label: "FAQ", href: "/faq" },
+  { label: "Book Appointment", href: "/contact-appointment", type: "button" },
+];
+
+

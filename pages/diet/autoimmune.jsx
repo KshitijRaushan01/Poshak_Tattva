@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { Fragment, useEffect } from "react";
+import Image from "next/image";
 import PageProgress from "components/PageProgress";
 
 export const metadata = {
@@ -98,8 +99,14 @@ export default function AutoimmuneDisordersPage() {
  </div>
  </div>
  <div className="col-lg-5">
- <div style={{ position: "relative", width: "100%", height: "100%", minHeight: 320 }}>
- <img src="/img/home/roadmap-assessment.png" alt="Anti-inflammatory foods and ingredients" style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", objectFit: "cover" }} />
+ <div style={{ position: "relative", width: "100%", height: "100%", minHeight: 450, background: "#f8f9fa" }}>
+ <Image
+ src="/img/home/roadmap-assessment.png"
+ alt="Clinical nutrition for autoimmune disorders"
+ fill
+ sizes="(max-width: 991px) 100vw, 500px"
+ style={{ objectFit: "contain", padding: "20px" }}
+ />
  </div>
  </div>
  </div>
@@ -206,7 +213,7 @@ export default function AutoimmuneDisordersPage() {
  </div>
  </section>
 
- <section className="wrapper py-10" style={{ background: "linear-gradient(135deg, #1F3D2B 0%, #3D5C4A 100%)" }}>
+ <section className="wrapper py-10 hero" style={{ background: "linear-gradient(135deg, #1F3D2B 0%, #3D5C4A 100%)" }}>
  <div className="container text-center">
  <h2 className="h3 fw-bold mb-4 text-white">Move from Managing Symptoms to Sustained Remission</h2>
  <a href="/contact-appointment" className="btn btn-lg fw-bold" style={{ background: "white", color: "#1F3D2B", border: "none" }}>Book Consultation</a>

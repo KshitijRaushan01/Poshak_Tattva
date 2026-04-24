@@ -96,72 +96,74 @@ const ProductCard = ({ product, priority = false }) => {
   }
 
   return (
-    <Link href={`/product/${id}`} className="text-decoration-none d-block h-100" style={{ color: 'inherit' }}>
-      <div className="pt-card">
-        {/* ── image area ── */}
-        <div className="pt-card__img-wrap">
-          <Image
-            src={thumbnail}
-            alt={name}
-            fill
-            priority={priority}
-            style={{ objectFit: 'contain', padding: '16px' }}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          />
+    <div className="pt-card h-100">
+      {/* ── image area ── */}
+      <Link href={`/product/${id}`} className="pt-card__img-wrap d-block">
+        <Image
+          src={thumbnail}
+          alt={`View details for ${name}`}
+          fill
+          priority={priority}
+          style={{ objectFit: 'contain', padding: '16px' }}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        />
 
-          {/* discount badge */}
-          {isOnSale && discountPct && (
-            <span className="pt-card__badge">
-              -{discountPct}%
-            </span>
-          )}
+        {/* discount badge */}
+        {isOnSale && discountPct && (
+          <span className="pt-card__badge">
+            -{discountPct}%
+          </span>
+        )}
 
-          {/* out of stock overlay */}
-          {!inStock && (
-            <div className="pt-card__oos">
-              <span>OUT OF STOCK</span>
-            </div>
+        {/* out of stock overlay */}
+        {!inStock && (
+          <div className="pt-card__oos">
+            <span>OUT OF STOCK</span>
+          </div>
+        )}
+      </Link>
+
+      {/* ── body ── */}
+      <div className="pt-card__body">
+        {/* name */}
+        <h2 className="pt-card__name">
+          <Link href={`/product/${id}`} className="text-decoration-none text-inherit">
+            {name}
+          </Link>
+        </h2>
+
+        {/* price row */}
+        <div className="pt-card__price-row">
+          <span className="pt-card__price-sale">{saleFormatted}</span>
+          {isOnSale && regularFormatted && (
+            <span className="pt-card__price-original">{regularFormatted}</span>
           )}
         </div>
 
-        {/* ── body ── */}
-        <div className="pt-card__body">
-          {/* name */}
-          <h3 className="pt-card__name">{name}</h3>
-
-          {/* price row */}
-          <div className="pt-card__price-row">
-            <span className="pt-card__price-sale">{saleFormatted}</span>
-            {isOnSale && regularFormatted && (
-              <span className="pt-card__price-original">{regularFormatted}</span>
-            )}
-          </div>
-
-          {/* action row */}
-          <div className="pt-card__actions">
-            <Link
-              href={`/product/${id}`}
-              className="pt-card__info-btn"
-              onClick={(e) => e.stopPropagation()}
-              title="View details"
-            >
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="12" cy="12" r="10" />
-                <line x1="12" y1="8" x2="12" y2="8" />
-                <line x1="12" y1="12" x2="12" y2="16" />
-              </svg>
-            </Link>
-            <button
-              className="pt-card__atc-btn"
-              onClick={handleAddToCart}
-              disabled={!inStock}
-            >
-              {inStock ? 'Add to cart' : 'Out of Stock'}
-            </button>
-          </div>
+        {/* action row */}
+        <div className="pt-card__actions mt-auto pt-3">
+          <Link
+            href={`/product/${id}`}
+            className="pt-card__info-btn"
+            aria-label={`View details for ${name}`}
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <line x1="12" y1="8" x2="12" y2="8" />
+              <line x1="12" y1="12" x2="12" y2="16" />
+            </svg>
+          </Link>
+          <button
+            className="pt-card__atc-btn"
+            onClick={handleAddToCart}
+            disabled={!inStock}
+            aria-label={`Add ${name} to cart`}
+          >
+            {inStock ? 'Add to cart' : 'Out of Stock'}
+          </button>
         </div>
       </div>
-    </Link>
+    </div>
   )
 }
 

@@ -31,10 +31,11 @@ const inputStyle = {
 
 const Field = ({ label, name, type = "text", placeholder, form, handleChange, errors }) => (
  <div className="mb-3">
- <label className="form-label fw-semibold" style={{ fontSize: "13px" }}>
+ <label htmlFor={`field-${name}`} className="form-label fw-semibold" style={{ fontSize: "13px" }}>
  {label}
  </label>
  <input
+ id={`field-${name}`}
  type={type}
  name={name}
  value={form[name]}
@@ -233,7 +234,7 @@ export default function CheckoutPage() {
  <meta name="description" content="Complete your purchase securely." />
  </Head>
 
- <main className="content-wrapper">
+ <main id="main-content" className="content-wrapper">
  <section
  className="wrapper py-10"
  style={{ background: "linear-gradient(135deg, #1F3D2B 0%, #3D5C4A 100%)" }}
@@ -353,7 +354,6 @@ export default function CheckoutPage() {
  type="submit"
  disabled={loading}
  className="btn btn-primary w-100 rounded-pill py-3 fw-bold"
- style={{ fontSize: "40px" }}
  >
  {loading ? (
  <span>

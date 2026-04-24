@@ -67,7 +67,7 @@ export default function OrderConfirmationPage() {
  <meta name="description" content="Your order has been placed successfully." />
  </Head>
 
- <main className="content-wrapper">
+ <main id="main-content" className="content-wrapper">
  <section
  className="wrapper"
  style={{
@@ -100,7 +100,7 @@ export default function OrderConfirmationPage() {
  boxShadow: "0 8px 24px rgba(76,175,80,0.35)",
  }}
  >
- <svg width="44" height="44" viewBox="0 0 24 24" fill="none">
+ <svg width="44" height="44" viewBox="0 0 24 24" fill="none" aria-hidden="true">
  <path
  d="M20 6L9 17L4 12"
  stroke="white"

@@ -5,30 +5,23 @@ import Link from "next/link";
 
 import NextLink from "./NextLink";
 import SocialLinks from "./SocialLinks";
-import ListItemLink from "./ListItemLink";
-import DropdownToggleLink from "./DropdownToggleLink";
+import DesktopNav from "./DesktopNav";
+import MobileNav from "./MobileNav";
 import { useCart } from "context/CartContext";
 
-import { soundHealing, diet, yoga } from "../data.js";
+import { NAV_ITEMS } from "../data.js";
+
 
 const Navbar = ({ navClassName, navOtherClass, fancy, stickyBox }) => {
   const sticky = useSticky(350);
   const navbarRef = useRef(null);
   const { cartCount } = useCart();
 
-  const renderLinks = (links) =>
-    links.map((item) => (
-      <ListItemLink
-        href={item.url || "#"}
-        title={item.title}
-        linkClassName="dropdown-item"
-        key={item.id}
-      />
-    ));
+
 
   const headerContent = (
     <Fragment>
-      <div className="navbar-brand w-100">
+      <div className="navbar-brand w-auto">
         <NextLink
           href="/"
           title={
@@ -68,171 +61,16 @@ const Navbar = ({ navClassName, navOtherClass, fancy, stickyBox }) => {
           />
         </div>
 
-        <div className="offcanvas-body ms-lg-auto d-flex flex-column h-100 offcavas-bg">
-          <ul className="navbar-nav">
-            <li className="nav-item" data-bs-dismiss="offcanvas">
-              <NextLink href="/" title="Home" className="nav-link" />
-            </li>
+        <div className="offcanvas-body ms-lg-auto d-flex flex-column flex-lg-row h-100 offcavas-bg">
+          {/* Desktop Navigation */}
+          <div className="d-none d-lg-flex">
+            <DesktopNav items={NAV_ITEMS} />
+          </div>
 
-            <li className="nav-item dropdown d-lg-block">
-              <DropdownToggleLink
-                title="Yoga"
-                className="nav-link dropdown-toggle"
-                href="/yoga"
-                disableToggle={true}
-              />
-              <ul className="dropdown-menu" data-bs-dismiss="offcanvas">
-                {yoga.map(({ id, url, title }) => (
-                  <ListItemLink
-                    key={id}
-                    href={url || "#"}
-                    title={title}
-                    linkClassName="dropdown-item"
-                  />
-                ))}
-              </ul>
-            </li>
-
-            <li className="nav-item dropdown d-block d-lg-none">
-              <DropdownToggleLink
-                title="Yoga"
-                className="nav-link dropdown-toggle"
-                href="/yoga"
-              />
-              <ul className="dropdown-menu" data-bs-dismiss="offcanvas">
-                {yoga.map(({ id, url, title }) => (
-                  <ListItemLink
-                    key={id}
-                    href={url || "#"}
-                    title={title}
-                    linkClassName="dropdown-item"
-                  />
-                ))}
-              </ul>
-            </li>
-
-            <li className="nav-item dropdown d-lg-block">
-              <DropdownToggleLink
-                title="Sound Healing"
-                className="nav-link dropdown-toggle"
-                href="/sound-healing"
-                disableToggle={true}
-              />
-              <ul className="dropdown-menu" data-bs-dismiss="offcanvas">
-                {soundHealing.map(({ id, title, url }) => (
-                  <ListItemLink
-                    key={id}
-                    href={url || "#"}
-                    title={title}
-                    linkClassName="dropdown-item"
-                  />
-                ))}
-              </ul>
-            </li>
-
-            <li className="nav-item dropdown d-block d-lg-none">
-              <DropdownToggleLink
-                title="Sound Healing"
-                className="nav-link dropdown-toggle"
-                href="/sound-healing"
-              />
-              <ul className="dropdown-menu" data-bs-dismiss="offcanvas">
-                {soundHealing.map(({ id, title, url }) => (
-                  <ListItemLink
-                    key={id}
-                    href={url || "#"}
-                    title={title}
-                    linkClassName="dropdown-item"
-                  />
-                ))}
-              </ul>
-            </li>
-
-            {["d-lg-block", "d-block d-lg-none"].map((cls, index) => (
-              <li className={`nav-item dropdown ${cls}`} key={index}>
-                <DropdownToggleLink
-                  title="Diet"
-                  className="nav-link dropdown-toggle"
-                  href="/diet"
-                  disableToggle={cls === "d-lg-block"}
-                />
-                <ul className="dropdown-menu" data-bs-dismiss="offcanvas">
-                  {diet.map(({ id, title, url }) => (
-                    <ListItemLink
-                      key={id}
-                      href={url || "#"}
-                      title={title}
-                      linkClassName="dropdown-item"
-                    />
-                  ))}
-                </ul>
-              </li>
-            ))}
-
-            <li
-              className="nav-item align-items-center d-flex mt-3 mt-lg-0 ms-lg-3"
-              data-bs-dismiss="offcanvas"
-            >
-              <NextLink
-                title="Shop"
-                href="/shop"
-                className="nav-link"
-              />
-            </li>
-
-            <li
-              className="nav-item align-items-center d-flex mt-3 mt-lg-0 ms-lg-3"
-              data-bs-dismiss="offcanvas"
-            >
-              <Link href="/cart" className="nav-link position-relative" style={{ paddingRight: '8px' }} aria-label="View Cart">
-                  🛒
-                  {cartCount > 0 && (
-                    <span
-                      style={{
-                        position: 'absolute',
-                        top: '-4px',
-                        right: '-4px',
-                        background: '#FB991C',
-                        color: '#fff',
-                        borderRadius: '50%',
-                        width: '18px',
-                        height: '18px',
-                        fontSize: '11px',
-                        fontWeight: '700',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        lineHeight: '1',
-                      }}
-                    >
-                      {cartCount > 9 ? '9+' : cartCount}
-                    </span>
-                  )}
-              </Link>
-            </li>
-
-            <li
-              className="nav-item align-items-center d-flex mt-3 mt-lg-0 ms-lg-3"
-              data-bs-dismiss="offcanvas"
-            >
-              <NextLink
-                title="FAQ"
-                href="/faq"
-                className="nav-link"
-              />
-            </li>
-
-            <li
-              className="nav-item align-items-center d-flex mt-3 mt-lg-0 ms-lg-3"
-              data-bs-dismiss="offcanvas"
-            >
-              <NextLink
-                title="Book Appointment"
-                href="/contact-appointment"
-                className="btn btn-sm secondary-bg text-white mb-lg-1 rounded border border-md-none"
-              />
-            </li>
-          </ul>
+          {/* Mobile Navigation */}
+          <div className="d-lg-none">
+            <MobileNav items={NAV_ITEMS} />
+          </div>
 
           <div className="offcanvas-footer d-lg-none">
             <div>
@@ -248,6 +86,8 @@ const Navbar = ({ navClassName, navOtherClass, fancy, stickyBox }) => {
             </div>
           </div>
         </div>
+
+
       </div>
 
       <div className={navOtherClass}>
@@ -264,6 +104,7 @@ const Navbar = ({ navClassName, navOtherClass, fancy, stickyBox }) => {
 
   return (
     <Fragment>
+      <a href="#main-content" className="skip-link">Skip to content</a>
       {stickyBox && (
         <div
           style={{ paddingTop: sticky ? navbarRef.current?.clientHeight : 0 }}
