@@ -13,7 +13,7 @@
 - **Mobile:** Expandable dropdown menu  
 - Links:
   - Group Sessions → `/yoga/group-sessions`
-  - Private Sessions (1:1) → `/yoga/pranayama`
+  - Private Sessions (1:1) → `/yoga/private-sessions`
   - Meditation Classes → `/yoga/meditation`
   - Yoga Nidra → `/yoga/nidra`
   - Pranayams Classes → `/yoga/pranayams`
@@ -93,7 +93,7 @@ All navigation links are powered by `src/data.js`:
 ```javascript
 export const yoga = [
   { id: 1, title: 'Group Sessions', url: '/yoga/group-sessions' },
-  { id: 2, title: 'Private Sessions (1:1)', url: '/yoga/pranayama' },
+  { id: 2, title: 'Private Sessions (1:1)', url: '/yoga/private-sessions' },
   { id: 3, title: 'Meditation Classes', url: '/yoga/meditation' },
   { id: 4, title: 'Yoga Nidra', url: '/yoga/nidra' },
   { id: 5, title: 'Pranayams Classes', url: '/yoga/pranayams' },
