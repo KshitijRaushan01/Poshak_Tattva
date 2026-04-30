@@ -70,7 +70,7 @@ const yogaServices = [
     id: 4,
     title: "Yoga Nidra",
     url: "/yoga/nidra",
-    img: "/img/services/yoga/yognidra.jpg",
+    img: "/img/services/yoga/Yog-nidra.jpeg",
     badge: "Deep Healing Sleep",
     description:
       "Yoga Nidra induces a scientifically verified hypnagogic state — between wakefulness and sleep — where the body heals at an accelerated rate. A 45-minute session is clinically equivalent to 3–4 hours of restorative sleep, triggering the parasympathetic nervous system's deepest repair cycle.",
