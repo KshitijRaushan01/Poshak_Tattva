@@ -141,7 +141,7 @@ const dietServices = [
   },
   {
     id: 6,
-    title: "Cancer Care Nutrition",
+    title: "Post Cancer Care Nutrition",
     url: "/diet/cancer-care",
     img: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80",
     badge: "Metabolic Support",

@@ -26,7 +26,7 @@ export const diet = [
   },
   {
     id: 6,
-    title: "Cancer Care",
+    title: "Post Cancer Care",
     url: "/diet/cancer-care",
   },
 ];
@@ -100,7 +100,7 @@ export const treatmentsFooter = [
   { id: 3, title: 'Lifestyle Management', url: '/diet/lifestyle' },
   { id: 4, title: 'Weight Loss', url: '/diet/weight-loss' },
   { id: 5, title: 'Chakra Healing', url: '/sound-healing/chakra-healing' },
-  { id: 6, title: 'Cancer Care', url: '/diet/cancer-care' },
+  { id: 6, title: 'Post Cancer Care', url: '/diet/cancer-care' },
 ];
 
 export const soundHealing = [

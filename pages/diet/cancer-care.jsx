@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata = {
-  title: "Cancer Care Nutrition | Poshak Tattva",
+  title: "Post Cancer Care Nutrition | Poshak Tattva",
   description: "Precision oncology nutrition protocols to support clinical treatment, reduce systemic inflammation, and accelerate post-treatment recovery through metabolic repair."
 }
 
@@ -39,27 +39,22 @@ export default function CancerCarePage() {
     {
       title: "Low-Glycaemic Metabolic Diet",
       desc: "Stabilizes blood sugar and insulin levels to minimize metabolic growth signals and support mitochondrial health during intensive clinical treatments.",
-      img: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "Anti-Inflammatory Phyto-Rich Diet",
       desc: "Focuses on high-potency antioxidants and anti-inflammatory compounds to reduce systemic stress and protect healthy cells from oxidative damage.",
-      img: "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "Restorative Microbiome Protocol",
       desc: "Rebuilds gut integrity and immune strength through targeted prebiotic and probiotic-rich whole foods, essential for recovery after aggressive therapies.",
-      img: "https://images.unsplash.com/photo-1610348725531-843dff563e2c?auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "Alkaline-Buffering Nutrition",
       desc: "Supports the body's natural pH balance and electrolyte levels to optimize enzymatic functions and reduce treatment-induced fatigue and brain fog.",
-      img: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "Precision Micronutrient Support",
       desc: "Customized delivery of essential vitamins and minerals designed to address specific deficiencies and support the liver's detoxification pathways.",
-      img: "https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?auto=format&fit=crop&w=800&q=80"
     },
   ];
 
@@ -67,7 +62,7 @@ export default function CancerCarePage() {
     <>
       <PageProgress />
       <Head>
-        <title>Cancer Care Nutrition — Precision Support for Recovery | Poshak Tattva</title>
+        <title>Post Cancer Care Nutrition — Precision Support for Recovery | Poshak Tattva</title>
         <meta name="description" content="Integrative oncology nutrition designed to rebuild cellular resilience, reduce inflammation & support clinical recovery. Science-backed dietary protocols. Book a consultation." />
       </Head>
 
@@ -76,7 +71,7 @@ export default function CancerCarePage() {
         <section className="wrapper py-16 hero-header" style={{ background: "linear-gradient(135deg, #3B2A1A 0%, #7A4A1E 60%, #C97B3A 100%)" }}>
           <div className="container text-center py-10">
             <span className="d-block text-uppercase fw-semibold mb-3" style={{ fontSize: 12, letterSpacing: "0.12em", color: "#F5C88A" }}>RECOVERY & RESILIENCE</span>
-            <h1 className="display-4 fw-bold mb-4 text-white">Cancer Care Nutrition</h1>
+            <h1 className="display-4 fw-bold mb-4 text-white">Post Cancer Care Nutrition</h1>
             <p className="lead mx-auto text-white opacity-75" style={{ maxWidth: 720 }}>
               Precision metabolic support engineered to enhance clinical treatment outcomes, reduce systemic inflammation, and accelerate cellular recovery.
             </p>
@@ -144,15 +139,7 @@ export default function CancerCarePage() {
                       <div className="container">
                         <div className="rmap-card shadow-lg">
                           <div className="row g-0 align-items-stretch">
-                            <div className="col-lg-5 d-none d-lg-block position-relative">
-                              <Image
-                                src={item.img}
-                                alt={item.title}
-                                fill
-                                style={{ objectFit: "cover" }}
-                              />
-                            </div>
-                            <div className="col-lg-7 p-6 p-md-10 d-flex flex-column justify-content-center bg-white">
+                            <div className="col-lg-12 p-6 p-md-10 d-flex flex-column justify-content-center bg-white">
                               <span className="rmap-badge mb-3">Protocol {idx + 1}</span>
                               <div className="rmap-num d-none d-md-block">{idx + 1}</div>
                               <h3 className="rmap-title">{item.title}</h3>

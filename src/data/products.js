@@ -258,13 +258,13 @@ export const productsData = [
     shortDescription: "Three crystal bowls tuned in major thirds — available in CEG, DFA, and EGB triads. Includes carrying bag, mallets, and O-rings.",
     description: "The Triad Crystal Bowl Set comprises bowls tuned in major thirds, evoking a positive, uplifting, and relaxed feeling. Available in three harmonious triads — C–E–G, D–F–A, and E–G–B. CEG set: 12\", 10\", 8\". DFA set: 11\", 9\", 7\". EGB set: 10\", 8\", 6\". Includes padded carrying bag, striking & rimming mallets, and three O-rings.",
     images: [
-      "/img/Products/Crystal Triad Bowl/Image_32_1774665018687.jpg",
+      "/img/Products/Crystal Triad Bowl/Image_32_1774665018687.png",
       "/img/Products/Crystal Triad Bowl/Image_34_1774665018690.png",
       "/img/Products/Crystal Triad Bowl/Image_35_1774665018690.png",
       "/img/Products/Crystal Triad Bowl/Image_49_1774665018690.png",
       "/img/Products/Crystal Triad Bowl/Image_50_1774665018690.png",
     ],
-    thumbnail: "/img/Products/Crystal Triad Bowl/Image_32_1774665018687.jpg",
+    thumbnail: "/img/Products/Crystal Triad Bowl/Image_32_1774665018687.png",
     price: { min: { inr: 33250, inrFormatted: "₹33,250.00" }, max: { inr: 35580, inrFormatted: "₹35,580.00" }, display: "₹33,250 – ₹35,580", onSale: false },
     hasVariations: true,
     variations: [
@@ -633,10 +633,10 @@ export const productsData = [
     shortDescription: "10.5-inch bowl for vibroacoustic & psychoacoustic therapy. Guides brain waves into deep relaxation with sustained, penetrating vibrations.",
     description: "Experience the profound resonance and therapeutic effects of our Head Bowl, masterfully crafted to deliver direct vibrational healing to your crown and entire cranial structure. This exceptional bowl is specifically designed for Vibroacoustic therapy and psychoacoustic therapy, utilizing low frequency sounds to gently guide brain waves into a deeply relaxed state. Measuring approximately 10.5 inches in diameter and weighing 1.5kg, this substantial instrument has the perfect mass and proportions to generate sustained, penetrating vibrations that dissolve tension and quiet mental chatter.",
     images: [
-      "/img/Products/The Head Bowl/Image_32_1774875772009.jpg",
+      "/img/Products/The Head Bowl/Image_32_1774875772009.png",
       "/img/Products/The Head Bowl/Image_34_1774875772010.jpg",
     ],
-    thumbnail: "/img/Products/The Head Bowl/Image_32_1774875772009.jpg",
+    thumbnail: "/img/Products/The Head Bowl/Image_32_1774875772009.png",
     price: { display: "₹9,990.00", originalPrice: { inr: 10990, inrFormatted: "₹10,990.00" }, salePrice: { inr: 9990, inrFormatted: "₹9,990.00" }, onSale: true, displayWithStrike: "~~₹10,990~~ ₹9,990" },
     hasVariations: false, variations: [], sizeOptions: {},
     inStock: true,
