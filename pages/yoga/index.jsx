@@ -32,7 +32,7 @@ const yogaServices = [
     id: 2,
     title: "Private 1:1 Yoga Sessions",
     url: "/yoga/private-sessions",
-    img: "/img/services/yoga/private-yoga.jpg",
+    img: "/img/services/yoga/download.jpg",
     badge: "Clinically Personalised",
     description:
       "One-on-one sessions where your yoga protocol is designed around your specific diagnosis, metabolic markers, and recovery goals. This is functional yoga as precision medicine — every posture and breath pattern prescribed for your root cause.",
@@ -51,7 +51,7 @@ const yogaServices = [
     id: 3,
     title: "Meditation Classes",
     url: "/yoga/meditation",
-    img: "/img/services/yoga/Meditation.jpg",
+    img: "/img/services/yoga/meditation.jpg",
     badge: "Neuro-Regulatory",
     description:
       "Clinical meditation protocols engineered to reduce cortisol, lower neuroinflammation, and rebuild cognitive resilience. These are not relaxation sessions — they are structured neuro-regulatory interventions with measurable outcomes on stress hormones and mental clarity.",
@@ -212,7 +212,7 @@ export default function YogaMainPage() {
             <div className="row text-center py-5 g-4">
               {[
                 { num: "5+", label: "Yoga Programs" },
-                { num: "15k+", label: "Students" },
+                { num: "5k+", label: "Students" },
                 { num: "5+", label: "Years of Experience" },
                 { num: "98%", label: "Recovery Rate" },
               ].map((s, i) => (

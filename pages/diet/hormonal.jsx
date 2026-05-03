@@ -87,7 +87,7 @@ export default function HormonalDisordersPage() {
                 <div className="col-lg-5">
                   <div style={{ position: "relative", width: "100%", height: "100%", minHeight: 450, background: "#f8f9fa" }}>
                     <Image
-                      src="/img/services/diet/Hormonal-Disorder.jpg"
+                      src="/img/services/diet/Hormonal Disorder.jpeg"
                       alt="Clinical nutrition for hormonal balance"
                       fill
                       sizes="(max-width: 991px) 100vw, 500px"

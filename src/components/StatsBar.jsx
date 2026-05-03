@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 
 /* ── Stat data (matches Testimonials section context) ─────── */
 const STATS = [
-  {icon: <img src="https://img.icons8.com/glyph-neue/64/guru.png" alt="guru" style={{ filter: "brightness(0) invert(1)", width: 40, height: 40, marginBottom: 12, opacity: 0.9 }}/>, id: "students",  raw: 15000,   suffix: "+",  label: "Students Trained"  },
+  {icon: <img src="https://img.icons8.com/glyph-neue/64/guru.png" alt="guru" style={{ filter: "brightness(0) invert(1)", width: 40, height: 40, marginBottom: 12, opacity: 0.9 }}/>, id: "students",  raw: 5000,    suffix: "+",  label: "Students Trained"  },
   {icon: <img src="https://img.icons8.com/emoji/96/star-emoji.png" alt="star-emoji" style={{ width: 40, height: 40, marginBottom: 12, opacity: 0.9 }}/>, id: "rating",    raw: null, suffix: "",     label: "Average Rating",  fixed: "4.9/5" },
   {icon: <img src="https://img.icons8.com/external-justicon-flat-justicon/64/external-trophy-reward-and-badges-justicon-flat-justicon-1.png" alt="external-trophy-reward-and-badges-justicon-flat-justicon-1" style={{ width: 40, height: 40, marginBottom: 12, opacity: 0.9 }}/>, id: "years",     raw: 5,    suffix: "+",    label: "Years Experience" },
   {icon: <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-wellness-lifestyles-flaticons-lineal-color-flat-icons-4.png" alt="external-wellness-lifestyles-flaticons-lineal-color-flat-icons-4" style={{ width: 40, height: 40, marginBottom: 12, opacity: 0.9 }}/>, id: "programs",  raw: 50,   suffix: "+",    label: "Wellness Programs" },

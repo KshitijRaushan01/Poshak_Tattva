@@ -111,7 +111,7 @@ export default function CancerCarePage() {
               <div className="col-lg-5">
                 <div style={{ position: "relative", borderRadius: 24, overflow: "hidden", boxShadow: "0 20px 60px rgba(0,0,0,0.12)", minHeight: 450, background: "#f8f9fa" }}>
                   <Image
-                    src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80"
+                    src="/img/services/diet/post-cancer-care.jpeg"
                     alt="Nutritious oncology support foods"
                     fill
                     sizes="(max-width: 991px) 100vw, 500px"

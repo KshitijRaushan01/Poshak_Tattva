@@ -959,18 +959,18 @@ p, .lead, .card-text {
 /* Ensure desktop dropdowns work with state */
 
 /* Service Card Overrides */
-.yoga-btn { background-color: #5a7a52; color: #fff; border: none; }
-.yoga-btn:hover, .yoga-btn:focus { background-color: #fd2a05; color: #fff; }
+.yoga-btn { background-color: #e63329 !important; color: #fff !important; border: none !important; }
+.yoga-btn:hover, .yoga-btn:focus { background-color: #c2291f !important; color: #fff !important; }
 
 .diet-link { color: #a0622a; }
 .diet-link:hover, .diet-link:focus { color: #fd2a05; }
-.diet-btn { background-color: #a0622a; color: white; border: none; }
-.diet-btn:hover, .diet-btn:focus { background-color: #7a4a1e; color: #fff; }
+.diet-btn { background-color: #e63329 !important; color: #fff !important; border: none !important; }
+.diet-btn:hover, .diet-btn:focus { background-color: #c2291f !important; color: #fff !important; }
 
 .sound-link { color: #8b6347; }
 .sound-link:hover, .sound-link:focus { color: #6b4830; }
-.sound-btn { background-color: #8b6347; color: white; border: none; }
-.sound-btn:hover, .sound-btn:focus { background-color: #6b4830; color: #fff; }
+.sound-btn { background-color: #e63329 !important; color: #fff !important; border: none !important; }
+.sound-btn:hover, .sound-btn:focus { background-color: #c2291f !important; color: #fff !important; }
 
 .service-card-item:hover, .service-card-item:focus {
   color: #fd2a05 !important;

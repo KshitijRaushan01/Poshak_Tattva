@@ -1,8 +1,7 @@
-import { Fragment, useState, useRef } from "react";
+import { Fragment, useState, useEffect } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, useScroll, useTransform } from "framer-motion";
 import PageProgress from "components/PageProgress";
 import Hero from "components/Hero";
 import StatsBar from "components/StatsBar";
@@ -14,12 +13,29 @@ import { yoga, diet, soundHealing } from "../src/data";
 const Home = () => {
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
-  const containerRef = useRef(null);
 
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end end"],
-  });
+  useEffect(() => {
+    const scales = Array.from(document.querySelectorAll('.rmap-scale'));
+    if (!scales.length) return;
+    const pins = Array.from(document.querySelectorAll('.rmap-pin'));
+    function onScroll() {
+      pins.forEach((pin, idx) => {
+        let covered = 0;
+        for (let j = idx + 1; j < pins.length; j++) {
+          if (pins[j].getBoundingClientRect().top <= window.innerHeight / 2) covered++;
+        }
+        const s = Math.max(0.90, 1 - covered * 0.032);
+        const b = Math.max(0.75, 1 - covered * 0.08);
+        if (scales[idx]) {
+          scales[idx].style.transform = `scale(${s})`;
+          scales[idx].style.filter = `brightness(${b})`;
+        }
+      });
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   const handleSubscribe = (e) => {
     e.preventDefault();
@@ -31,34 +47,12 @@ const Home = () => {
   };
 
   const stats = [
-    { number: "15k+", label: "Students", icon: "👥" },
+    { number: "5k+", label: "Students", icon: "👥" },
     { number: "50+", label: "Cities Reached", icon: "🌍" },
     { number: "5+", label: "Years of Experience", icon: "⏱️" },
     { number: "98%", label: "Root-Cause Resolution Rate", icon: "⭐" },
   ];
 
-  const whyChooseUs = [
-    {
-      title: "Root-Cause Methodology",
-      desc: "We don't treat symptoms — we identify and eliminate the underlying metabolic and neurological triggers of chronic disorders.",
-      img: "/img/home/methodology-root-cause.png"
-    },
-    {
-      title: "Clinical-Grade Protocols",
-      desc: "Our Clinical Diet plans are therapeutically calibrated to fix metabolic dysfunction, inflammation, and gut dysbiosis.",
-      img: "/img/home/methodology-nutrition.png"
-    },
-    {
-      title: "Nervous System Rewiring",
-      desc: "Sound Healing sessions use precise vibrational frequencies to shift the nervous system out of chronic fight-or-flight patterns.",
-      img: "/img/home/methodology-sound.png"
-    },
-    {
-      title: "Functional Yoga Therapy",
-      desc: "Yoga as medicine — postures and pranayama prescribed to stimulate the lymphatic, endocrine, and autonomic nervous systems.",
-      img: "/img/home/methodology-yoga.png"
-    },
-  ];
 
   const howItWorks = [
     {
@@ -116,7 +110,7 @@ const Home = () => {
             </div>
             <About
               imgPosition="right"
-              imgSrc="/img/yds.png"
+              imgSrc="/img/yds2.png"
               heading="" // Removed heading from here to avoid duplication
               headingClass="text-center mb-6"
               para="At Poshak Tattva, we go beyond the absence of illness to achieve systemic recovery. Chronic lifestyle disorders — from metabolic dysfunction and hormonal imbalance to autoimmune flares and digestive disorders — are not destiny. They are the result of compounding root causes that conventional medicine rarely addresses."
@@ -143,7 +137,7 @@ const Home = () => {
         </section>
 
         {/* Recovery Roadmap — Scroll-Stacking Cards */}
-        <section className="wrapper py-16 overflow-hidden" style={{ background: "#f0ece6" }} ref={containerRef}>
+        <section className="wrapper py-16" style={{ background: "#f0ece6" }}>
           <div className="container text-center mb-12">
             <h2 className="display-5 fw-bold mb-4">Your Recovery Roadmap</h2>
             <p className="lead mx-auto" style={{ maxWidth: 640 }}>A structured clinical intake process designed for measurable results, not just temporary relief</p>
@@ -151,19 +145,34 @@ const Home = () => {
 
           <div className="rmap-stack">
             {howItWorks.map((item, idx) => (
-              <RoadmapCard
-                key={idx}
-                item={item}
-                idx={idx}
-                total={howItWorks.length}
-                scrollYProgress={scrollYProgress}
-              />
+              <Fragment key={idx}>
+                <div className="rmap-pin" style={{ zIndex: idx + 1 }}>
+                  <div className="rmap-scale">
+                    <div className="container">
+                      <div className="rmap-card">
+                        <div className="rmap-text">
+                          <div className="rmap-badge">Step {item.step}</div>
+                          <div className="rmap-num">0{item.step}</div>
+                          <h3 className="rmap-title">{item.title}</h3>
+                          <hr className="rmap-hr" />
+                          <p className="rmap-desc">{item.desc}</p>
+                        </div>
+                        <div className="rmap-img">
+                          <Image src={item.img} alt={item.title} fill style={{ objectFit: 'cover' }} />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {idx < howItWorks.length - 1 && <div className="rmap-spacer" aria-hidden="true" />}
+              </Fragment>
             ))}
           </div>
 
           <style>{`
  .rmap-stack { padding-bottom: 5vh; }
- .rmap-pin { position: sticky; top: 120px; }
+ .rmap-scale { transform-origin: top center; transition: transform 0.18s ease, filter 0.18s ease; }
+ .rmap-pin { position: sticky; top: calc(50vh - 170px); }
  .rmap-card {
  display: grid;
  grid-template-columns: 1fr 1fr;
@@ -239,7 +248,7 @@ const Home = () => {
  .rmap-num { font-size: 5rem; }
  }
  @media (max-width: 768px) {
- .rmap-pin { top: 100px; }
+ .rmap-pin { top: calc(50vh - 140px); }
  .rmap-spacer { height: 40vh; }
  .rmap-text { padding: 24px; }
  .rmap-title { font-size: 1.5rem; }
@@ -636,29 +645,6 @@ const Home = () => {
   );
 };
 
-const RoadmapCard = ({ item, idx, total, scrollYProgress }) => {
-  const scale = useTransform(
-    scrollYProgress,
-    [idx / total, (idx + 1) / total],
-    [1, Math.max(0.9, 1 - (total - idx - 1) * 0.03)]
-  );
 
-  return (
-    <div className="rmap-pin pb-4">
-      <motion.div className="rmap-card" style={{ scale }}>
-        <div className="rmap-text">
-          <div className="rmap-badge">Step {item.step}</div>
-          <div className="rmap-num">0{item.step}</div>
-          <h3 className="rmap-title">{item.title}</h3>
-          <hr className="rmap-hr" />
-          <p className="rmap-desc">{item.desc}</p>
-        </div>
-        <div className="rmap-img">
-          <Image src={item.img} alt={item.title} fill style={{ objectFit: 'cover' }} />
-        </div>
-      </motion.div>
-    </div>
-  );
-};
 
 export default Home;

@@ -178,7 +178,7 @@ export default function SoundHealingMainPage() {
                         <div className="row text-center py-5 g-4">
                             {[
                                 { num: "4+", label: "Sound-Healing Programs" },
-                                { num: "15k+", label: "Students" },
+                                { num: "5k+", label: "Students" },
                                 { num: "5+", label: "Years of Experience" },
                                 { num: "432Hz", label: "Healing Frequency Used" },
                             ].map((s, i) => (

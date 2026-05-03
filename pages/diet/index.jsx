@@ -39,7 +39,7 @@ const dietServices = [
     id: 2,
     title: "Hormonal Balance Nutrition",
     url: "/diet/hormonal",
-    img: "/img/services/diet/Hormonal-Disorder.jpg",
+    img: "/img/services/diet/Hormonal Disorder.jpeg",
     badge: "Endocrine Regulation",
     description:
       "Hormonal imbalances — PCOS, thyroid dysfunction, adrenal fatigue, perimenopause — respond directly to nutritional intervention. Our clinical nutrition protocols are designed to regulate the HPA axis, optimise insulin sensitivity, and restore oestrogen-progesterone balance through precise dietary engineering.",
@@ -117,7 +117,7 @@ const dietServices = [
     id: 5,
     title: "Autoimmune Nutrition Therapy",
     url: "/diet/autoimmune",
-    img: "/img/home/roadmap-assessment.png",
+    img: "/img/services/diet/Autoimmune.jpg",
     badge: "Immune System Regulation",
     description:
       "Autoimmune conditions — rheumatoid arthritis, lupus, Hashimoto's, multiple sclerosis — are fundamentally disorders of immune dysregulation, most commonly triggered by gut permeability and systemic inflammation. Our AIP-based nutrition protocol removes immune triggers and rebuilds mucosal barrier integrity.",
@@ -143,7 +143,7 @@ const dietServices = [
     id: 6,
     title: "Post Cancer Care Nutrition",
     url: "/diet/cancer-care",
-    img: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80",
+    img: "/img/services/diet/post-cancer-care.jpeg",
     badge: "Metabolic Support",
     description:
       "Precision oncology nutrition designed to create a physiological environment that supports clinical treatment while building cellular resilience. We focus on metabolic flexibility, systemic inflammation reduction, and microbiome repair to enhance recovery outcomes.",
@@ -254,7 +254,7 @@ export default function DietMainPage() {
             <div className="row text-center py-5 g-4">
               {[
                 { num: "5+", label: "Diet Programs" },
-                { num: "15k+", label: "Students" },
+                { num: "5k+", label: "Students" },
                 { num: "5+", label: "Years of Experience" },
                 { num: "100%", label: "Root-Cause Approach" },
               ].map((s, i) => (
