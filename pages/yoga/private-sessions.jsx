@@ -191,7 +191,7 @@ export default function PrivateSessionsPage() {
               Start with a clinical consultation where we map out your recovery journey. No generic classes, just precision therapy.
             </p>
             <a href="/contact-appointment" className="btn btn-lg fw-bold px-6 py-3 rounded-pill" style={{ background: "#A8D5B5", color: "#1F3D2B", border: "none" }}>
-              Book Free Consultation →
+              Book Consultation →
             </a>
           </div>
         </section>

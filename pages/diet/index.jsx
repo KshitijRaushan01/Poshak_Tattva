@@ -13,7 +13,7 @@ const dietServices = [
     id: 1,
     title: "Digestive Disorder Protocols",
     url: "/diet/digestive-disorders",
-    img: "/img/services/diet/Digestive-Disorder.png",
+    img: "/img/services/diet/Digestive Disorder.jpg",
     badge: "Gut Microbiome Reset",
     description:
       "Digestive disorders — IBS, GERD, leaky gut, chronic bloating — are almost always rooted in gut dysbiosis and systemic inflammation, not just food sensitivity. Our therapeutic-grade nutrition protocols correct the gut microbiome at the cellular level, eliminating triggers rather than suppressing symptoms.",

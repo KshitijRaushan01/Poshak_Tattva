@@ -139,7 +139,7 @@ export default function SoundHealingWorkshopPage() {
           <div className="container text-center">
             <h2 className="h3 fw-bold mb-4 text-white">Bring Healing to Your Team or Community</h2>
             <p className="text-white mb-6 opacity-75">Custom workshops available for corporate teams, retreats, and private groups.</p>
-            <a href="/contact-appointment" className="btn btn-lg fw-bold" style={{ background: "white", color: "#1F3D2B", border: "none" }}>View Schedules</a>
+            <a href="/contact-appointment" className="btn btn-lg fw-bold" style={{ background: "white", color: "#1F3D2B", border: "none" }}>Book Session</a>
           </div>
         </section>
       </main>

@@ -148,7 +148,7 @@ export default function GroupSessionsPage() {
             <h2 className="h3 fw-bold mb-4 text-white">Ready to Move, Breathe, and Grow Together?</h2>
             <p className="text-white mb-6 opacity-75">First class is complimentary. No experience needed — just an open mind.</p>
             <a href="/contact-appointment" className="btn btn-lg fw-bold" style={{ background: "white", color: "#1F3D2B", border: "none" }}>
-              View Schedule &amp; Book
+              Book a Session
             </a>
           </div>
         </section>

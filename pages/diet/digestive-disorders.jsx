@@ -52,7 +52,7 @@ export default function DigestiveDisordersPage() {
         <meta property="og:description" content="Your gut is where health begins. Heal IBS, bloating & reflux through targeted nutrition protocols." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://poshaktattva.com/diet/digestive-disorders" />
-        <meta property="og:image" content="/img/services/diet/Digestive-Disorder.png" />
+        <meta property="og:image" content="/img/services/diet/Digestive Disorder.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="canonical" href="https://poshaktattva.com/diet/digestive-disorders" />
       </Head>
@@ -88,7 +88,7 @@ export default function DigestiveDisordersPage() {
                 <div className="col-lg-5">
                   <div style={{ position: "relative", width: "100%", height: "100%", minHeight: 450, background: "#f8f9fa" }}>
                     <Image
-                      src="/img/services/diet/Digestive-Disorder.png"
+                      src="/img/services/diet/Digestive Disorder.jpg"
                       alt="Clinical nutrition for digestive disorders"
                       fill
                       sizes="(max-width: 991px) 100vw, 500px"

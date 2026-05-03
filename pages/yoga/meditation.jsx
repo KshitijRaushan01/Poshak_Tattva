@@ -167,7 +167,7 @@ export default function MeditationPage() {
             <h2 className="h3 fw-bold mb-4 text-white">Your Mind Deserves the Same Care as Your Body</h2>
             <p className="text-white mb-6 opacity-75">Book a free introductory session and discover which meditation style fits your life.</p>
             <a href="/contact-appointment" className="btn btn-lg fw-bold" style={{ background: "white", color: "#1F3D2B", border: "none" }}>
-              Book Free Session
+              Book Session
             </a>
           </div>
         </section>

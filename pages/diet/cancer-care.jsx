@@ -170,7 +170,7 @@ export default function CancerCarePage() {
               className="btn btn-lg fw-bold px-8 py-4 rounded-pill"
               style={{ background: "#F5C88A", color: "#3B2A1A", border: "none" }}
             >
-              Book Free Consultation
+              Book Consultation
             </Link>
           </div>
         </section>

@@ -55,38 +55,8 @@ export default function ContactPage() {
         <section className="wrapper bg-light py-12">
           <div className="container">
             <div className="row">
-              {/* Contact Info */}
-              <div className="col-lg-4 mb-8 mb-lg-0">
-                <h1 className="display-5 mb-8">Contact Us</h1>
-                <div className="card p-6 shadow-lg rounded-lg">
-                  <h5 className="mb-4">Get In Touch</h5>
-
-                  <div className="mb-6">
-                    <h6 className="mb-2">Email</h6>
-                    <a href="mailto:poshaktattva@gmail.com" className="text-decoration-none">
-                      poshaktattva@gmail.com
-                    </a>
-                  </div>
-
-                  <div className="mb-6">
-                    <h6 className="mb-2">Phone</h6>
-                    <a href="tel:+919351500400" className="text-decoration-none">
-                      +91 9351500400
-                    </a>
-                  </div>
-
-                  <div>
-                    <h6 className="mb-1">Address</h6>
-                    <p className="small" style={{ fontSize: "15px" }}>
-                      177, Vinoba Puri, Lajpat Nagar 2, New Delhi, Delhi 110024
-                    </p>
-                    <SocialLinks className="nav social mt-2" />
-                  </div>
-                </div>
-              </div>
-
               {/* Book Appointment Form */}
-              <div className="col-lg-8">
+              <div className="col-lg-8 order-lg-2">
                 <div className="card p-6 shadow-lg rounded-lg">
                   <h3 className="h4 mb-2">Book an Appointment</h3>
                   <p className=" mb-6">Schedule your wellness session with us. We'll confirm your booking via email or phone.</p>
@@ -186,6 +156,36 @@ export default function ContactPage() {
                       {status.error && <div className="text-danger small">{status.error}</div>}
                     </div>
                   </form>
+                </div>
+              </div>
+
+              {/* Contact Info */}
+              <div className="col-lg-4 mb-8 mb-lg-0 order-lg-1">
+                <h1 className="display-5 mb-8">Contact Us</h1>
+                <div className="card p-6 shadow-lg rounded-lg">
+                  <h5 className="mb-4">Get In Touch</h5>
+
+                  <div className="mb-6">
+                    <h6 className="mb-2">Email</h6>
+                    <a href="mailto:poshaktattva@gmail.com" className="text-decoration-none">
+                      poshaktattva@gmail.com
+                    </a>
+                  </div>
+
+                  <div className="mb-6">
+                    <h6 className="mb-2">Phone</h6>
+                    <a href="tel:+919351500400" className="text-decoration-none">
+                      +91 9351500400
+                    </a>
+                  </div>
+
+                  <div>
+                    <h6 className="mb-1">Address</h6>
+                    <p className="small" style={{ fontSize: "15px" }}>
+                      177, Vinoba Puri, Lajpat Nagar 2, New Delhi, Delhi 110024
+                    </p>
+                    <SocialLinks className="nav social mt-2" />
+                  </div>
                 </div>
               </div>
             </div>

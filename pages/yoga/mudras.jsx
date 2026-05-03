@@ -187,7 +187,7 @@ export default function MudrasPage() {
               className="btn btn-lg fw-bold px-8 py-4 rounded-pill"
               style={{ background: "#ffffff", color: "#1F3D2B", border: "none" }}
             >
-              Book Free Session
+              Book Session
             </Link>
           </div>
         </section>

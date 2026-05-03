@@ -245,7 +245,7 @@ export default function SoundHealingMainPage() {
                                 >
                                     <div className={`row g-0 ${idx % 2 === 1 ? "flex-row-reverse" : ""}`}>
                                         {/* Image Panel */}
-                                        <div className="col-md-5 position-relative">
+                                        <div className="col-md-5 position-relative" style={{ minHeight: "420px" }}>
                                             <Image src={service.img} alt={service.title} fill style={{ objectFit: 'cover' }} />
                                         </div>
 
