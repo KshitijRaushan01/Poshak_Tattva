@@ -82,7 +82,7 @@ export default function GongBathPage() {
  </div>
  <div className="col-lg-6">
  <div style={{ borderRadius: 16, overflow: "hidden", boxShadow: "0 20px 60px rgba(0,0,0,0.12)" }}>
- <img src="/img/home/methodology-sound.png" alt="Gong bath meditation session" style={{ width: "100%", height: 320, objectFit: "cover", display: "block" }} />
+ <img src="/img/home/methodology-sound.png" alt="Gong bath meditation session" style={{ width: "100%", height: "auto", display: "block" }} />
  </div>
  </div>
  </div>

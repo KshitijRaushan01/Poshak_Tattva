@@ -86,9 +86,9 @@ export default function MeditationPage() {
               <div className="col-lg-6">
                 <div style={{ borderRadius: 16, overflow: "hidden", boxShadow: "0 20px 60px rgba(0,0,0,0.12)" }}>
                   <img
-                    src="/img/services/yoga/Meditation.jpg"
+                    src="/img/services/yoga/meditation.jpg"
                     alt="Person meditating in serene setting"
-                    style={{ width: "100%", height: 320, objectFit: "cover", display: "block" }}
+                    style={{ width: "100%", height: "auto", display: "block", borderRadius: 16 }}
                   />
                 </div>
               </div>

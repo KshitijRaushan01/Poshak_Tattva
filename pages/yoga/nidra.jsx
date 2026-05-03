@@ -49,7 +49,7 @@ export default function YogaNidraPage() {
         <meta property="og:description" content="The yoga of conscious sleep. 30 minutes of Nidra = 4 hours of regular sleep. Book your session." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://poshaktattva.com/yoga/nidra" />
-        <meta property="og:image" content="/img/services/yoga/Yog-nidra.jpeg" />
+        <meta property="og:image" content="/img/services/yoga/yog-nidra.jpeg" />
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="canonical" href="https://poshaktattva.com/yoga/nidra" />
       </Head>
@@ -86,9 +86,9 @@ export default function YogaNidraPage() {
               <div className="col-lg-6">
                 <div style={{ borderRadius: 16, overflow: "hidden", boxShadow: "0 20px 60px rgba(0,0,0,0.12)" }}>
                   <img
-                    src="/img/services/yoga/Yog-nidra.jpeg"
+                    src="/img/services/yoga/yog-nidra.jpeg"
                     alt="Person lying in savasana during yoga nidra"
-                    style={{ width: "100%", height: 320, objectFit: "cover", display: "block" }}
+                    style={{ width: "100%", height: "auto", display: "block" }}
                   />
                 </div>
               </div>

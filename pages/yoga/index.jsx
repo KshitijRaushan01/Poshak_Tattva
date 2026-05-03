@@ -13,7 +13,7 @@ const yogaServices = [
     id: 1,
     title: "Group Yoga Sessions",
     url: "/yoga/group-sessions",
-    img: "/img/services/yoga/Group-Yoga.jpg",
+    img: "/img/services/yoga/group-yoga.jpg",
     badge: "Most Popular",
     description:
       "Train alongside a community of like-minded practitioners. Our group sessions are therapeutically structured — each class follows a clinical sequence targeting specific physiological systems: lymphatic drainage, spinal decompression, and autonomic regulation.",
@@ -70,7 +70,7 @@ const yogaServices = [
     id: 4,
     title: "Yoga Nidra",
     url: "/yoga/nidra",
-    img: "/img/services/yoga/Yog-nidra.jpeg",
+    img: "/img/services/yoga/yog-nidra.jpeg",
     badge: "Deep Healing Sleep",
     description:
       "Yoga Nidra induces a scientifically verified hypnagogic state — between wakefulness and sleep — where the body heals at an accelerated rate. A 45-minute session is clinically equivalent to 3–4 hours of restorative sleep, triggering the parasympathetic nervous system's deepest repair cycle.",

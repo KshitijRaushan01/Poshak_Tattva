@@ -83,7 +83,7 @@ export default function SoundHealingWorkshopPage() {
               </div>
               <div className="col-lg-6">
                 <div style={{ borderRadius: 16, overflow: "hidden", boxShadow: "0 20px 60px rgba(0,0,0,0.12)" }}>
-                  <img src="/img/services/sound/sound- healing workshop.jpg" alt="Group sound healing workshop" style={{ width: "100%", height: 320, objectFit: "cover", display: "block" }} />
+                  <img src="/img/Gallery/10043.jpeg" alt="Group sound healing workshop" style={{ width: "100%", height: "auto", display: "block" }} />
                 </div>
               </div>
             </div>

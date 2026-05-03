@@ -61,13 +61,11 @@ export default function ChakraHealingPage() {
                 <a href="/contact-appointment" className="btn btn-primary rounded-pill px-6">Balance Your Chakras</a>
               </div>
               <div className="col-lg-6">
-                <div style={{ borderRadius: 16, overflow: "hidden", boxShadow: "0 20px 60px rgba(0,0,0,0.12)", position: "relative", height: 650, background: "#f8f9fa" }}>
-                  <Image
+                <div style={{ borderRadius: 16, overflow: "hidden", boxShadow: "0 20px 60px rgba(0,0,0,0.12)" }}>
+                  <img
                     src="/img/services/sound/Chakra-Healing/Chakra.jpg"
                     alt="Seven Chakras Energy Centres Infographic"
-                    fill
-                    sizes="(max-width: 991px) 100vw, 600px"
-                    style={{ objectFit: "contain", display: "block", padding: "20px" }}
+                    style={{ width: "100%", height: "auto", display: "block" }}
                   />
                 </div>
               </div>

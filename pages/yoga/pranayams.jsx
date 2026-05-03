@@ -85,13 +85,11 @@ export default function PranayamsPage() {
                 <a href="/contact-appointment" className="btn btn-primary">Start Pranayama Practice</a>
               </div>
               <div className="col-lg-6">
-                <div style={{ borderRadius: 16, overflow: "hidden", boxShadow: "0 20px 60px rgba(0,0,0,0.12)", position: "relative", height: 320 }}>
-                  <Image
+                <div style={{ borderRadius: 16, overflow: "hidden", boxShadow: "0 20px 60px rgba(0,0,0,0.12)" }}>
+                  <img
                     src="/img/Gallery/DSC06332.jpg"
                     alt="Person practicing pranayama breathing"
-                    fill
-                    sizes="(max-width: 991px) 100vw, 600px"
-                    style={{ objectFit: "cover", display: "block" }}
+                    style={{ width: "100%", height: "auto", display: "block" }}
                   />
                 </div>
               </div>
