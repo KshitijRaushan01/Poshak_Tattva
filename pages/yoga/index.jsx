@@ -244,8 +244,8 @@ export default function YogaMainPage() {
                 >
                   <div className={`row g-0 ${idx % 2 === 1 ? "flex-row-reverse" : ""}`}>
                     {/* Image Panel */}
-                    <div className="col-md-5 position-relative" style={{ minHeight: "350px", background: "#f8f9fa" }}>
-                      <Image src={service.img} alt={service.title} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 450px" style={{ objectFit: 'contain', padding: '24px' }} />
+                    <div className="col-md-5 position-relative">
+                      <Image src={service.img} alt={service.title} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 450px" style={{ objectFit: 'cover' }} />
                     </div>
 
                     {/* Content */}

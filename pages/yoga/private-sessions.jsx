@@ -10,25 +10,25 @@ export const metadata = {
 
 export default function PrivateSessionsPage() {
   const pillars = [
-    { 
-      title: "Clinical Intake & Assessment", 
-      desc: "Every journey begins with a comprehensive clinical intake. We analyze your medical history, current symptoms, and metabolic markers to understand the root cause of your health challenges before designing your practice." 
+    {
+      title: "Clinical Intake & Assessment",
+      desc: "Every journey begins with a comprehensive clinical intake. We analyze your medical history, current symptoms, and metabolic markers to understand the root cause of your health challenges before designing your practice."
     },
-    { 
-      title: "Precision Protocol Design", 
-      desc: "Your yoga sequence is not a generic flow. It is a clinical protocol — specific asanas and pranayama sequences engineered to stimulate the lymphatic system, activate the vagus nerve, and restore endocrine balance." 
+    {
+      title: "Precision Protocol Design",
+      desc: "Your yoga sequence is not a generic flow. It is a clinical protocol — specific asanas and pranayama sequences engineered to stimulate the lymphatic system, activate the vagus nerve, and restore endocrine balance."
     },
-    { 
-      title: "1:1 Therapeutic Guidance", 
-      desc: "With undivided attention, we ensure every posture and breath pattern is executed with therapeutic precision. Real-time adjustments prevent injury and maximize the healing potential of every movement." 
+    {
+      title: "1:1 Therapeutic Guidance",
+      desc: "With undivided attention, we ensure every posture and breath pattern is executed with therapeutic precision. Real-time adjustments prevent injury and maximize the healing potential of every movement."
     },
-    { 
-      title: "Bio-Feedback Monitoring", 
-      desc: "We monitor your physiological responses during the session. By observing your breath rate and nervous system cues, we adjust the intensity to ensure you remain in the 'healing zone' — the parasympathetic state." 
+    {
+      title: "Bio-Feedback Monitoring",
+      desc: "We monitor your physiological responses during the session. By observing your breath rate and nervous system cues, we adjust the intensity to ensure you remain in the 'healing zone' — the parasympathetic state."
     },
-    { 
-      title: "Progression & Data Tracking", 
-      desc: "Recovery is measurable. We track your progress over time, adjusting your clinical protocol as your health markers improve and your body's resilience grows, ensuring continuous advancement toward your goals." 
+    {
+      title: "Progression & Data Tracking",
+      desc: "Recovery is measurable. We track your progress over time, adjusting your clinical protocol as your health markers improve and your body's resilience grows, ensuring continuous advancement toward your goals."
     },
   ];
 
@@ -100,13 +100,11 @@ export default function PrivateSessionsPage() {
                 <a href="/contact-appointment" className="btn btn-primary px-6 py-3 rounded-pill fw-bold">Book Your Clinical Assessment</a>
               </div>
               <div className="col-lg-6">
-                <div style={{ borderRadius: 16, overflow: "hidden", boxShadow: "0 20px 60px rgba(0,0,0,0.12)", background: "#f8f9fa" }}>
-                  <Image
+                <div style={{ borderRadius: 16, overflow: "hidden", boxShadow: "0 20px 60px rgba(0,0,0,0.12)" }}>
+                  <img
                     src="/img/services/yoga/private-yoga.jpg"
                     alt="Private 1:1 Yoga Session"
-                    width={600}
-                    height={400}
-                    style={{ width: "100%", height: "auto", objectFit: "cover", display: "block", padding: "20px" }}
+                    style={{ width: "100%", height: "auto", display: "block" }}
                   />
                 </div>
               </div>

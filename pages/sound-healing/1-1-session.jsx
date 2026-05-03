@@ -82,7 +82,7 @@ export default function SoundHealingSessionPage() {
  </div>
  <div className="col-lg-6">
  <div style={{ borderRadius: 16, overflow: "hidden", boxShadow: "0 20px 60px rgba(0,0,0,0.12)" }}>
- <img src="/img/Gallery/5.jpg" alt="Sound healing with singing bowls" style={{ width: "100%", height: 800, objectFit: "cover", display: "block" , objectPosition:"top"}} />
+ <img src="/img/Gallery/5.jpg" alt="Sound healing with singing bowls" style={{ width: "100%", height: "auto", display: "block" }} />
  </div>
  </div>
  </div>
