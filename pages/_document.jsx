@@ -18,9 +18,9 @@ class ENTrovaDocument extends Document {
             rel="stylesheet"
           />
           {/* Favicon */}
-          <link rel="icon" type="image/jpeg" href="/img/favicon/favicon.jpg" />
-          <link rel="shortcut icon" href="/img/favicon/favicon.jpg" />
-          <link rel="apple-touch-icon" href="/img/favicon/favicon.jpg" />
+          <link rel="icon" type="image/jpeg" href="/img/favicon/favicon.jpg?v=2" />
+          <link rel="shortcut icon" href="/img/favicon/favicon.jpg?v=2" />
+          <link rel="apple-touch-icon" href="/img/favicon/favicon.jpg?v=2" />
         </Head>
         <body>
           <Main />
