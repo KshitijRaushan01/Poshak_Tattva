@@ -3,10 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import PageProgress from "components/PageProgress";
 
-export const metadata = {
-  title: "Functional Yoga Therapy Programs | Poshak Tattva",
-  description: "Explore our complete range of clinical yoga programs at Poshak Tattva — Group Sessions, Private 1:1, Meditation, Yoga Nidra, and Pranayama. Yoga prescribed as medicine for chronic disorder recovery."
-}
+
 
 const yogaServices = [
   {
@@ -70,7 +67,7 @@ const yogaServices = [
     id: 4,
     title: "Yoga Nidra",
     url: "/yoga/nidra",
-    img: "/img/services/yoga/yog-nidra.jpeg",
+    img: "/img/services/yoga/yog-nidra.jpg",
     badge: "Deep Healing Sleep",
     description:
       "Yoga Nidra induces a scientifically verified hypnagogic state — between wakefulness and sleep — where the body heals at an accelerated rate. A 45-minute session is clinically equivalent to 3–4 hours of restorative sleep, triggering the parasympathetic nervous system's deepest repair cycle.",
@@ -135,6 +132,13 @@ export default function YogaMainPage() {
           name="description"
           content="Explore our complete range of clinical yoga programs at Poshak Tattva — Group Sessions, Private 1:1, Meditation, Yoga Nidra, and Pranayama. Yoga prescribed as medicine for chronic disorder recovery."
         />
+        <meta property="og:title" content="Functional Yoga Therapy Programs — Poshak Tattva" />
+        <meta property="og:description" content="Yoga prescribed as clinical medicine. Specific sequences for lymphatic drainage, vagus nerve stimulation, and endocrine regulation." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://poshaktattva.com/yoga" />
+        <meta property="og:image" content="/img/Yoga.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <link rel="canonical" href="https://poshaktattva.com/yoga" />
       </Head>
 
       <main className="content-wrapper">
@@ -169,7 +173,7 @@ export default function YogaMainPage() {
                 </span>
                 <h1 className="display-3 fw-bold text-white mb-4" style={{ lineHeight: 1.15 }}>
                   Functional<br />
-                  <span style={{ color: "white !important" }}>Yoga Therapy</span>
+                  <span className="text-white">Yoga Therapy</span>
                 </h1>
                 <p className="lead mb-6" style={{ color: "#ffffff", maxWidth: "560px" }}>
                   Yoga prescribed as clinical medicine — specific asana and pranayama sequences that stimulate the lymphatic system, activate the vagus nerve, and restore endocrine regulation for measurable recovery outcomes.
@@ -245,7 +249,11 @@ export default function YogaMainPage() {
                   <div className={`row g-0 ${idx % 2 === 1 ? "flex-row-reverse" : ""}`}>
                     {/* Image Panel */}
                     <div className="col-md-5 position-relative" style={{ minHeight: "420px" }}>
-                      <Image src={service.img} alt={service.title} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 450px" style={{ objectFit: 'cover' }} />
+                      <img 
+                        src={service.img} 
+                        alt={service.title} 
+                        style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', inset: 0 }} 
+                      />
                     </div>
 
                     {/* Content */}

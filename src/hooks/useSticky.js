@@ -7,7 +7,7 @@ const useSticky = (height = 100) => {
     if (window.scrollY > height) setSticky(true);else setSticky(false);
   }, [height]);
   useEffect(() => {
-    if (!window) return;
+    if (typeof window === 'undefined') return;
     window.addEventListener('scroll', listener);
     return () => window.removeEventListener('scroll', listener);
   }, [listener]);

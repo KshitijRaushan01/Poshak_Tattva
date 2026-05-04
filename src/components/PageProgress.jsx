@@ -14,27 +14,36 @@ const PageProgress = () => {
       progressPath.style.strokeDashoffset = pathLength.toString();
       progressPath.getBoundingClientRect();
       progressPath.style.transition = progressPath.style.transition = 'stroke-dashoffset 10ms linear';
-      window.addEventListener('scroll', function () {
+      const onScroll = function () {
         const scroll = document.body.scrollTop || document.documentElement.scrollTop;
         const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         const progress = pathLength - scroll * pathLength / height;
         progressPath.style.strokeDashoffset = progress.toString();
-        const scrollElementPos = document.body.scrollTop || document.documentElement.scrollTop; // added classname
+        const scrollElementPos = document.body.scrollTop || document.documentElement.scrollTop;
 
         if (scrollElementPos >= offset) {
           progressWrap.classList.add('active-progress');
         } else {
           progressWrap.classList.remove('active-progress');
         }
-      });
-      progressWrap.addEventListener('click', function (e) {
+      };
+
+      const onClick = function (e) {
         e.preventDefault();
         window.scroll({
           top: 0,
           left: 0,
           behavior: 'smooth'
         });
-      });
+      };
+
+      window.addEventListener('scroll', onScroll);
+      progressWrap.addEventListener('click', onClick);
+
+      return () => {
+        window.removeEventListener('scroll', onScroll);
+        progressWrap.removeEventListener('click', onClick);
+      };
     }
   }, []);
   return <div className="progress-wrap" ref={progressWrapRef}>

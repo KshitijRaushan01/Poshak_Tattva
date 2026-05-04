@@ -3,10 +3,7 @@ import { Fragment, useEffect } from "react";
 import Image from "next/image";
 import PageProgress from "components/PageProgress";
 
-export const metadata = {
-  title: "Digestive Disorders Nutrition | Poshak Tattva",
-  description: "Clinical nutrition protocols for IBS, GERD, leaky gut, and digestive disorders. Reset your gut microbiome and eliminate chronic digestive symptoms at the root cause."
-}
+
 
 export default function DigestiveDisordersPage() {
   useEffect(() => {
