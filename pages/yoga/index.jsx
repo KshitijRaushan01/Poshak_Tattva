@@ -10,7 +10,7 @@ const yogaServices = [
     id: 1,
     title: "Group Yoga Sessions",
     url: "/yoga/group-sessions",
-    img: "/img/services/yoga/group-yoga.jpg",
+    img: "/img/services/yoga/group-yoga-session.jpg",
     badge: "Most Popular",
     description:
       "Train alongside a community of like-minded practitioners. Our group sessions are therapeutically structured — each class follows a clinical sequence targeting specific physiological systems: lymphatic drainage, spinal decompression, and autonomic regulation.",
@@ -48,7 +48,7 @@ const yogaServices = [
     id: 3,
     title: "Meditation Classes",
     url: "/yoga/meditation",
-    img: "/img/services/yoga/meditation.jpg",
+    img: "/img/services/yoga/meditation-session.jpg",
     badge: "Neuro-Regulatory",
     description:
       "Clinical meditation protocols engineered to reduce cortisol, lower neuroinflammation, and rebuild cognitive resilience. These are not relaxation sessions — they are structured neuro-regulatory interventions with measurable outcomes on stress hormones and mental clarity.",
@@ -249,10 +249,10 @@ export default function YogaMainPage() {
                   <div className={`row g-0 ${idx % 2 === 1 ? "flex-row-reverse" : ""}`}>
                     {/* Image Panel */}
                     <div className="col-md-5 position-relative" style={{ minHeight: "420px" }}>
-                      <img 
-                        src={service.img} 
-                        alt={service.title} 
-                        style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', inset: 0 }} 
+                      <img
+                        src={service.img}
+                        alt={service.title}
+                        style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', inset: 0 }}
                       />
                     </div>
 

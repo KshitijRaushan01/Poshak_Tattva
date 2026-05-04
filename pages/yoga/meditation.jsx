@@ -49,7 +49,7 @@ export default function MeditationPage() {
         <meta property="og:description" content="Train your mind the same way you train your body. Practical meditation for real people with real schedules." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://poshaktattva.com/yoga/meditation" />
-        <meta property="og:image" content="/img/services/yoga/meditation.jpg" />
+        <meta property="og:image" content="/img/services/yoga/meditation-session.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="canonical" href="https://poshaktattva.com/yoga/meditation" />
       </Head>
@@ -86,7 +86,7 @@ export default function MeditationPage() {
               <div className="col-lg-6">
                 <div style={{ borderRadius: 16, overflow: "hidden", boxShadow: "0 20px 60px rgba(0,0,0,0.12)" }}>
                   <img
-                    src="/img/services/yoga/meditation.jpg"
+                    src="/img/services/yoga/meditation-session.jpg"
                     alt="Person meditating in serene setting"
                     style={{ width: "100%", height: "auto", display: "block", borderRadius: 16 }}
                   />

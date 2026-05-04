@@ -49,7 +49,7 @@ export default function GroupSessionsPage() {
         <meta property="og:description" content="Build strength, flexibility, and genuine connection in small-group yoga classes. First class free." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://poshaktattva.com/yoga/group-sessions" />
-        <meta property="og:image" content="/img/services/yoga/group-yoga.jpg" />
+        <meta property="og:image" content="/img/services/yoga/group-yoga-session.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="canonical" href="https://poshaktattva.com/yoga/group-sessions" />
       </Head>
@@ -86,7 +86,7 @@ export default function GroupSessionsPage() {
               <div className="col-lg-6">
                 <div style={{ borderRadius: 16, overflow: "hidden", boxShadow: "0 20px 60px rgba(0,0,0,0.12)" }}>
                   <img
-                    src="/img/services/yoga/group-yoga.jpg"
+                    src="/img/services/yoga/group-yoga-session.jpg"
                     alt="Group yoga class in session"
                     style={{ width: "100%", height: "auto", display: "block" }}
                   />
