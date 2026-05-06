@@ -67,7 +67,7 @@ const Hero = () => {
                 className="btn btn-lg text-white secondary-bg rounded"
               />
               <NextLink
-                title="Explore Our Approach"
+                title="About Us"
                 href="/about-us"
                 className="btn btn-lg btn-outline-light rounded"
               />

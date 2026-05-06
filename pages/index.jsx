@@ -110,7 +110,7 @@ const Home = () => {
             </div>
             <About
               imgPosition="right"
-              imgSrc="/img/yds2.png"
+              imgSrc="/img/yds2.jpg"
               heading="" // Removed heading from here to avoid duplication
               headingClass="text-center mb-6"
               para="At Poshak Tattva, we go beyond the absence of illness to achieve systemic recovery. Chronic lifestyle disorders — from metabolic dysfunction and hormonal imbalance to autoimmune flares and digestive disorders — are not destiny. They are the result of compounding root causes that conventional medicine rarely addresses."
