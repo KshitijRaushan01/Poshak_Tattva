@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 
 const navItems = [
   { href: "/admin",               label: "Dashboard",    icon: "📊" },
+  { href: "/admin/orders",        label: "Orders",       icon: "📦" },
   { href: "/admin/appointments",  label: "Appointments", icon: "📅" },
   { href: "/admin/products",      label: "Products",     icon: "🛍️" },
   { href: "/admin/testimonials",  label: "Testimonials", icon: "⭐" },
@@ -11,6 +12,7 @@ const navItems = [
 
 export default function AdminLayout({ children }) {
   const router = useRouter();
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
 
   async function handleLogout() {
     await fetch("/api/admin/logout", { method: "POST" });
@@ -42,6 +44,14 @@ export default function AdminLayout({ children }) {
           top: 0;
           height: 100vh;
           overflow-y: auto;
+          transition: transform 0.3s ease;
+          z-index: 100;
+        }
+        @media (max-width: 991px) {
+          .adm-sidebar {
+            position: fixed;
+            transform: translateX(${isSidebarOpen ? '0' : '-100%'});
+          }
         }
         .adm-logo {
           padding: 1.5rem 1.25rem;
@@ -105,7 +115,19 @@ export default function AdminLayout({ children }) {
           z-index: 10;
           justify-content: space-between;
         }
-        .adm-topbar-title { font-weight: 600; font-size: 1rem; }
+        .adm-topbar-title { font-weight: 600; font-size: 1rem; display: flex; align-items: center; gap: 0.75rem; }
+        .adm-menu-toggle {
+          display: none;
+          background: none;
+          border: none;
+          color: #fff;
+          font-size: 1.25rem;
+          cursor: pointer;
+          padding: 0.25rem;
+        }
+        @media (max-width: 991px) {
+          .adm-menu-toggle { display: block; }
+        }
         .adm-badge {
           background: rgba(76,175,80,0.15);
           color: #4CAF50;
@@ -117,6 +139,18 @@ export default function AdminLayout({ children }) {
           letter-spacing: 0.04em;
         }
         .adm-content { padding: 1.75rem; flex: 1; }
+
+        /* ── Mobile Overlay ── */
+        .adm-sidebar-overlay {
+          display: none;
+          position: fixed;
+          inset: 0;
+          background: rgba(0,0,0,0.5);
+          z-index: 90;
+        }
+        @media (max-width: 991px) {
+          .adm-sidebar-overlay.open { display: block; }
+        }
 
         /* ── Cards ── */
         .adm-card {
@@ -161,6 +195,9 @@ export default function AdminLayout({ children }) {
           cursor: pointer;
           border: none;
           transition: opacity 0.15s, transform 0.1s;
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
         }
         .adm-btn:hover { opacity: 0.85; transform: translateY(-1px); }
         .adm-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
@@ -206,7 +243,7 @@ export default function AdminLayout({ children }) {
           border: 1px solid rgba(255,255,255,0.1);
           border-radius: 16px;
           padding: 2rem;
-          width: 100%;
+          width: 95%;
           max-width: 480px;
           max-height: 90vh;
           overflow-y: auto;
@@ -216,6 +253,9 @@ export default function AdminLayout({ children }) {
       `}</style>
 
       <div className="adm-root">
+        {/* Mobile Overlay */}
+        <div className={`adm-sidebar-overlay ${isSidebarOpen ? 'open' : ''}`} onClick={() => setSidebarOpen(false)} />
+
         {/* Sidebar */}
         <aside className="adm-sidebar">
           <div className="adm-logo">
@@ -232,6 +272,7 @@ export default function AdminLayout({ children }) {
                 key={item.href}
                 href={item.href}
                 className={`adm-nav-item ${router.pathname === item.href ? "active" : ""}`}
+                onClick={() => setSidebarOpen(false)}
               >
                 <span className="adm-nav-icon">{item.icon}</span>
                 {item.label}
@@ -250,9 +291,10 @@ export default function AdminLayout({ children }) {
         {/* Main content */}
         <div className="adm-main">
           <header className="adm-topbar">
-            <span className="adm-topbar-title">
+            <div className="adm-topbar-title">
+              <button className="adm-menu-toggle" onClick={() => setSidebarOpen(true)}>☰</button>
               {navItems.find((n) => n.href === router.pathname)?.label ?? "Admin"}
-            </span>
+            </div>
             <span className="adm-badge">Poshak Tattva Dashboard</span>
           </header>
           <main className="adm-content">{children}</main>

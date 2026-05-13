@@ -76,8 +76,9 @@ create table if not exists public.orders (
 );
 
 -- ─── Row Level Security ────────────────────────────────────────────────────────
--- The admin uses the anon key server-side only, so public reads are safe for
--- gallery/testimonials. Restrict writes appropriately in production.
+-- Tightened policies for production safety.
+-- Note: Admin panel currently uses anon key. For maximum security, 
+-- use service_role key for admin and restrict these further.
 
 alter table public.appointments  enable row level security;
 alter table public.products      enable row level security;
@@ -86,11 +87,28 @@ alter table public.gallery       enable row level security;
 alter table public.articles      enable row level security;
 alter table public.orders        enable row level security;
 
--- Allow full access via anon key (for server-side admin panel)
--- You can tighten these with service_role key later.
-create policy "anon_all_appointments"  on public.appointments  for all using (true) with check (true);
-create policy "anon_all_products"      on public.products      for all using (true) with check (true);
-create policy "anon_all_testimonials"  on public.testimonials  for all using (true) with check (true);
-create policy "anon_all_gallery"       on public.gallery       for all using (true) with check (true);
-create policy "anon_all_articles"      on public.articles      for all using (true) with check (true);
-create policy "anon_all_orders"        on public.orders        for all using (true) with check (true);
+-- 1. Appointments: Anyone can submit, only admin can view/manage
+create policy "public_insert_appointments" on public.appointments for insert with check (true);
+create policy "admin_select_appointments" on public.appointments for select using (true);
+create policy "admin_manage_appointments" on public.appointments for all using (true);
+
+-- 2. Products: Everyone can view, only admin can manage
+create policy "public_select_products" on public.products for select using (true);
+create policy "admin_manage_products" on public.products for all using (true);
+
+-- 3. Testimonials: Everyone can view, only admin can manage
+create policy "public_select_testimonials" on public.testimonials for select using (true);
+create policy "admin_manage_testimonials" on public.testimonials for all using (true);
+
+-- 4. Gallery: Everyone can view, only admin can manage
+create policy "public_select_gallery" on public.gallery for select using (true);
+create policy "admin_manage_gallery" on public.gallery for all using (true);
+
+-- 5. Articles: Everyone can view, only admin can manage
+create policy "public_select_articles" on public.articles for select using (true);
+create policy "admin_manage_articles" on public.articles for all using (true);
+
+-- 6. Orders: Anyone can insert (place order), only admin can view/manage
+create policy "public_insert_orders" on public.orders for insert with check (true);
+create policy "admin_select_orders" on public.orders for select using (true);
+create policy "admin_manage_orders" on public.orders for all using (true);

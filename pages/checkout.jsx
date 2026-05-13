@@ -18,41 +18,7 @@ import { useCart } from "context/CartContext";
 // src="https://checkout.razorpay.com/v1/checkout.js"
 // ─────────────────────────────────────────────
 
-const inputStyle = {
- width: "100%",
- padding: "12px 16px",
- borderRadius: "10px",
- border: "1px solid #dee2e6",
- fontSize: "14px",
- outline: "none",
- transition: "border-color 0.2s",
- background: "#fff",
-};
-
-const Field = ({ label, name, type = "text", placeholder, form, handleChange, errors }) => (
- <div className="mb-3">
- <label htmlFor={`field-${name}`} className="form-label fw-semibold" style={{ fontSize: "13px" }}>
- {label}
- </label>
- <input
- id={`field-${name}`}
- type={type}
- name={name}
- value={form[name]}
- onChange={handleChange}
- placeholder={placeholder}
- style={{
- ...inputStyle,
- borderColor: errors[name] ? "#dc3545" : "#dee2e6",
- }}
- onFocus={e => (e.target.style.borderColor = "#1C7690")}
- onBlur={e => (e.target.style.borderColor = errors[name] ? "#dc3545" : "#dee2e6")}
- />
- {errors[name] && (
- <small className="text-danger">{errors[name]}</small>
- )}
- </div>
-);
+import FormField from "components/ui/FormField";
 
 export default function CheckoutPage() {
  const { cartItems, cartTotal, clearCart } = useCart();
@@ -254,27 +220,85 @@ export default function CheckoutPage() {
  <div className="card border-0 shadow-sm rounded-4 p-4">
  <h4 className="fw-bold mb-4">Delivery Address</h4>
 
- <Field label="Full Name *" name="fullName" placeholder="Full Name" form={form} handleChange={handleChange} errors={errors} />
- <div className="row">
- <div className="col-md-6">
- <Field label="Email *" name="email" type="email" placeholder="Your Mail" form={form} handleChange={handleChange} errors={errors} />
- </div>
- <div className="col-md-6">
- <Field label="Phone *" name="phone" type="tel" placeholder=" 1234567890" form={form} handleChange={handleChange} errors={errors} />
- </div>
- </div>
- <Field label="Address *" name="address" placeholder="Street / Flat / Area" form={form} handleChange={handleChange} errors={errors} />
- <div className="row">
- <div className="col-md-4">
- <Field label="City *" name="city" placeholder="Jaipur" form={form} handleChange={handleChange} errors={errors} />
- </div>
- <div className="col-md-4">
- <Field label="State *" name="state" placeholder="Rajasthan" form={form} handleChange={handleChange} errors={errors} />
- </div>
- <div className="col-md-4">
- <Field label="Pincode *" name="pincode" placeholder="302001" form={form} handleChange={handleChange} errors={errors} />
- </div>
- </div>
+              <FormField
+                label="Full Name"
+                name="fullName"
+                placeholder="Full Name"
+                value={form.fullName}
+                onChange={handleChange}
+                error={errors.fullName}
+                required
+              />
+              <div className="row">
+                <div className="col-md-6">
+                  <FormField
+                    label="Email"
+                    name="email"
+                    type="email"
+                    placeholder="Your Mail"
+                    value={form.email}
+                    onChange={handleChange}
+                    error={errors.email}
+                    required
+                  />
+                </div>
+                <div className="col-md-6">
+                  <FormField
+                    label="Phone"
+                    name="phone"
+                    type="tel"
+                    placeholder=" 1234567890"
+                    value={form.phone}
+                    onChange={handleChange}
+                    error={errors.phone}
+                    required
+                  />
+                </div>
+              </div>
+              <FormField
+                label="Address"
+                name="address"
+                placeholder="Street / Flat / Area"
+                value={form.address}
+                onChange={handleChange}
+                error={errors.address}
+                required
+              />
+              <div className="row">
+                <div className="col-md-4">
+                  <FormField
+                    label="City"
+                    name="city"
+                    placeholder="Jaipur"
+                    value={form.city}
+                    onChange={handleChange}
+                    error={errors.city}
+                    required
+                  />
+                </div>
+                <div className="col-md-4">
+                  <FormField
+                    label="State"
+                    name="state"
+                    placeholder="Rajasthan"
+                    value={form.state}
+                    onChange={handleChange}
+                    error={errors.state}
+                    required
+                  />
+                </div>
+                <div className="col-md-4">
+                  <FormField
+                    label="Pincode"
+                    name="pincode"
+                    placeholder="302001"
+                    value={form.pincode}
+                    onChange={handleChange}
+                    error={errors.pincode}
+                    required
+                  />
+                </div>
+              </div>
  </div>
 
  {/* Payment badge */}

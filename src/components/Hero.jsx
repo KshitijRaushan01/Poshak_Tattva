@@ -52,9 +52,9 @@ const Hero = () => {
             data-interval="-200"
             data-delay="500"
           >
-            <h2 className="fs-56 mb-4 text-white animate__animated animate__slideInDown animate__delay-1s">
+            <h1 className="fs-56 mb-4 text-white animate__animated animate__slideInDown animate__delay-1s">
               Back to Bliss
-            </h2>
+            </h1>
 
             <p className="lead fs-23 lh-sm mb-7 text-white animate__animated animate__slideInRight animate__delay-2s">
               Poshak Tattva: Pure Elements, Proven Health

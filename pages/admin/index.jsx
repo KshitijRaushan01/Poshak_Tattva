@@ -16,6 +16,8 @@ export default function AdminDashboard() {
   const [stats, setStats] = useState({
     appointments: null,
     products: null,
+    orders: null,
+    revenue: null,
     testimonials: null,
     gallery: null,
     articles: null,
@@ -24,14 +26,16 @@ export default function AdminDashboard() {
   useEffect(() => {
     async function fetchCounts() {
       try {
-        const [appt, prod, test, gall, art] = await Promise.all([
+        const [appt, prod, test, gall, art, ord] = await Promise.all([
           supabase.from("appointments").select("id", { count: "exact", head: true }),
           supabase.from("products").select("id", { count: "exact", head: true }),
           supabase.from("testimonials").select("id", { count: "exact", head: true }),
           supabase.from("gallery").select("id", { count: "exact", head: true }),
           supabase.from("articles").select("id", { count: "exact", head: true }),
+          supabase.from("orders").select("amount", { count: "exact" }),
         ]);
-        if (appt.error) console.error("appt error", appt.error);
+
+        const totalRevenue = ord.data?.reduce((acc, curr) => acc + (curr.amount || 0), 0) || 0;
 
         setStats({
           appointments: appt.count ?? 0,
@@ -39,6 +43,8 @@ export default function AdminDashboard() {
           testimonials: test.count ?? 0,
           gallery: gall.count ?? 0,
           articles: art.count ?? 0,
+          orders: ord.count ?? 0,
+          revenue: totalRevenue,
         });
       } catch (err) {
         console.error("Dashboard count error:", err);
@@ -48,10 +54,10 @@ export default function AdminDashboard() {
   }, []);
 
   const cards = [
-    { label: "Total Appointments", value: stats.appointments, icon: "📅", href: "/admin/appointments", color: "#4ade80" },
-    { label: "Products in DB",     value: stats.products,     icon: "🛍️", href: "/admin/products",     color: "#60a5fa" },
-    { label: "Testimonials",       value: stats.testimonials, icon: "⭐", href: "/admin/testimonials", color: "#fbbf24" },
-    { label: "Gallery Images",     value: stats.gallery,      icon: "🖼️", href: "/admin/gallery",      color: "#c084fc" },
+    { label: "Total Orders",      value: stats.orders,       icon: "📦", href: "/admin/orders",       color: "#60a5fa" },
+    { label: "Total Revenue",     value: `₹${stats.revenue?.toLocaleString()}`, icon: "💰", href: "/admin/orders", color: "#4ade80" },
+    { label: "Appointments",      value: stats.appointments, icon: "📅", href: "/admin/appointments", color: "#c084fc" },
+    { label: "Products",          value: stats.products,     icon: "🛍️", href: "/admin/products",     color: "#fbbf24" },
     { label: "Articles",           value: stats.articles,     icon: "📝", href: "/admin/articles",     color: "#f87171" },
   ];
 

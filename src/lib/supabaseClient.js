@@ -6,7 +6,11 @@
 
 import { createClient } from "@supabase/supabase-js";
 
-const supabaseUrl     = process.env.NEXT_PUBLIC_SUPABASE_URL     || "https://qcnvvzmxqfxdcfhdviyc.supabase.co";
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFjbnZ2em14cWZ4ZGNmaGR2aXljIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzU3OTAwMjUsImV4cCI6MjA5MTM2NjAyNX0.yib8uTlHLvMNSKJhCvGVI0BXxLrT6H4CtSyVG5nnkqU";
+const supabaseUrl     = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+if (!supabaseUrl || !supabaseAnonKey) {
+  console.warn("Supabase credentials missing! Check your .env.local file.");
+}
+
+export const supabase = createClient(supabaseUrl || "", supabaseAnonKey || "");

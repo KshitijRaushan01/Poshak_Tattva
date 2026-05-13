@@ -48,8 +48,9 @@ function MyApp({ Component, pageProps }) {
         </title>
         <meta
           name="description"
-          content="Poshak Tattva offers holistic wellness through Yoga, Diet, and Sound Healing. Rebalance your body and mind with natural healing practices."
+          content="Poshak Tattva offers holistic wellness through Yoga, Diet, and Sound Healing. Rebalance your body and mind with natural healing practices in India."
         />
+        <link rel="canonical" href="https://poshaktattva.com/" />
 
         {/* Open Graph Meta */}
         <meta property="og:type" content="website" />
@@ -72,18 +73,42 @@ function MyApp({ Component, pageProps }) {
         />
 
         {/* Twitter Meta */}
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Poshak Tattva – Yoga, Diet & Sound Healing for Holistic Wellness"
+          content="Poshak Tattva – Holistic Wellness"
         />
         <meta
           name="twitter:description"
-          content="Rejuvenate your mind, body, and soul with Yoga, Diet, and Sound Healing by Poshak Tattva."
+          content="Rejuvenate your mind, body, and soul with Yoga, Diet, and Sound Healing."
         />
         <meta
           name="twitter:image"
           content="https://poshaktattva.com/img/poshak.png"
+        />
+
+        {/* Structured Data (JSON-LD) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "HealthAndBeautyBusiness",
+              "name": "Poshak Tattva",
+              "url": "https://poshaktattva.com/",
+              "logo": "https://poshaktattva.com/img/poshak.png",
+              "image": "https://poshaktattva.com/img/poshak.png",
+              "description": "Holistic wellness center offering Yoga, Diet therapy, and Sound Healing.",
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "IN"
+              },
+              "sameAs": [
+                "https://www.instagram.com/poshak_tattva/",
+                "https://www.facebook.com/poshaktattva"
+              ]
+            }),
+          }}
         />
       </Head>
 
